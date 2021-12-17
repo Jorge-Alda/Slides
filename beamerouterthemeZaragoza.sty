@@ -1,0 +1,98 @@
+% Copyright 2007 by Till Tantau
+% Copyright 2015 by Vedran Mileti\'c, Joseph Wright
+% Copyright 2017,2018 by Louis Stuart, Joseph Wright
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+% See the file doc/licenses/LICENSE for more details.
+
+
+\newdimen\beamer@headheight
+\usebeamerfont{frametitle}
+\beamer@headheight=1.0\baselineskip
+\reset@font
+
+\def\beamer@lefttext{left}
+
+\DeclareOptionBeamer{hideothersubsections}[]{\beamer@nav@subsectionstyle{show/show/hide}}
+\DeclareOptionBeamer{hideallsubsections}[]{\beamer@nav@subsectionstyle{hide}}
+
+
+
+\DeclareOptionBeamer{left}{\def\beamer@sidebarside{left}}
+\DeclareOptionBeamer{right}{\def\beamer@sidebarside{right}}
+\ExecuteOptionsBeamer{left}
+\ProcessOptionsBeamer
+
+
+\mode<presentation>
+
+  \setbeamercolor*{frametitle}{parent=Zaragoza}
+
+  \defbeamertemplate*{frametitle}{Zaragoza theme}
+  {%
+    %\nointerlineskip%
+    \vskip-\beamer@headheight%
+    \vbox to \beamer@headheight{%
+      %\vfil
+      \leftskip=-\beamer@leftmargin%
+      \advance\leftskip by1.8cm%
+      \rightskip=-\beamer@rightmargin%
+      \advance\rightskip by1.8cm plus1fil%
+      {\usebeamercolor[fg]{frametitle}\usebeamerfont{frametitle}\strut\insertframetitle}%
+      \ifx\insertframesubtitle\@empty{\par}\else%
+        {\usebeamercolor[fg]{palette tertiary}\usebeamerfont{framesubtitle}\strut\insertframesubtitle\par}%
+      \fi%
+      %\vbox{}%
+     % \vskip-1em%
+     \vskip0pt
+      \vfil
+    }%
+  }
+  
+  
+
+  \defbeamertemplate*{headline}{Zaragoza theme}
+  {%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=0.12\paperwidth, ht=\beamer@headheight,dp=1ex]{date in head/foot}
+        \usebeamerfont{framesubtitle}\hspace*{1em} \insertframenumber{} / \inserttotalframenumber
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[wd=0.88\paperwidth, ht=\beamer@headheight,dp=1ex]{frametitle}
+	\usebeamercolor[fg]{frametitle}%
+	\ifx\beamer@sidebarside\beamer@lefttext%
+      \else%
+        \hfill%
+      \fi%
+        \vrule width0pt height \beamer@headheight% 
+    \end{beamercolorbox}
+    }
+  }
+
+\defbeamertemplate*{footline}{Zaragoza theme}
+{%
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.248\paperwidth,ht=2.25ex,dp=1ex,left]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\hspace*{1em}\insertshortauthor\expandafter\ifblank\expandafter{\beamer@shortinstitute}{}{~~(\insertshortinstitute)}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=0.002\paperwidth,ht=2.25ex,dp=1ex,left]{page number in head/foot}
+  \end{beamercolorbox}
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=0.002\paperwidth,ht=2.25ex,dp=1ex,left]{page number in head/foot}
+  \end{beamercolorbox}
+  \begin{beamercolorbox}[wd=.248\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{1em}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+
+\mode
+<all>

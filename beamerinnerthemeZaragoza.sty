@@ -1,0 +1,59 @@
+\newcommand{\Zaragoza@titlepagelogoA}{}
+\newcommand{\Zaragoza@titlepagelogoB}{}
+\newcommand{\titlepagelogoA}[1]{\renewcommand{\Zaragoza@titlepagelogoA}{#1}}
+\newcommand{\titlepagelogoB}[1]{\renewcommand{\Zaragoza@titlepagelogoB}{#1}}
+\usetikzlibrary{positioning}
+\mode<presentation>
+
+
+\setbeamertemplate{background}{
+  \begin{tikzpicture}
+  \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+  \usebeamercolor{palette primary}
+  \fill[color=bg] (0,2) rectangle (\the\paperwidth,\the\paperheight);
+  \usebeamercolor{palette secondary}
+  \fill[color=bg] (0,0) rectangle(2.95,1.9);
+  \usebeamercolor{palette tertiary}
+  \fill[color=bg] (3.05,0) rectangle(\the\paperwidth,1.9);
+  \ifnum\thepage>1\relax%
+   \fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight);
+   \fi
+  \end{tikzpicture}
+}
+
+% Title page
+\defbeamertemplate*{title page}{Zaragoza}[1][]
+{ 
+%   \begin{textblock*}{12cm}(0cm, 3cm)
+%    \begin{beamercolorbox}[wd=12cm,leftskip=-0.8cm,sep=8pt,#1]{title page header}
+%      \usebeamerfont{title}\inserttitle\par%
+%      \usebeamerfont{subtitle}\insertsubtitle\par%
+%    \end{beamercolorbox}%
+%    \end{textblock*}
+%    \begin{textblock*}{12cm}(0cm, 5.2cm)
+%    \begin{beamercolorbox}[wd=12cm,leftskip=2.2cm,#1]{author}
+%      \usebeamerfont{author}\insertauthor%
+%    \end{beamercolorbox}
+%     \vskip0.2cm%
+%    \begin{beamercolorbox}[wd=12cm,leftskip=2.2cm,#1]{date}
+%      \usebeamerfont{author}\insertdate%
+%    \end{beamercolorbox}
+%    \end{textblock*}
+%  \vfill
+\begin{tikzpicture}
+\useasboundingbox (1,0) rectangle(\the\paperwidth,\the\paperheight);
+\usebeamercolor{palette primary}
+\node[align=left, font=\usebeamerfont{subtitle}, anchor= south west, color=fg] (sub) at (0.2, 2.1)  {\insertsubtitle};
+\usebeamercolor{palette primary}
+\node[align=left, font=\usebeamerfont{title}, anchor= south west, color=fg] at ([shift={(0, 0.2)}]sub.north west) {\inserttitle};
+\usebeamercolor{palette tertiary}
+\node[align=left, font=\usebeamerfont{author}, anchor= north west, color=fg] at (3.0, 1.9) {\insertauthor\\ \insertdate};
+
+\node[left, anchor=north west] at (0, \the\paperheight){\Zaragoza@titlepagelogoA}; 
+
+\node[right, anchor=north east] at (\the\paperwidth, \the\paperheight){\Zaragoza@titlepagelogoB};  
+\end{tikzpicture}
+}
+
+\mode
+<all>
