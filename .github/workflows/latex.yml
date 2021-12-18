@@ -1,0 +1,52 @@
+# This is a basic workflow that compiles the .tex files
+name: LaTeXMK
+
+env:
+  MAIN_FILE: slides #name of the main .tex and .bbl file, without the extension
+
+# Controls when the workflow will run
+on:
+  push:
+    tags:
+      - "*"
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Compiles the tex file, https://github.com/marketplace/actions/latexmk
+      - name: Replace tag id
+        run: find . -type f -name "*.tex" -exec sed -i "s/++TAGNUM++/${{ githuf.ref_name }}/g" {} +
+      - name: Generate PDF document
+        uses: hspaans/latexmk-action@v1.1.1
+        with:
+          format: pdf
+          filename: ${{ env.MAIN_FILE }}.tex
+      - name: release
+        uses: actions/create-release@v1
+        id: create_release
+        with:
+          draft: false
+          prerelease: false
+          release_name: v${{ github.ref }}
+          tag_name: ${{ github.ref }}
+          body_path: README.md
+        env:
+         GITHUB_TOKEN: ${{ github.token }}
+      - name: upload PDF to release
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ${{ env.MAIN_FILE }}.pdf
+          asset_name: ${{ env.MAIN_FILE }}_${{ github.ref_name }}.pdf
+          asset_content_type: application/pdf
