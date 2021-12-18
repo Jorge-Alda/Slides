@@ -24,7 +24,7 @@ jobs:
 
       # Compiles the tex file, https://github.com/marketplace/actions/latexmk
       - name: Replace tag id
-        run: find . -type f -name "*.tex" -exec sed -i "s/++TAGNUM++/${{ githuf.ref_name }}/g" {} +
+        run: find . -type f -name "*.tex" -exec sed -i "s/++TAGNUM++/${{ github.ref_name }}/g" {} +
       - name: Generate PDF document
         uses: hspaans/latexmk-action@v1.1.1
         with:
