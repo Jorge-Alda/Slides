@@ -4,7 +4,7 @@
 \usepackage{appendixnumberbeamer}
 
 
-\title{IFT Seminar, 27 January 2022}
+\title[Using ML techniques in phenomenological studies in flavour physics]{Using Machine Learning techniques in\\ phenomenological studies in flavour physics}
 \subtitle{Jorge Alda,\\ Universidad de Zaragoza/CAPA \hspace{4em} \texttt{jalda@unizar.es} }
 \author[Jorge Alda]{Based on \textbf{JA}, J. Guasch, S. Peñaranda \\
 arXiv:2109.07405 [hep-ph]}
@@ -119,6 +119,34 @@ arXiv:2109.07405 [hep-ph]}
 
 
 
+\end{frame}
+
+\begin{frame}
+    \frametitle{Effective Field Theories}
+    Translating between the two EFTs: 1-loop RG running $\Lambda \to \mu_\mathrm{EW}$ + matching:
+    \begin{itemize}
+        \item {\small $C_9^\ell \approx \frac{\sqrt{2}}{V_{tb}V_{ts}^* G_F \Lambda^2}\left[ \frac{2\pi^2}{e^2}(C_{\ell q(1)}^{\ell\ell23}+C_{\ell q(1)}^{\ell\ell23}) + \textcolor{blue}{\frac{\log(m_b/\Lambda)}{3}(C_{\ell q(1)}^{3323}+C_{\ell q(1)}^{3323})}\right]\, $.}
+        \item {\small $C_{10}^\ell \approx \frac{-\sqrt{2}}{V_{tb}V_{ts}^* G_F \Lambda^2} \frac{2\pi^2}{e^2}(C_{\ell q(1)}^{\ell\ell23}+C_{\ell q(1)}^{\ell\ell23}) \, $.}
+        \item {\small $C_{VL} \approx \frac{-1}{\sqrt{2}G_F\Lambda^2}\left(C_{\ell q(3)}^{\ell\ell33}+ \frac{V_{cs}}{V_{cb}}C_{\ell q(3)}^{\ell\ell 23}\right)$\,.}
+        \item {\small $C_\nu^\ell \approx \frac{\sqrt{2}}{e^2 V_{tb}V_{ts}^* G_F \Lambda^2}\left[2\pi^2(C_{\ell q(1)}^{\ell\ell 23}-C_{\ell q(3)}^{\ell\ell 23})+\textcolor{blue}{\frac{2{g'}^2}{3}\log(m_b/\Lambda)C_{\ell q(3)}^{\ell\ell 23}}\right]\,$.}
+    \end{itemize}
+
+    \textcolor{blue}{Loop-level corrections} break the relatio $C_9^\ell = -C_{10}^\ell$.
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Effective Field Theories}
+
+    Our setting: in the interaction basis, NP only affects the third generation,\footnote[1]{arXiv:1705.00929}
+    $$C_1 = C_{\ell q(1)}^{3333}\,,\qquad\qquad C_3 = C_{\ell q(3)}^{3333}\,.$$
+    We have to rotate to the mass basis, using rotation matrices $\lambda^q$ and $\lambda^\ell$,
+    $$C_{\ell q(1)}^{ijkl} = C_1 \lambda_\ell^{ij}\lambda_q^{kl}\,\qquad\qquad C_{\ell q(3)}^{ijkl} = C_3 \lambda_\ell^{ij}\lambda_q^{kl}\,. $$
+    The rotation matrices must be hermitian, idempotent and with $\mathrm{tr}\lambda =1$. Parameterized as
+    $$ \lambda = \frac{1}{1+|\alpha|^2+|\beta|^2}\begin{pmatrix}
+            |\alpha|^2 & \alpha \beta^* & \alpha \\ \alpha^* \beta & |\beta|^2 & \beta \\ \alpha^* & \beta^* & 1
+        \end{pmatrix}\,. $$
+    We will fix $C_1 = C_3$ to avoid large deviations in the $B\to K^{(*)}\nu\overline{\nu}$ decays.
 \end{frame}
 
 \end{document}
