@@ -127,11 +127,11 @@ arXiv:2109.07405 [hep-ph]}
     \begin{itemize}
         \item {\small $C_9^\ell \approx \frac{\sqrt{2}}{V_{tb}V_{ts}^* G_F \Lambda^2}\left[ \frac{2\pi^2}{e^2}(C_{\ell q(1)}^{\ell\ell23}+C_{\ell q(1)}^{\ell\ell23}) + \textcolor{blue}{\frac{\log(m_b/\Lambda)}{3}(C_{\ell q(1)}^{3323}+C_{\ell q(1)}^{3323})}\right]\, $.}
         \item {\small $C_{10}^\ell \approx \frac{-\sqrt{2}}{V_{tb}V_{ts}^* G_F \Lambda^2} \frac{2\pi^2}{e^2}(C_{\ell q(1)}^{\ell\ell23}+C_{\ell q(1)}^{\ell\ell23}) \, $.}
-        \item {\small $C_{VL} \approx \frac{-1}{\sqrt{2}G_F\Lambda^2}\left(C_{\ell q(3)}^{\ell\ell33}+ \frac{V_{cs}}{V_{cb}}C_{\ell q(3)}^{\ell\ell 23}\right)$\,.}
+\item {\small $C_{VL}^\ell \approx \frac{-1}{\sqrt{2}G_F\Lambda^2}\left(C_{\ell q(3)}^{\ell\ell33}+ \frac{V_{cs}}{V_{cb}}C_{\ell q(3)}^{\ell\ell 23}\right)$\,.}
         \item {\small $C_\nu^\ell \approx \frac{\sqrt{2}}{e^2 V_{tb}V_{ts}^* G_F \Lambda^2}\left[2\pi^2(C_{\ell q(1)}^{\ell\ell 23}-C_{\ell q(3)}^{\ell\ell 23})+\textcolor{blue}{\frac{2{g'}^2}{3}\log(m_b/\Lambda)C_{\ell q(3)}^{\ell\ell 23}}\right]\,$.}
     \end{itemize}
 
-    \textcolor{blue}{Loop-level corrections} break the relatio $C_9^\ell = -C_{10}^\ell$.
+\textcolor{blue}{Loop-level corrections} break the relation $C_9^\ell = -C_{10}^\ell$.
 
 \end{frame}
 
@@ -147,6 +147,36 @@ arXiv:2109.07405 [hep-ph]}
             |\alpha|^2 & \alpha \beta^* & \alpha \\ \alpha^* \beta & |\beta|^2 & \beta \\ \alpha^* & \beta^* & 1
         \end{pmatrix}\,. $$
     We will fix $C_1 = C_3$ to avoid large deviations in the $B\to K^{(*)}\nu\overline{\nu}$ decays.
+\end{frame}
+
+\begin{frame}
+    \frametitle{Global fits}
+    \begin{itemize}
+        \item The structure of the $\lambda$ matrices creates Lepton Flavour Violating effects through $\lambda_\ell^{ij}\, (i\neq j)$.
+        \item RG evolution causes mixing between effective operators:
+              \begin{itemize}
+                  \item For example, $O_{\ell q(1)}$ mixes with $O_{\varphi \ell(1)} = (\varphi^\dagger i \overleftrightarrow D_{\mu} \varphi)(\bar{\ell} \gamma^\mu \ell )$ that modifies the $Z\ell^+\ell^-$ couplings.
+              \end{itemize}
+    \end{itemize}
+
+    ~
+
+    We need to consider the effects of the New Physics in a wide range of experimentally-measured observables: Global Fits.
+
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Global fits}
+
+    Tools used for the global fits (in \texttt{python3}):
+    \begin{itemize}
+        \item \texttt{wilson}\footnote[1]{arXiv:1804.05033}: RG evolution and mixing of the Wilson coefficients.
+        \item \texttt{flavio}\footnote[2]{arXiv:1810.08132}: Calculation of observables in EFTs and database of experimental measurements.
+        \item \texttt{smelli}\footnote[3]{arXiv:1810.07698}: Global likelihood function:
+              {\small$$\Delta \log L = -\frac{1}{2}\Delta\chi^2 = -\frac{1}{2}\sum_{i,j} [\mathcal{O}_i^\mathrm{exp} - \mathcal{O}_i(\vec{C})] (\mathcal{C}^\mathrm{th}+\mathcal{C}^\mathrm{exp})^{-1}_{ij} [\mathcal{O}_j^\mathrm{exp} - \mathcal{O}_j(\vec{C})]\,. $$}
+    \end{itemize}
+
 \end{frame}
 
 \end{document}
