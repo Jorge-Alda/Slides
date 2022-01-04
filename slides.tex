@@ -189,7 +189,7 @@ arXiv:2109.07405 [hep-ph]}
             $\beta^\ell$                & $0 \pm 0.025$       & $0 \pm 0.025$                \\\hline
             $\alpha^q$                  &                     & $-0.05^{+0.12}_{-0.07}$      \\\hline
             $\beta^q$                   & $0.8^{+2.0}_{-0.5}$ & $0.73^{+2.8}_{-0.6}$         \\\hline
-            $\Delta \chi^2_\mathrm{SM}$ & 40.32               & 57.06                        \\\hline
+            $\Delta \chi^2_\mathrm{SM}$ & $40.32$               & $57.06$                        \\\hline
             SM Pull                     & $5.75\,\sigma$      & $6.57\,\sigma$               \\\hline
         \end{tabular}
     \end{center}
@@ -215,6 +215,64 @@ arXiv:2109.07405 [hep-ph]}
         C_9^e   & = -C_{10}^e + C_9^\mathrm{loop} = -0.32\,, \qquad\qquad                 &  & C_{10}^e =-0.36\,,             \\
         C_9^\mu & = {\color{gray}-C_{10}^\mu} + C_9^\mathrm{loop} = -0.67\,, \qquad\qquad &  & {\color{gray}C_{10}^\mu =0}\,.
     \end{align*}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Exploring the likelihood function}
+
+    \begin{itemize}
+        \item We would like to explore the properties of the likelihood function around the best fit point.
+        \item {\bf Problem:} At each point $(C, \alpha^\ell, \beta^\ell, \alpha^q, \beta^q)$ requires the calculation of 471 observables, many of them need numerical integration.
+        \item In a previous work\footnote[1]{arXiv:2012.14799}, we used the Hessian approximation,
+        $$\Delta\log L (\vec{C}) \approx \Delta\log L_\mathrm{bf} + \vec{C}^T \mathbb{H} \vec{C}\,.$$
+        \item Doesn't work in this case because of non-linear relation between fit parameters and Wilson coefficients.
+        \item {\bf Idea:} Teach a machine to approximate $\log L(\vec{C})$.
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{xgboost}
+
+    Decision tree
+    \includegraphics[width=\textwidth]{figures/dectree.png}
+
+    \invisible{A regression tree $k$ defines a function $f_k(x)$. We use an ensemble of trees $F$ for the prediction: $$\phi(x) = \sum_{k\in F} f_k(x)\,.$$}
+\end{frame}
+
+\begin{frame}
+    \frametitle{xgboost}
+
+    Regression tree
+    \includegraphics[width=\textwidth]{figures/regtree_nof.png}
+
+    \invisible{A regression tree $k$ defines a function $f_k(x)$. We use an ensemble of trees $F$ for the prediction: $$\phi(x) = \sum_{k\in F} f_k(x)\,.$$}
+\end{frame}
+
+\begin{frame}
+    \frametitle{xgboost}
+
+    Regression tree
+    \includegraphics[width=\textwidth]{figures/regtree.png}
+
+    A regression tree $k$ defines a function $f_k(x)$. We use an ensemble of trees $F$ for the prediction: $$\phi(x) = \sum_{k\in F} f_k(x)\,.$$
+\end{frame}
+
+\begin{frame}
+    \frametitle{xgboost}
+
+    We have a dataset $\{(x_i, y_i)\}$ with $x_i \in X (\mathbb{R}^n)$ and $y_i \in \mathbb{R}$, and want to find $\phi(x)$ so $\phi(x_i)\approx y_i$. Defining the regularized objective
+    $$\mathcal{L}[\phi] = \sum_i \ell(\phi(x_i), y_i) + \sum_k \Omega(f_k)\,. $$
+\begin{itemize}
+    \item $\ell(\tilde{y}_i, y_i)$ is the loss function.
+    \item $\Omega(f_k)$ penalizes the complexity of the trees.
+\end{itemize}
+The objective is optimized iteratively:
+\begin{itemize}
+    \item The algorithm starts with one tree with a single leaf.
+    \item At each step, one new tree with one more leaf is added to the ensemble (splitting).
+    \item To prevent overfitting, the weights of the newly added leaf is multiplied by $\eta < 1$ (shrinkage).
+\end{itemize}
 \end{frame}
 
 \end{document}
