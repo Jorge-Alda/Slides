@@ -261,7 +261,11 @@ arXiv:2109.07405 [hep-ph]}
 \begin{frame}
     \frametitle{xgboost}
 
-    We have a dataset $\{(x_i, y_i)\}$ with $x_i \in X (\mathbb{R}^n)$ and $y_i \in \mathbb{R}$, and want to find $\phi(x)$ so $\phi(x_i)\approx y_i$. Defining the regularized objective
+    Extreme Gradient Boosting (xgboost)\footnote[1]{arXiv:1603.02754}.
+
+    ~
+
+    We have a dataset $\{(x_i, y_i)\}$ with $x_i \in X (\sim\mathbb{R}^n)$ and $y_i \in \mathbb{R}$, and want to find $\phi(x)$ so $\phi(x_i)\approx y_i$. Defining the regularized objective
     $$\mathcal{L}[\phi] = \sum_i \ell(\phi(x_i), y_i) + \sum_k \Omega(f_k)\,. $$
 \begin{itemize}
     \item $\ell(\tilde{y}_i, y_i)$ is the loss function.
@@ -318,6 +322,42 @@ The objective is optimized iteratively:
     ~
 
     We use the trained model $\log\tilde{L}(\vec{C})$ to compute an approximation of the likelihood function.
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{SHAP values}
+
+    Measure of the importance of each parameter in the Machine Learning prediction for a single datapoint\footnote[1]{arXiv:1705.07874}. Based on game theory (Lloyd Shapley, Nobel Prize in Economics '12).
+
+
+    \begin{itemize}
+        \item \textbf{Local accuracy:} The sum of all SHAP values (plus a constant) is the ML prediction.
+        \item \textbf{Missingness:} If some parameter is missing, its SHAP value is zero.
+        \item \textbf{Consistency:} If the model is changed so one parameter has a larger impact, its SHAP value will increase.
+    \end{itemize}
+
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{SHAP values}
+    We train $2^n$ simplified models
+
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[width=\columnwidth]{figures/shapgraph.png}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Marginal contributions {\color{red} when adding $x^1$}: $\phi_{100}-\phi_{000}$, $\phi_{110}-\phi_{010}$, $\phi_{101}-\phi_{001}$, $\phi_{111} - \phi_{011}$.
+                \item SHAP value {\color{red}for $x^1$} is a weighted average of all its marginal contributions.
+                \item $\phi_{000}$ is the constant value. 
+            \end{itemize}
+        \end{column}
+    \end{columns}
+    
+    Efficient implementation (poly time) for tree-based ML models.\footnote[1]{arXiv:1802.03888}
 
 \end{frame}
 
