@@ -275,4 +275,50 @@ The objective is optimized iteratively:
 \end{itemize}
 \end{frame}
 
+\begin{frame}
+    \frametitle{Machine Learning training}
+
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            Data sample consisting of
+            \begin{itemize}
+                \item 5000 points re-used from likelihood plots.
+                \item 5000 random points.
+                \item Split in 75\% training set, 25\% validation set.
+            \end{itemize}
+            Results of the training:
+            \begin{itemize}
+                \item Pearson regression coefficient $r=0.971$.
+                \item Mean Absolute Error $0.655$.
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[width=\columnwidth]{figures/regression_xgb.pdf}
+        \end{column}
+    \end{columns}
+    
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Machine-Learning Montecarlo}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            We want to generate a sample of points distributed according to the $\chi^2$ of the fit.
+
+            We generate random points, that are accepted if
+            $$\log \tilde{L}(\vec{C}) = \log L_\mathrm{bf} + \log u\,,$$
+            with $u$ a random number from the uniform distribution in $[0,1)$.
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[width=\columnwidth]{figures/hist_xgb.pdf}
+        \end{column}
+    \end{columns}
+    
+    ~
+
+    We use the trained model $\log\tilde{L}(\vec{C})$ to compute an approximation of the likelihood function.
+
+\end{frame}
+
 \end{document}
