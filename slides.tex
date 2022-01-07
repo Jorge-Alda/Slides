@@ -50,7 +50,7 @@ arXiv:2109.07405 [hep-ph]}
                   \item $R_{K^+} = 0.846^{+0.042}_{-0.039}{}^{+0.013}_{-0.012}$,
                   \item $R_{K^{*0}} = 0.685^{+0.113}_{-0.069}\pm0.047$. ($3.1\,\sigma$ tension)
               \end{itemize}
-        \item Angular observables for $B\to K^* \ell^+\ell^-$: $P'_4$, $P'_5$...
+        \item Angular observables for $B\to K^* \ell^+\ell^-$: $P'_4$, $P'_5\ldots$
         \item Also $B_s \to \phi \mu^+ \mu^-$ decays.
     \end{itemize}
 
@@ -98,7 +98,7 @@ arXiv:2109.07405 [hep-ph]}
 \begin{frame}
 
     \frametitle{Effective Field Theories}
-    The $B$ anomalies are defined at $\mu=m_b$, we need to integrate the heavy SM particles. We obtain the WET:
+    The $B$ anomalies are defined at $\mu=m_b$, we need to integrate the heavy SM particles. We obtain the WET\@:
 
     ~
 
@@ -106,7 +106,7 @@ arXiv:2109.07405 [hep-ph]}
         \item $\left.\begin{matrix}
                       O_9^\ell = (\bar{s}_L \gamma_\alpha b_L)(\bar{e}_\ell \gamma^\alpha e_\ell) \\
                       O_{10}^\ell = (\bar{s}_L \gamma_\alpha b_L)(\bar{e}_\ell \gamma^\alpha \gamma_5 e_\ell)
-                  \end{matrix}\right\} \qquad \Longrightarrow \qquad R_{K^{(*)}}$.
+                  \end{matrix}\right\} \qquad \Longrightarrow \qquad R_{K^{(*)}}$. % chktex 21
 
               ~
 
@@ -174,7 +174,7 @@ arXiv:2109.07405 [hep-ph]}
         \item \texttt{wilson}\footnote[1]{arXiv:1804.05033}: RG evolution and mixing of the Wilson coefficients.
         \item \texttt{flavio}\footnote[2]{arXiv:1810.08132}: Calculation of observables in EFTs and database of experimental measurements.
         \item \texttt{smelli}\footnote[3]{arXiv:1810.07698}: Global likelihood function:
-              {\small$$\Delta \log L = -\frac{1}{2}\Delta\chi^2 = -\frac{1}{2}\sum_{i,j} [\mathcal{O}_i^\mathrm{exp} - \mathcal{O}_i(\vec{C})] (\mathcal{C}^\mathrm{th}+\mathcal{C}^\mathrm{exp})^{-1}_{ij} [\mathcal{O}_j^\mathrm{exp} - \mathcal{O}_j(\vec{C})]\,. $$}
+              {\small$$\Delta \log L = -\frac{1}{2}\Delta\chi^2 = -\frac{1}{2}\sum_{i,j} [\mathcal{O}_i^\mathrm{exp} - \mathcal{O}_i(\vec{C})] (\mathcal{C}^\mathrm{th}+\mathcal{C}^\mathrm{exp})^{-1}_{ij} [\mathcal{O}_j^\mathrm{exp} - \mathcal{O}_j(\vec{C})]\,. $$} % chktex 35
     \end{itemize}
 
 \end{frame}
@@ -312,7 +312,7 @@ The objective is optimized iteratively:
 
             We generate random points, that are accepted if
             $$\log \tilde{L}(\vec{C}) = \log L_\mathrm{bf} + \log u\,,$$
-            with $u$ a random number from the uniform distribution in $[0,1)$.
+            with $u$ a random number from the uniform distribution in $[0,1)$. % chktex 9
         \end{column}
         \begin{column}{0.5\textwidth}
             \includegraphics[width=\columnwidth]{figures/hist_xgb.pdf}
@@ -361,4 +361,44 @@ The objective is optimized iteratively:
 
 \end{frame}
 
-\end{document}
+\begin{frame}
+    \frametitle{SHAP values: results}
+
+    The mixing \(\beta^q\) to the second quark generation and $\alpha^\ell$ to the first lepton generation are in general the most important features.
+    \begin{center}
+        \includegraphics[width=0.8\textwidth]{figures/SHAP_summary.pdf}
+    \end{center}
+    
+    For the best fit point, the value of $C$ is also important:
+    \begin{center}
+        \begin{tabular}{|*{8}{c|}}\hline
+        Base & \multicolumn{5}{c|}{SHAP value for} & Final & Actual \\ \cline{2-6}
+        value & $C$ & $\alpha^\ell$ & $\beta^\ell$ & $\alpha^q$ & $\beta^q$ & prediction & $\log L$ \\\hline
+        39.43 & 3.293 & 4.056 & 1.993 & 2.671 & 4.086 & 55.537 & 57.06 \\\hline
+        \end{tabular}
+        \end{center}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{SHAP values: results}
+    SHAP importances reproduce the dependence of the $-\log L$:
+    \begin{center}
+        \includegraphics[width=0.19\textwidth]{figures/evoplot_C.pdf}
+        \includegraphics[width=0.19\textwidth]{figures/evoplot_alphal.pdf}
+        \includegraphics[width=0.19\textwidth]{figures/evoplot_betal.pdf}
+        \includegraphics[width=0.19\textwidth]{figures/evoplot_alphaq.pdf}
+        \includegraphics[width=0.19\textwidth]{figures/evoplot_betaq.pdf}
+    \end{center}
+    \begin{center}
+        \includegraphics[width=0.19\textwidth]{figures/SHAP_C.pdf}
+        \includegraphics[width=0.19\textwidth]{figures/SHAP_al.pdf}
+        \includegraphics[width=0.19\textwidth]{figures/SHAP_bl.pdf}
+        \includegraphics[width=0.19\textwidth]{figures/SHAP_aq.pdf}
+        \includegraphics[width=0.19\textwidth]{figures/SHAP_bq.pdf}
+    \end{center}
+    
+
+\end{frame}
+
+\end{document} %chktex 17
