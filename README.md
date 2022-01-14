@@ -1,10 +1,10 @@
-# IFT Seminar, 27 January 2022
+# Unizar Seminar, 20 January 2022
 
 **Title:** Using Machine Learning techniques in phenomenological studies in flavour physics
 
 **Speaker:** Jorge Alda
 
-**Venue:** IFT, Autonomous University of Madrid, Spain
+**Venue:** Seminario de Física Teórica, Universidad de Zaragoza, Spain
 
 **Abstract:** In the recent years, a series of measurements in the observables RK(\*) and RD(\*)
 concerning the semileptonic decays of the B mesons have shown hints of violations of Lepton Flavour
