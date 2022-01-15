@@ -6,8 +6,8 @@ Collections of slides for all my public presentations starting on 2022
 
 ### 2022
 
-* Unizar Seminar, 2022-01-20: [Branch](https://github.com/Jorge-Alda/Slides/tree/Unizar202201), [Slides](https://github.com/Jorge-Alda/Slides/releases).
-* IFT Seminar, 2022-01-27: [Branch](https://github.com/Jorge-Alda/Slides/tree/IFT2022), [Slides](https://github.com/Jorge-Alda/Slides/releases/tag/001.211218.01).
+* Unizar Seminar, 2022-01-20: [Branch](https://github.com/Jorge-Alda/Slides/tree/Unizar202201), [Slides](https://github.com/Jorge-Alda/Slides/releases?q=tag:002).
+* IFT Seminar, 2022-01-27: [Branch](https://github.com/Jorge-Alda/Slides/tree/IFT2022), [Slides](https://github.com/Jorge-Alda/Slides/releases?q=tag:001).
 * Thesis Defense, 2022: [Branch](https://github.com/Jorge-Alda/Slides/tree/thesisdef), [Slides](https://github.com/Jorge-Alda/Slides/releases).
 
 ## How does this repo work?
