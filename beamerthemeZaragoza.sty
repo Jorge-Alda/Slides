@@ -27,6 +27,12 @@
 \setbeamertemplate{itemize items}[square]
 \setbeamertemplate{enumerate items}[square]
 
+\let\svthefootnote\thefootnote
+\textheight 1in
+\newcommand\blankfootnote[1]{%
+  \let\thefootnote\relax\footnotetext{#1}%
+  \let\thefootnote\svthefootnote%
+}
 
 \mode
 <all>
