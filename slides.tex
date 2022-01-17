@@ -411,18 +411,14 @@ The objective is optimized iteratively:
     \frametitle{SHAP values: results}
     SHAP importances reproduce the dependence of the $-\log L$:
     \begin{center}
-        \includegraphics[width=0.19\textwidth]{figures/evoplot_C.pdf}
-        \includegraphics[width=0.19\textwidth]{figures/evoplot_alphal.pdf}
-        \includegraphics[width=0.19\textwidth]{figures/evoplot_betal.pdf}
-        \includegraphics[width=0.19\textwidth]{figures/evoplot_alphaq.pdf}
-        \includegraphics[width=0.19\textwidth]{figures/evoplot_betaq.pdf}
+        \includegraphics[width=0.32\textwidth]{figures/evoplot_C.pdf}
+        \includegraphics[width=0.32\textwidth]{figures/evoplot_alphal.pdf}
+        \includegraphics[width=0.32\textwidth]{figures/evoplot_betaq.pdf}
     \end{center}
     \begin{center}
-        \includegraphics[width=0.19\textwidth]{figures/SHAP_C.pdf}
-        \includegraphics[width=0.19\textwidth]{figures/SHAP_al.pdf}
-        \includegraphics[width=0.19\textwidth]{figures/SHAP_bl.pdf}
-        \includegraphics[width=0.19\textwidth]{figures/SHAP_aq.pdf}
-        \includegraphics[width=0.19\textwidth]{figures/SHAP_bq.pdf}
+        \includegraphics[width=0.32\textwidth]{figures/SHAP_C.pdf}
+        \includegraphics[width=0.32\textwidth]{figures/SHAP_al.pdf}
+        \includegraphics[width=0.32\textwidth]{figures/SHAP_bq.pdf}
     \end{center}
     
     \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
@@ -432,11 +428,12 @@ The objective is optimized iteratively:
 \begin{frame}
     \frametitle{Correlations between WCs}
 
-    \begin{columns}
-        \begin{column}{0.5\textwidth}
-            \includegraphics[width=\columnwidth]{figures/coeffcorr.pdf}
+    \begin{columns}[onlytextwidth]
+        \begin{column}{0.6\textwidth}
+            \includegraphics[width=\columnwidth,clip]{figures/coeffcorr.pdf}
+            
         \end{column}
-        \begin{column}{0.5\textwidth}
+        \begin{column}{0.4\textwidth}
             \begin{itemize}
                 \item Correlation in $C_{10}^e$, $C_{VL}^e$ and $C_\nu^e$, all proportional to $C \lambda^q_{23} \lambda^\ell_{11}$.
                 \item Correlation in $C_{10}^\mu$, $C_{VL}^\mu$ and $C_\nu^\mu$, all proportional to $C \lambda^q_{23} \lambda^\ell_{22}$.
@@ -454,11 +451,11 @@ The objective is optimized iteratively:
 \begin{frame}
     \frametitle{Correlations between observables}
 
-    \begin{columns}
-        \begin{column}{0.5\textwidth}
+    \begin{columns}[onlytextwidth]
+        \begin{column}{0.6\textwidth}
             \includegraphics[width=\columnwidth]{figures/obscorr.pdf}
         \end{column}
-        \begin{column}{0.5\textwidth}
+        \begin{column}{0.4\textwidth}
             \begin{itemize}
                 \item Moderate correlation between $R_K$ and $\mathrm{BR}(B_s \to \mu^+ \mu^-)$ because $C_9^\mu \neq C_{10}^\mu$.
                 \item Also moderate correlation between $R_K$ and $R_D$.
@@ -530,6 +527,20 @@ The objective is optimized iteratively:
         \item Interesting correlation between $R_{D^{(*)}}$ and $\mathrm{BR}(B\to K^{(*)}\nu\bar{\nu})$.
         \item Explanation in terms of vector leptoquark $U_1$ coupling to second and third generations of quarks and third ($R_{D^{(*)}}$) and first ($R_{K^{(*)}}$) generation of leptons.
     \end{itemize}
+
+\end{frame}
+\appendix
+
+\begin{frame}
+    \frametitle{Backup slides}
+
+    \begin{center}
+        \includegraphics[width=0.45\textwidth]{figures/evoplot_betal.pdf}
+        \includegraphics[width=0.45\textwidth]{figures/evoplot_alphaq.pdf}   \end{center}
+    \begin{center}
+        \includegraphics[width=0.45\textwidth]{figures/SHAP_bl.pdf}
+        \includegraphics[width=0.45\textwidth]{figures/SHAP_aq.pdf}
+    \end{center}
 
 \end{frame}
 
