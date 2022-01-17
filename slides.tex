@@ -176,7 +176,8 @@ arXiv:2109.07405 [hep-ph]}
         \item \texttt{wilson}\footnote[1]{J.~Aebischer, J.~Kumar and D.~M.~Straub. arXiv:1804.05033}: RG evolution and mixing of the Wilson coefficients.
         \item \texttt{flavio}\footnote[2]{D.~M.~Straub. arXiv:1810.08132}: Calculation of observables in EFTs and database of experimental measurements.
         \item \texttt{smelli}\footnote[3]{J.~Aebischer, J.~Kumar, P.~Stangl and D.~M.~Straub. arXiv:1810.07698}: Global likelihood function:
-              {\small$$\Delta \log L = -\frac{1}{2}\Delta\chi^2 = -\frac{1}{2}\sum_{i,j} [\mathcal{O}_i^\mathrm{exp} - \mathcal{O}_i(\vec{C})] (\mathcal{C}^\mathrm{th}+\mathcal{C}^\mathrm{exp})^{-1}_{ij} [\mathcal{O}_j^\mathrm{exp} - \mathcal{O}_j(\vec{C})]\,. $$} % chktex 35
+              {\small$$\Delta \log L = -\frac{1}{2}\Delta\chi^2 = -\frac{1}{2}\sum_{i,j} [\mathcal{O}_i^\mathrm{exp} - \mathcal{O}^\mathrm{th}_i(\vec{C})] (\mathcal{C}^\mathrm{exp}+\mathcal{C}^\mathrm{th}(C))^{-1}_{ij} [\mathcal{O}_j^\mathrm{exp} - \mathcal{O}^\mathrm{th}_j(\vec{C})]\,. $$} % chktex 35
+            $\mathcal{O}_i^\mathrm{exp}$ is the experimental measurements for the $i$-th observable, and $\mathcal{O}_i^\mathrm{th}$ its SMEMT prediction. $\mathcal{C}_{ij}^\mathrm{exp}$ and $\mathcal{C}^\mathrm{th}(C)$ are the covariance matrices (usually block-diagonal).% chktex 35
     \end{itemize}
 
 \end{frame}
@@ -249,7 +250,7 @@ arXiv:2109.07405 [hep-ph]}
         \item {\bf Problem:} At each point $(C, \alpha^\ell, \beta^\ell, \alpha^q, \beta^q)$ requires the calculation of 471 observables, many of them need numerical integration.
         \item In a previous work\footnote[1]{\textbf{J.A.}, J.~Guasch and S.~Pe\~naranda. arXiv:2012.14799}, we used the Hessian approximation,
         $$\Delta\log L (\vec{C}) \approx \Delta\log L_\mathrm{bf} + \vec{C}^T \mathbb{H} \vec{C}\,.$$
-        \item Doesn't work in this case because of non-linear relation between fit parameters and Wilson coefficients.
+        \item Doesn't work in this case because of non-linear relation between fit parameters and Wilson coefficients (equi-probability surfaces are not ellipsoids).
         \item {\bf Idea:} Teach a machine to approximate $\log L(\vec{C})$.
     \end{itemize}
 
@@ -501,6 +502,7 @@ The objective is optimized iteratively:
 \begin{frame}
     \frametitle{Connection to leptoquarks}
 
+    Couplings to vector leptoquark $U_1$ in Scenario II (mixing to first and second generation):
     $$x_L = \begin{pmatrix}
         -2.27\times10^{-3} & -3.76\times 10^{-10}  & -0.0325 \\
         0.0319 & 5.29\times 10^{-9} &  0.458\\
