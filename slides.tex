@@ -45,7 +45,7 @@ arXiv:2109.07405 [hep-ph]}
         \item Universality ratios $R_{K^{(*)}}$
               $$R_{K^{(*)}} = \frac{\mathrm{BR}(B\to K^{(*)}\mu^+ \mu^-)}{\mathrm{BR}(B\to K^{(*)}e^+ e^-)}\,, $$
               In the SM, theoretically clean, and $R_{K^{(*)}}=1$.\\
-              LHCb measurements\footnote{arXiv:2103.11769, arXiv:1705.05802}:
+              LHCb measurements\footnote{R. Aaij \textit{et al.} (LHCb) arXiv:2103.11769, arXiv:1705.05802}:
               \begin{itemize}
                   \item $R_{K^+} = 0.846^{+0.042}_{-0.039}{}^{+0.013}_{-0.012}$,
                   \item $R_{K^{*0}} = 0.685^{+0.113}_{-0.069}\pm0.047$. ($3.1\,\sigma$ tension)
@@ -65,6 +65,8 @@ arXiv:2109.07405 [hep-ph]}
             \begin{itemize}
                 \item Universality ratios $R_{D^{(*)}}$
                       $$R_{D^{(*)}} = \frac{\mathrm{BR}(B\to D^{(*)}\tau \nu)}{\mathrm{BR}(B\to D^{(*)}\ell \nu)}\,, $$
+                      $$R_D = 0.340 \pm 0.027 \pm 0.013\,,$$
+                      $$R_{D^*} = 0.295 \pm 0.011 \pm 0.008\,.$$
                       Combined tension of $3.08\,\sigma$.\footnotemark[1]
                 \item Longitudinal polarization of $D^*$.
                 \item Also $B_c \to J/\psi \ell\nu$ decays.
@@ -75,7 +77,7 @@ arXiv:2109.07405 [hep-ph]}
             \includegraphics[width=\columnwidth]{figures/rdrds_spring2019.pdf}
         \end{column}
     \end{columns}
-    \footnotetext[1]{arXiv:1909.12524}
+    \footnotetext[1]{Y. S. Ahmis \textit{et al.} (HFLAV) arXiv:1909.12524}
 \end{frame}
 
 \begin{frame}
@@ -85,7 +87,7 @@ arXiv:2109.07405 [hep-ph]}
 
     ~
 
-    At energies $\Lambda$ above the electroweak scale, the dim-6 SMEFT (2499 operators)\footnote[1]{arXiv:1008.4884}
+    At energies $\Lambda$ above the electroweak scale, the dim-6 SMEFT (2499 operators)\footnote[1]{B.~Grzadkowski, M.~Iskrzynski, M.~Misiak and J.~Rosiek. arXiv:1008.4884}
 
     $$\mathcal{L} = \mathcal{L}_\mathrm{SM} + \frac{1}{\Lambda^2}\sum C_i O_i\,.$$
 
@@ -132,13 +134,13 @@ arXiv:2109.07405 [hep-ph]}
     \end{itemize}
 
 \textcolor{blue}{Loop-level corrections} break the relation $C_9^\ell = -C_{10}^\ell$.
-
+\blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
 \end{frame}
 
 \begin{frame}
     \frametitle{Effective Field Theories}
 
-    Our setting: in the interaction basis, NP only affects the third generation,\footnote[1]{arXiv:1705.00929}
+    Our setting: in the interaction basis, NP only affects the third generation,\footnote[1]{F.~Feruglio, P.~Paradisi and A.~Pattori. arXiv:1705.00929}
     $$C_1 = C_{\ell q(1)}^{3333}\,,\qquad\qquad C_3 = C_{\ell q(3)}^{3333}\,.$$
     We have to rotate to the mass basis, using rotation matrices $\lambda^q$ and $\lambda^\ell$,
     $$C_{\ell q(1)}^{ijkl} = C_1 \lambda_\ell^{ij}\lambda_q^{kl}\,\qquad\qquad C_{\ell q(3)}^{ijkl} = C_3 \lambda_\ell^{ij}\lambda_q^{kl}\,. $$
@@ -171,9 +173,9 @@ arXiv:2109.07405 [hep-ph]}
 
     Tools used for the global fits (in \texttt{python3}):
     \begin{itemize}
-        \item \texttt{wilson}\footnote[1]{arXiv:1804.05033}: RG evolution and mixing of the Wilson coefficients.
-        \item \texttt{flavio}\footnote[2]{arXiv:1810.08132}: Calculation of observables in EFTs and database of experimental measurements.
-        \item \texttt{smelli}\footnote[3]{arXiv:1810.07698}: Global likelihood function:
+        \item \texttt{wilson}\footnote[1]{J.~Aebischer, J.~Kumar and D.~M.~Straub. arXiv:1804.05033}: RG evolution and mixing of the Wilson coefficients.
+        \item \texttt{flavio}\footnote[2]{D.~M.~Straub. arXiv:1810.08132}: Calculation of observables in EFTs and database of experimental measurements.
+        \item \texttt{smelli}\footnote[3]{J.~Aebischer, J.~Kumar, P.~Stangl and D.~M.~Straub. arXiv:1810.07698}: Global likelihood function:
               {\small$$\Delta \log L = -\frac{1}{2}\Delta\chi^2 = -\frac{1}{2}\sum_{i,j} [\mathcal{O}_i^\mathrm{exp} - \mathcal{O}_i(\vec{C})] (\mathcal{C}^\mathrm{th}+\mathcal{C}^\mathrm{exp})^{-1}_{ij} [\mathcal{O}_j^\mathrm{exp} - \mathcal{O}_j(\vec{C})]\,. $$} % chktex 35
     \end{itemize}
 
@@ -189,8 +191,8 @@ arXiv:2109.07405 [hep-ph]}
 
     We consider two different scenarios:
     \begin{itemize}
-        \item \textbf{Scenario I:} Mixing to first generation $\alpha$ are negligible\footnote[1]{arXiv:1705.00929}.
-        \item \textbf{Scenario II:} Mixing to first and second generations.
+        \item \textbf{Scenario I:} Mixing to first generation $\alpha$ are negligible\footnote[1]{F.~Feruglio, P.~Paradisi and A.~Pattori. arXiv:1705.00929}.
+        \item \textbf{Scenario II:} Mixing to first and second generations\footnote[2]{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}.
     \end{itemize}
     \begin{center}\small
         \begin{tabular}{|c|c|c|}\hline
@@ -218,6 +220,7 @@ arXiv:2109.07405 [hep-ph]}
         \item $\alpha^\ell$ is constrained by $R_{K^{(*)}}$.
         \item $\beta^\ell$ is constrianed by LFV observables.
     \end{itemize}
+    \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
 \end{frame}
 
 \begin{frame}
@@ -235,6 +238,7 @@ arXiv:2109.07405 [hep-ph]}
         C_9^e   & = -C_{10}^e + C_9^\mathrm{loop} = -0.32\,, \qquad\qquad                 &  & C_{10}^e =-0.36\,,             \\
         C_9^\mu & = {\color{gray}-C_{10}^\mu} + C_9^\mathrm{loop} = -0.67\,, \qquad\qquad &  & {\color{gray}C_{10}^\mu =0}\,.
     \end{align*}
+    \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
 \end{frame}
 
 \begin{frame}
@@ -243,7 +247,7 @@ arXiv:2109.07405 [hep-ph]}
     \begin{itemize}
         \item We would like to explore the properties of the likelihood function around the best fit point.
         \item {\bf Problem:} At each point $(C, \alpha^\ell, \beta^\ell, \alpha^q, \beta^q)$ requires the calculation of 471 observables, many of them need numerical integration.
-        \item In a previous work\footnote[1]{arXiv:2012.14799}, we used the Hessian approximation,
+        \item In a previous work\footnote[1]{\textbf{J.A.}, J.~Guasch and S.~Pe\~naranda. arXiv:2012.14799}, we used the Hessian approximation,
         $$\Delta\log L (\vec{C}) \approx \Delta\log L_\mathrm{bf} + \vec{C}^T \mathbb{H} \vec{C}\,.$$
         \item Doesn't work in this case because of non-linear relation between fit parameters and Wilson coefficients.
         \item {\bf Idea:} Teach a machine to approximate $\log L(\vec{C})$.
@@ -281,7 +285,7 @@ arXiv:2109.07405 [hep-ph]}
 \begin{frame}
     \frametitle{xgboost}
 
-    Extreme Gradient Boosting (xgboost)\footnote[1]{arXiv:1603.02754}.
+    Extreme Gradient Boosting (xgboost)\footnote[1]{T.~Chen and C.~Guestrin. arXiv:1603.02754}.
 
     ~
 
@@ -320,7 +324,7 @@ The objective is optimized iteratively:
             \includegraphics[width=\columnwidth]{figures/regression_xgb.pdf}
         \end{column}
     \end{columns}
-    
+    \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
 
 \end{frame}
 
@@ -342,13 +346,14 @@ The objective is optimized iteratively:
     ~
 
     We use the trained model $\log\tilde{L}(\vec{C})$ to compute an approximation of the likelihood function.
+    \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
 
 \end{frame}
 
 \begin{frame}
     \frametitle{SHAP values}
 
-    Measure of the importance of each parameter in the Machine Learning prediction for a single datapoint\footnote[1]{arXiv:1705.07874}. Based on game theory (Lloyd Shapley, Nobel Prize in Economics '12).
+    Measure of the importance of each parameter in the Machine Learning prediction for a single datapoint\footnote[1]{S. Lundberg, S. Lee. arXiv:1705.07874}. Based on game theory (Lloyd Shapley, Nobel Prize in Economics '12).
 
 
     \begin{itemize}
@@ -377,7 +382,7 @@ The objective is optimized iteratively:
         \end{column}
     \end{columns}
     
-    Efficient implementation (poly time) for tree-based Machine Learning models.\footnote[1]{arXiv:1802.03888}
+    Efficient implementation (poly time) for tree-based Machine Learning models.\footnote[1]{S. Lundberg, G. Erion, S. Lee. arXiv:1802.03888}
 
 \end{frame}
 
@@ -397,6 +402,7 @@ The objective is optimized iteratively:
         39.43 & 3.293 & 4.056 & 1.993 & 2.671 & 4.086 & 55.537 & 57.06 \\\hline
         \end{tabular}
         \end{center}
+        \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
 
 \end{frame}
 
@@ -418,6 +424,7 @@ The objective is optimized iteratively:
         \includegraphics[width=0.19\textwidth]{figures/SHAP_bq.pdf}
     \end{center}
     
+    \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
 
 \end{frame}
 
@@ -439,6 +446,7 @@ The objective is optimized iteratively:
             
         \end{column}
     \end{columns}
+    \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
 
 \end{frame}
 
@@ -458,6 +466,7 @@ The objective is optimized iteratively:
             \end{itemize}
         \end{column}
     \end{columns}
+    \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
 
 \end{frame}
 
@@ -470,6 +479,7 @@ The objective is optimized iteratively:
 
     An excess in $R_D$ implies an excess in $\mathrm{BR}(B\to K^{(*)}\nu\bar{\nu})$. \\(Note that the {\color{gray}2021 World Average} is not included in our fit).
 
+    \blankfootnote{J. Grygier \textit{et al.} (Belle) arXiv:1702.03224; F. Dattola (Belle-II) arXiv:2105.05754; Y. S. Ahmis \textit{et al.} (HFLAV) arXiv:1909.12524; \textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
 \end{frame}
 
 
@@ -498,7 +508,7 @@ The objective is optimized iteratively:
         \end{pmatrix}\,.
     $$
     \begin{itemize}
-        \item Couplings $x_L^{23}$ and $x_L^{33}$, previously proposed to describe the $R_{D^{(*)}}$ anomaly\footnote[1]{2101.12069}. Compatible with experimental limits.
+        \item Couplings $x_L^{23}$ and $x_L^{33}$, previously proposed to describe the $R_{D^{(*)}}$ anomaly\footnote[1]{A.~Bhaskar, D.~Das, T.~Mandal, S.~Mitra and C.~Neeraj. 2101.12069}. Compatible with experimental limits.
         \item Additionally, couplings $x_L^{21}$ and $x_L^{31}$ to describe the $R_{K^{(*)}}$ anomaly. 
     \end{itemize}
 
