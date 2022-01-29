@@ -4,7 +4,11 @@
 
 **Speaker:** Jorge Alda
 
-**Venue:** IFT, Autonomous University of Madrid, Spain
+**Venue:** IFT, Autonomous University of Madrid, Spain [online]
+
+**Webpage:** [Link](https://www.ift.uam-csic.es/es/events/using-machine-learning-techniques-phenomenological-studies-flavour-physics)
+
+**Recording on YouTube:** [Link](https://www.youtube.com/watch?v=YTJ1-HS5CXw)
 
 **Abstract:** In the recent years, a series of measurements in the observables RK(\*) and RD(\*)
 concerning the semileptonic decays of the B mesons have shown hints of violations of Lepton Flavour
