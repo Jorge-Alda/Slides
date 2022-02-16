@@ -27,128 +27,21 @@ arXiv:2109.07405 [hep-ph]}
 \end{frame}
 
 \begin{frame}
-    \frametitle{$B$ anomalies}
+\frametitle{Long Story Short}
+\begin{itemize}
+\item Anomalous experimental results in Lepton Flavour Universality ratios $R_{K^{(*)}}$ and $R_{D^{(*)}}$.
+$$R_{K^{(*)}} = \frac{\mathrm{BR}(B\to K^{(*)}\mu^+ \mu^-)}{\mathrm{BR}(B\to K^{(*)}e^+ e^-)},\qquad R_{D^{(*)}} = \frac{\mathrm{BR}(B\to D^{(*)}\tau \nu)}{\mathrm{BR}(B\to D^{(*)}\ell \nu)}.$$
+\item Description in terms of dim-6 effective operators (SMEFT)
+$$\mathcal{L} = \mathcal{L}_\mathrm{SM} + \frac{C_{\ell q (1)}}{\Lambda^2}  (\bar{\ell}_i \gamma_\mu \ell_j)(\bar{q}_k \gamma^\mu  q_l)+\frac{C_{\ell q (3)}}{\Lambda^2}(\bar{\ell}_i \gamma_\mu \tau^I \ell_j)(\bar{q}_k \gamma^\mu \tau^I q_l).$$
 
-    Experimental results for the decays of $B$ mesons that don't conform with the SM predictions.
+\item Flavour structure given by\footnote[1]{F.~Feruglio, P.~Paradisi and A.~Pattori. arXiv:1705.00929}
 
-    ~
-
-    In particular, these anomalies show hints of violation of the Leptonic Flavour Universality (LFU).
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{$B$ anomalies}
-
-    Flavour-changing neutral currents $b \to s \ell^+ \ell^-$, with $\ell = e, \mu$.
-    \begin{itemize}
-        \item Universality ratios $R_{K^{(*)}}$
-              $$R_{K^{(*)}} = \frac{\mathrm{BR}(B\to K^{(*)}\mu^+ \mu^-)}{\mathrm{BR}(B\to K^{(*)}e^+ e^-)}\,, $$
-              In the SM, theoretically clean, and $R_{K^{(*)}}=1$.\\
-              LHCb measurements\footnote{R. Aaij \textit{et al.} (LHCb) arXiv:2103.11769, arXiv:1705.05802}:
-              \begin{itemize}
-                  \item $R_{K^+} = 0.846^{+0.042}_{-0.039}{}^{+0.013}_{-0.012}$,
-                  \item $R_{K^{*0}} = 0.685^{+0.113}_{-0.069}\pm0.047$. ($3.1\,\sigma$ tension)
-              \end{itemize}
-        \item Angular observables for $B\to K^* \ell^+\ell^-$: $P'_4$, $P'_5\ldots$
-        \item Also $B_s \to \phi \mu^+ \mu^-$ decays.
-    \end{itemize}
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{$B$ anomalies}
-    Flavour-changing charged currents $b\to c \ell \nu$, with $\ell = e/\mu, \tau$.
-    \begin{columns}
-        \begin{column}{0.55\textwidth}
-
-            \begin{itemize}
-                \item Universality ratios $R_{D^{(*)}}$
-                      $$R_{D^{(*)}} = \frac{\mathrm{BR}(B\to D^{(*)}\tau \nu)}{\mathrm{BR}(B\to D^{(*)}\ell \nu)}\,, $$
-                      $$R_D = 0.340 \pm 0.027 \pm 0.013\,,$$
-                      $$R_{D^*} = 0.295 \pm 0.011 \pm 0.008\,.$$
-                      Combined tension of $3.08\,\sigma$.\footnotemark[1]
-                \item Longitudinal polarization of $D^*$.
-                \item Also $B_c \to J/\psi \ell\nu$ decays.
-            \end{itemize}
-
-        \end{column}
-        \begin{column}{0.5\textwidth}
-            \includegraphics[width=\columnwidth]{figures/rdrds_spring2019.pdf}
-        \end{column}
-    \end{columns}
-    \footnotetext[1]{Y. S. Ahmis \textit{et al.} (HFLAV) arXiv:1909.12524}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Effective Field Theories}
-
-    Effective Field Theories (EFTs) describe deviations from the SM in a model-independent way, using effective operators of dim $>4$ and their corresponding Wilson coefficients.
-
-    ~
-
-    At energies $\Lambda$ above the electroweak scale, the dim-6 SMEFT (2499 operators)\footnote[1]{B.~Grzadkowski, M.~Iskrzynski, M.~Misiak and J.~Rosiek. arXiv:1008.4884}
-
-    $$\mathcal{L} = \mathcal{L}_\mathrm{SM} + \frac{1}{\Lambda^2}\sum C_i O_i\,.$$
-
-    We will focus on the following operators at $\Lambda = 1\,\mathrm{TeV}$:
-
-    $$O_{\ell q(1)}^{ijkl} = (\bar{\ell}_i \gamma_\mu \ell_j)(\bar{q}_k \gamma^\mu  q_l),\qquad\qquad O_{\ell q(3)}^{ijkl}= (\bar{\ell}_i \gamma_\mu \tau^I \ell_j)(\bar{q}_k \gamma^\mu \tau^I q_l)\,.$$
-
-\end{frame}
-
-\begin{frame}
-
-    \frametitle{Effective Field Theories}
-    The $B$ anomalies are defined at $\mu=m_b$, we need to integrate the heavy SM particles. We obtain the WET\@:
-
-    ~
-
-    \begin{itemize}
-        \item $\left.\begin{matrix}
-                      O_9^\ell = (\bar{s}_L \gamma_\alpha b_L)(\bar{e}_\ell \gamma^\alpha e_\ell) \\
-                      O_{10}^\ell = (\bar{s}_L \gamma_\alpha b_L)(\bar{e}_\ell \gamma^\alpha \gamma_5 e_\ell)
-                  \end{matrix}\right\} \qquad \Longrightarrow \qquad R_{K^{(*)}}$. % chktex 21
-
-              ~
-
-        \item $O_{VL}^\ell = (\bar{c}_L \gamma_\alpha b_L)(\bar{e}_{\ell\,L} \gamma^\alpha \nu_\ell) \qquad\Longrightarrow\qquad R_{D^{(*)}}$.
-
-              ~
-
-        \item $O_\nu^\ell = (\bar{s}_L \gamma_\alpha b_L)(\bar{\nu}_\ell (1-\gamma_5) \nu_\ell) \qquad\Longrightarrow \qquad \mathrm{BR}(B\to K^{(*)}\nu\overline{\nu})$.
-    \end{itemize}
-
-
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{Effective Field Theories}
-    Translating between the two EFTs: 1-loop RG running $\Lambda \to \mu_\mathrm{EW}$ + matching:
-    \begin{itemize}
-        \item {\small $C_9^\ell \approx \frac{\sqrt{2}}{V_{tb}V_{ts}^* G_F \Lambda^2}\left[ \frac{2\pi^2}{e^2}(C_{\ell q(1)}^{\ell\ell23}+C_{\ell q(3)}^{\ell\ell23}) + \textcolor{blue}{\frac{\log(m_b/\Lambda)}{3}(C_{\ell q(1)}^{3323}+C_{\ell q(3)}^{3323})}\right]\, $.}
-        \item {\small $C_{10}^\ell \approx \frac{-\sqrt{2}}{V_{tb}V_{ts}^* G_F \Lambda^2} \frac{2\pi^2}{e^2}(C_{\ell q(1)}^{\ell\ell23}+C_{\ell q(3)}^{\ell\ell23}) \, $.}
-\item {\small $C_{VL}^\ell \approx \frac{-1}{\sqrt{2}G_F\Lambda^2}\left(C_{\ell q(3)}^{\ell\ell33}+ \frac{V_{cs}}{V_{cb}}C_{\ell q(3)}^{\ell\ell 23}\right)$\,.}
-        \item {\small $C_\nu^\ell \approx \frac{\sqrt{2}}{e^2 V_{tb}V_{ts}^* G_F \Lambda^2}\left[2\pi^2(C_{\ell q(1)}^{\ell\ell 23}-C_{\ell q(3)}^{\ell\ell 23})+\textcolor{blue}{\frac{2{g'}^2}{3}\log(m_b/\Lambda)C_{\ell q(3)}^{\ell\ell 23}}\right]\,$.}
-    \end{itemize}
-
-\textcolor{blue}{Loop-level corrections} break the relation $C_9^\ell = -C_{10}^\ell$.
-\blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Effective Field Theories}
-
-    Our setting: in the interaction basis, NP only affects the third generation,\footnote[1]{F.~Feruglio, P.~Paradisi and A.~Pattori. arXiv:1705.00929}
-    $$C_1 = C_{\ell q(1)}^{3333}\,,\qquad\qquad C_3 = C_{\ell q(3)}^{3333}\,.$$
-    We have to rotate to the mass basis, using rotation matrices $\lambda^q$ and $\lambda^\ell$,
-    $$C_{\ell q(1)}^{ijkl} = C_1 \lambda_\ell^{ij}\lambda_q^{kl}\,\qquad\qquad C_{\ell q(3)}^{ijkl} = C_3 \lambda_\ell^{ij}\lambda_q^{kl}\,. $$
-    The rotation matrices must be hermitian, idempotent and with $\mathrm{tr}\lambda =1$. Parameterized as
-    $$ \lambda = \frac{1}{1+|\alpha|^2+|\beta|^2}\begin{pmatrix}
-            |\alpha|^2 & \alpha \beta^* & \alpha \\ \alpha^* \beta & |\beta|^2 & \beta \\ \alpha^* & \beta^* & 1
-        \end{pmatrix}\,. $$
-    We will fix $C_1 = C_3$ to avoid large deviations in the $B\to K^{(*)}\nu\overline{\nu}$ decays.
+$$C_{\ell q(1)}^{ijkl} = C_1 \lambda_\ell^{ij}\lambda_q^{kl}\,\qquad\qquad C_{\ell q(3)}^{ijkl} = C_3 \lambda_\ell^{ij}\lambda_q^{kl}\,. $$
+The mixing matrices must be hermitian, idempotent and with $\mathrm{tr}\lambda =1$. Parameterized as
+$$ \lambda = \frac{1}{1+|\alpha|^2+|\beta|^2}\begin{pmatrix}
+|\alpha|^2 & \alpha \beta^* & \alpha \\ \alpha^* \beta & |\beta|^2 & \beta \\ \alpha^* & \beta^* & 1
+\end{pmatrix}. $$
+\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -159,26 +52,15 @@ arXiv:2109.07405 [hep-ph]}
               \begin{itemize}
                   \item For example, $O_{\ell q(1)}$ mixes with $O_{\varphi \ell(1)} = (\varphi^\dagger i \overleftrightarrow D_{\mu} \varphi)(\bar{\ell} \gamma^\mu \ell )$ that modifies the $Z\ell^+\ell^-$ couplings.
               \end{itemize}
+\item We will fix $C_1 = C_3$ to avoid large deviations in the $B\to K^{(*)}\nu\overline{\nu}$ decays.
     \end{itemize}
 
     ~
 
     We need to consider the effects of the New Physics in a wide range of experimentally-measured observables: Global Fits.
 
+We work in \texttt{Python3}, using the packages \texttt{wilson}\footnote[1]{J.~Aebischer, J.~Kumar and D.~M.~Straub. arXiv:1804.05033}, \texttt{flavio}\footnote[2]{D.~M.~Straub. arXiv:1810.08132} and \texttt{smelli}\footnote[3]{J.~Aebischer, J.~Kumar, P.~Stangl and D.~M.~Straub. arXiv:1810.07698}.
 
-\end{frame}
-
-\begin{frame}
-    \frametitle{Global fits}
-
-    Tools used for the global fits (in \texttt{python3}):
-    \begin{itemize}
-        \item \texttt{wilson}\footnote[1]{J.~Aebischer, J.~Kumar and D.~M.~Straub. arXiv:1804.05033}: RG evolution and mixing of the Wilson coefficients.
-        \item \texttt{flavio}\footnote[2]{D.~M.~Straub. arXiv:1810.08132}: Calculation of observables in EFTs and database of experimental measurements.
-        \item \texttt{smelli}\footnote[3]{J.~Aebischer, J.~Kumar, P.~Stangl and D.~M.~Straub. arXiv:1810.07698}: Global likelihood function:
-              {\small$$\Delta \log L = -\frac{1}{2}\Delta\chi^2 = -\frac{1}{2}\sum_{i,j} [\mathcal{O}_i^\mathrm{exp} - \mathcal{O}^\mathrm{th}_i(\vec{C})] (\mathcal{C}^\mathrm{exp}+\mathcal{C}^\mathrm{th}(C))^{-1}_{ij} [\mathcal{O}_j^\mathrm{exp} - \mathcal{O}^\mathrm{th}_j(\vec{C})]\,. $$} % chktex 35
-            $\mathcal{O}_i^\mathrm{exp}$ is the experimental measurements for the $i$-th observable, and $\mathcal{O}_i^\mathrm{th}$ its SMEMT prediction. $\mathcal{C}_{ij}^\mathrm{exp}$ and $\mathcal{C}^\mathrm{th}(C)$ are the covariance matrices (usually block-diagonal).% chktex 35
-    \end{itemize}
 
 \end{frame}
 
@@ -219,7 +101,7 @@ arXiv:2109.07405 [hep-ph]}
     \end{center}
     \begin{itemize}
         \item $\alpha^\ell$ is constrained by $R_{K^{(*)}}$.
-        \item $\beta^\ell$ is constrianed by LFV observables.
+\item $\beta^\ell$ is constrained by LFV observables.
     \end{itemize}
     \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
 \end{frame}
@@ -426,29 +308,6 @@ The objective is optimized iteratively:
 \end{frame}
 
 \begin{frame}
-    \frametitle{Correlations between WCs}
-
-    \begin{columns}[onlytextwidth]
-        \begin{column}{0.6\textwidth}
-            \includegraphics[width=\columnwidth,clip]{figures/coeffcorr.pdf}
-            
-        \end{column}
-        \begin{column}{0.4\textwidth}
-            \begin{itemize}
-                \item Correlation in $C_{10}^e$, $C_{VL}^e$ and $C_\nu^e$, all proportional to $C \lambda^q_{23} \lambda^\ell_{11}$.
-                \item Correlation in $C_{10}^\mu$, $C_{VL}^\mu$ and $C_\nu^\mu$, all proportional to $C \lambda^q_{23} \lambda^\ell_{22}$.
-                \item Correlation in $C_{VL}^\tau$ and $C_\nu^\tau$, all proportional to $C \lambda^q_{23} \lambda^\ell_{33}$.
-                \item $C_9^\mu = C_9^\mathrm{loop}$ correlated to $\tau$ sector ($C\lambda^q_{23} \approx C\lambda^q_{23} \lambda^\ell_{33}$).
-                \item $C_9^e = -C_{10}^e + C_9^\mathrm{loop}$ partially correlated to $e$ and $\tau$ sectors.
-            \end{itemize}
-            
-        \end{column}
-    \end{columns}
-    \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
-
-\end{frame}
-
-\begin{frame}
     \frametitle{Correlations between observables}
 
     \begin{columns}[onlytextwidth]
@@ -480,68 +339,198 @@ The objective is optimized iteratively:
     \blankfootnote{J. Grygier \textit{et al.} (Belle) arXiv:1702.03224; F. Dattola (Belle-II) arXiv:2105.05754; Y. S. Ahmis \textit{et al.} (HFLAV) arXiv:1909.12524; \textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
 \end{frame}
 
-
 \begin{frame}
-    \frametitle{Connection to Leptoquarks}
+  \frametitle{Conclusions}
 
-    Vector Leptoquark $U_1 \sim (\bar{\mathbf{3}}, \mathbf{1}, 2/3)$,
-    $$\mathcal{L}_{U_1} = x_L^{ij} \bar{q}_i \gamma_\mu U_1^\mu \ell_j + x_R^{ij} \bar{d}_{Ri} \gamma_\mu U_1^\mu e_{Rj} + \mathrm{h.c.} $$
-
-    Matching to the SMEFT Wilson coefficients
-    $$C_{\ell q(1)}^{ijkl} = C_{\ell q(3)}^{ijkl} = \frac{-\Lambda^2}{2M_U^2}x_L^{li}x_L^{kj*}\,,$$
-    $$C_{ed}^{ijkl} = -\frac{1}{2}C_{qde}^{ijkl} = \frac{-\Lambda^2}{2M_U^2}x_R^{li}x_R^{kj*}\,,$$
-    In terms of the parameters of our fit,
-    $$|x_L^{ji}|^2 = -\frac{2}{M_U^2}C\lambda^\ell_{ii}\lambda^q_{jj}\,,$$
-    $$\mathrm{Arg}(x_L^{ji}) = \mathrm{Arg}(\lambda_{j3}^q)-\mathrm{Arg}(\lambda_{i3}^\ell) + \theta\,.$$ % chktex 21
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{Connection to leptoquarks}
-
-    Couplings to vector leptoquark $U_1$ in Scenario II (mixing to first and second generation):
-    $$x_L = \begin{pmatrix}
-        -2.27\times10^{-3} & -3.76\times 10^{-10}  & -0.0325 \\
-        0.0319 & 5.29\times 10^{-9} &  0.458\\
-        0.0437  & 7.25\times 10^{-9}  & 0.627
-        \end{pmatrix}\,.
-    $$
-    \begin{itemize}
-        \item Couplings $x_L^{23}$ and $x_L^{33}$, previously proposed to describe the $R_{D^{(*)}}$ anomaly\footnote[1]{A.~Bhaskar, D.~Das, T.~Mandal, S.~Mitra and C.~Neeraj. 2101.12069}. Compatible with experimental limits.
-        \item Additionally, couplings $x_L^{21}$ and $x_L^{31}$ to describe the $R_{K^{(*)}}$ anomaly. 
-    \end{itemize}
-
-    ~
-    
-    Other leptoquark models, and $W'$ and $Z'$ models, do not generate $C_{\ell q(1)} = C_{\ell q (3)}$. 
-\end{frame}
-
-\begin{frame}
-    \frametitle{Conclusions}
-
-    \begin{itemize}
-        \item Using EFTs (SMEFT) to describe the $R_{K^{(*)}}$ and $R_{D^{(*)}}$ anomalies: $R_{D^{(*)}}$ generated at tree level and $R_{K^{(*)}}$ from interplay between tree and loop level.
-        \item Global fits are needed to take in account possible side-effects. 
-        \item \texttt{xgboost} Machine Learning model is able to approximate the likelihood function.
-        \item SHAP values capture the importance of each parameter in the fit.
-        \item Interesting correlation between $R_{D^{(*)}}$ and $\mathrm{BR}(B\to K^{(*)}\nu\bar{\nu})$.
-        \item Explanation in terms of vector leptoquark $U_1$ coupling to second and third generations of quarks and third ($R_{D^{(*)}}$) and first ($R_{K^{(*)}}$) generation of leptons.
-    \end{itemize}
+  \begin{itemize}
+    \item Using EFTs (SMEFT) to describe the $R_{K^{(*)}}$ and $R_{D^{(*)}}$ anomalies: $R_{D^{(*)}}$ generated at tree level and $R_{K^{(*)}}$ from interplay between tree and loop level.
+    \item Global fits are needed to take in account possible side-effects.
+    \item \texttt{xgboost} Machine Learning model is able to approximate the likelihood function.
+    \item SHAP values capture the importance of each parameter in the fit.
+    \item Interesting correlation between $R_{D^{(*)}}$ and $\mathrm{BR}(B\to K^{(*)}\nu\bar{\nu})$.
+    \item Explanation in terms of vector leptoquark $U_1$ coupling to second and third generations of quarks and third ($R_{D^{(*)}}$) and first ($R_{K^{(*)}}$) generation of leptons.
+  \end{itemize}
 
 \end{frame}
 \appendix
 
+\begin{frame}[plain]
+  \vspace{3cm}
+  {\Large\bf\color{unizarblue} Backup slides}
+\end{frame}
+
 \begin{frame}
-    \frametitle{Backup slides}
+  \frametitle{$B$ anomalies}
 
-    \begin{center}
-        \includegraphics[width=0.45\textwidth]{figures/evoplot_betal.pdf}
-        \includegraphics[width=0.45\textwidth]{figures/evoplot_alphaq.pdf}   \end{center}
-    \begin{center}
-        \includegraphics[width=0.45\textwidth]{figures/SHAP_bl.pdf}
-        \includegraphics[width=0.45\textwidth]{figures/SHAP_aq.pdf}
-    \end{center}
+  Flavour-changing neutral currents $b \to s \ell^+ \ell^-$, with $\ell = e, \mu$.
+  \begin{itemize}
+    \item Universality ratios $R_{K^{(*)}}$
+          $$R_{K^{(*)}} = \frac{\mathrm{BR}(B\to K^{(*)}\mu^+ \mu^-)}{\mathrm{BR}(B\to K^{(*)}e^+ e^-)}\,, $$
+          In the SM, theoretically clean, and $R_{K^{(*)}}=1$.\\
+          LHCb measurements\footnote{R. Aaij \textit{et al.} (LHCb) arXiv:2103.11769, arXiv:1705.05802}:
+          \begin{itemize}
+            \item $R_{K^+} = 0.846^{+0.042}_{-0.039}{}^{+0.013}_{-0.012}$,
+            \item $R_{K^{*0}} = 0.685^{+0.113}_{-0.069}\pm0.047$. ($3.1\,\sigma$ tension)
+          \end{itemize}
+    \item Angular observables for $B\to K^* \ell^+\ell^-$: $P'_4$, $P'_5\ldots$
+    \item Also $B_s \to \phi \mu^+ \mu^-$ decays.
+  \end{itemize}
 
+\end{frame}
+
+\begin{frame}
+  \frametitle{$B$ anomalies}
+  Flavour-changing charged currents $b\to c \ell \nu$, with $\ell = e/\mu, \tau$.
+  \begin{columns}
+    \begin{column}{0.55\textwidth}
+
+      \begin{itemize}
+        \item Universality ratios $R_{D^{(*)}}$
+              $$R_{D^{(*)}} = \frac{\mathrm{BR}(B\to D^{(*)}\tau \nu)}{\mathrm{BR}(B\to D^{(*)}\ell \nu)}\,, $$
+              $$R_D = 0.340 \pm 0.027 \pm 0.013\,,$$
+              $$R_{D^*} = 0.295 \pm 0.011 \pm 0.008\,.$$
+              Combined tension of $3.08\,\sigma$.\footnotemark[1]
+        \item Longitudinal polarization of $D^*$.
+        \item Also $B_c \to J/\psi \ell\nu$ decays.
+      \end{itemize}
+
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width=\columnwidth]{figures/rdrds_spring2019.pdf}
+    \end{column}
+  \end{columns}
+  \footnotetext[1]{Y. S. Ahmis \textit{et al.} (HFLAV) arXiv:1909.12524}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Effective Field Theories}
+
+  Effective Field Theories (EFTs) describe deviations from the SM in a model-independent way, using effective operators of dim $>4$ and their corresponding Wilson coefficients.
+
+  ~
+
+  At energies $\Lambda$ above the electroweak scale, the dim-6 SMEFT (2499 operators)\footnote[1]{B.~Grzadkowski, M.~Iskrzynski, M.~Misiak and J.~Rosiek. arXiv:1008.4884}
+
+  $$\mathcal{L} = \mathcal{L}_\mathrm{SM} + \frac{1}{\Lambda^2}\sum C_i O_i\,.$$
+
+  We will focus on the following operators at $\Lambda = 1\,\mathrm{TeV}$:
+
+  $$O_{\ell q(1)}^{ijkl} = (\bar{\ell}_i \gamma_\mu \ell_j)(\bar{q}_k \gamma^\mu  q_l),\qquad\qquad O_{\ell q(3)}^{ijkl}= (\bar{\ell}_i \gamma_\mu \tau^I \ell_j)(\bar{q}_k \gamma^\mu \tau^I q_l)\,.$$
+
+\end{frame}
+
+\begin{frame}
+
+  \frametitle{Effective Field Theories}
+  The $B$ anomalies are defined at $\mu=m_b$, we need to integrate the heavy SM particles. We obtain the WET\@:
+
+  ~
+
+  \begin{itemize}
+    \item $\left.\begin{matrix}
+              O_9^\ell = (\bar{s}_L \gamma_\alpha b_L)(\bar{e}_\ell \gamma^\alpha e_\ell) \\
+              O_{10}^\ell = (\bar{s}_L \gamma_\alpha b_L)(\bar{e}_\ell \gamma^\alpha \gamma_5 e_\ell)
+            \end{matrix}\right\} \qquad \Longrightarrow \qquad R_{K^{(*)}}$. % chktex 21
+
+          ~
+
+    \item $O_{VL}^\ell = (\bar{c}_L \gamma_\alpha b_L)(\bar{e}_{\ell\,L} \gamma^\alpha \nu_\ell) \qquad\Longrightarrow\qquad R_{D^{(*)}}$.
+
+          ~
+
+    \item $O_\nu^\ell = (\bar{s}_L \gamma_\alpha b_L)(\bar{\nu}_\ell (1-\gamma_5) \nu_\ell) \qquad\Longrightarrow \qquad \mathrm{BR}(B\to K^{(*)}\nu\overline{\nu})$.
+  \end{itemize}
+
+
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Effective Field Theories}
+  Translating between the two EFTs: 1-loop RG running $\Lambda \to \mu_\mathrm{EW}$ + matching:
+  \begin{itemize}
+    \item {\small $C_9^\ell \approx \frac{\sqrt{2}}{V_{tb}V_{ts}^* G_F \Lambda^2}\left[ \frac{2\pi^2}{e^2}(C_{\ell q(1)}^{\ell\ell23}+C_{\ell q(3)}^{\ell\ell23}) + \textcolor{blue}{\frac{\log(m_b/\Lambda)}{3}(C_{\ell q(1)}^{3323}+C_{\ell q(3)}^{3323})}\right]\, $.}
+    \item {\small $C_{10}^\ell \approx \frac{-\sqrt{2}}{V_{tb}V_{ts}^* G_F \Lambda^2} \frac{2\pi^2}{e^2}(C_{\ell q(1)}^{\ell\ell23}+C_{\ell q(3)}^{\ell\ell23}) \, $.}
+    \item {\small $C_{VL}^\ell \approx \frac{-1}{\sqrt{2}G_F\Lambda^2}\left(C_{\ell q(3)}^{\ell\ell33}+ \frac{V_{cs}}{V_{cb}}C_{\ell q(3)}^{\ell\ell 23}\right)$\,.}
+    \item {\small $C_\nu^\ell \approx \frac{\sqrt{2}}{e^2 V_{tb}V_{ts}^* G_F \Lambda^2}\left[2\pi^2(C_{\ell q(1)}^{\ell\ell 23}-C_{\ell q(3)}^{\ell\ell 23})+\textcolor{blue}{\frac{2{g'}^2}{3}\log(m_b/\Lambda)C_{\ell q(3)}^{\ell\ell 23}}\right]\,$.}
+  \end{itemize}
+
+  \textcolor{blue}{Loop-level corrections} break the relation $C_9^\ell = -C_{10}^\ell$.
+  \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{SHAP values and likelihoods}
+
+  \begin{center}
+    \includegraphics[width=0.45\textwidth]{figures/evoplot_betal.pdf}
+    \includegraphics[width=0.45\textwidth]{figures/evoplot_alphaq.pdf}   \end{center}
+  \begin{center}
+    \includegraphics[width=0.45\textwidth]{figures/SHAP_bl.pdf}
+    \includegraphics[width=0.45\textwidth]{figures/SHAP_aq.pdf}
+  \end{center}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Correlations between WCs}
+
+  \begin{columns}[onlytextwidth]
+    \begin{column}{0.6\textwidth}
+      \includegraphics[width=\columnwidth,clip]{figures/coeffcorr.pdf}
+
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \begin{itemize}
+        \item Correlation in $C_{10}^e$, $C_{VL}^e$ and $C_\nu^e$, all proportional to $C \lambda^q_{23} \lambda^\ell_{11}$.
+        \item Correlation in $C_{10}^\mu$, $C_{VL}^\mu$ and $C_\nu^\mu$, all proportional to $C \lambda^q_{23} \lambda^\ell_{22}$.
+        \item Correlation in $C_{VL}^\tau$ and $C_\nu^\tau$, all proportional to $C \lambda^q_{23} \lambda^\ell_{33}$.
+        \item $C_9^\mu = C_9^\mathrm{loop}$ correlated to $\tau$ sector ($C\lambda^q_{23} \approx C\lambda^q_{23} \lambda^\ell_{33}$).
+        \item $C_9^e = -C_{10}^e + C_9^\mathrm{loop}$ partially correlated to $e$ and $\tau$ sectors.
+      \end{itemize}
+
+    \end{column}
+  \end{columns}
+  \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Connection to Leptoquarks}
+
+Vector Leptoquark $U_1 \sim (\bar{\mathbf{3}}, \mathbf{1}, 2/3)$,
+$$\mathcal{L}_{U_1} = x_L^{ij} \bar{q}_i \gamma_\mu U_1^\mu \ell_j + x_R^{ij} \bar{d}_{Ri} \gamma_\mu U_1^\mu e_{Rj} + \mathrm{h.c.} $$
+
+Matching to the SMEFT Wilson coefficients
+$$C_{\ell q(1)}^{ijkl} = C_{\ell q(3)}^{ijkl} = \frac{-\Lambda^2}{2M_U^2}x_L^{li}x_L^{kj*}\,,$$
+$$C_{ed}^{ijkl} = -\frac{1}{2}C_{qde}^{ijkl} = \frac{-\Lambda^2}{2M_U^2}x_R^{li}x_R^{kj*}\,,$$
+In terms of the parameters of our fit,
+$$|x_L^{ji}|^2 = -\frac{2}{M_U^2}C\lambda^\ell_{ii}\lambda^q_{jj}\,,$$
+$$\mathrm{Arg}(x_L^{ji}) = \mathrm{Arg}(\lambda_{j3}^q)-\mathrm{Arg}(\lambda_{i3}^\ell) + \theta\,.$$ % chktex 21
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Connection to leptoquarks}
+
+Couplings to vector leptoquark $U_1$ in Scenario II (mixing to first and second generation):
+$$x_L = \begin{pmatrix}
+    -2.27\times10^{-3} & -3.76\times 10^{-10} & -0.0325 \\
+    0.0319             & 5.29\times 10^{-9}   & 0.458   \\
+    0.0437             & 7.25\times 10^{-9}   & 0.627
+  \end{pmatrix}\,.
+$$
+\begin{itemize}
+  \item Couplings $x_L^{23}$ and $x_L^{33}$, previously proposed to describe the $R_{D^{(*)}}$ anomaly\footnote[1]{A.~Bhaskar, D.~Das, T.~Mandal, S.~Mitra and C.~Neeraj. 2101.12069}. Compatible with experimental limits.
+  \item Additionally, couplings $x_L^{21}$ and $x_L^{31}$ to describe the $R_{K^{(*)}}$ anomaly.
+\end{itemize}
+
+~
+
+Other leptoquark models, and $W'$ and $Z'$ models, do not generate $C_{\ell q(1)} = C_{\ell q (3)}$.
 \end{frame}
 
 \end{document} %chktex 17

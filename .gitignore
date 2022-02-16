@@ -276,3 +276,5 @@ TSWLatexianTemp*
 *.lpz
 slides.pdf
 __latexindent_temp.tex
+
+.vscode
