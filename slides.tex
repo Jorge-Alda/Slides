@@ -34,7 +34,7 @@ $$R_{K^{(*)}} = \frac{\mathrm{BR}(B\to K^{(*)}\mu^+ \mu^-)}{\mathrm{BR}(B\to K^{
 \item Description in terms of dim-6 effective operators (SMEFT)
 $$\mathcal{L} = \mathcal{L}_\mathrm{SM} + \frac{C_{\ell q (1)}}{\Lambda^2}  (\bar{\ell}_i \gamma_\mu \ell_j)(\bar{q}_k \gamma^\mu  q_l)+\frac{C_{\ell q (3)}}{\Lambda^2}(\bar{\ell}_i \gamma_\mu \tau^I \ell_j)(\bar{q}_k \gamma^\mu \tau^I q_l).$$
 
-\item Flavour structure given by\footnote[1]{F.~Feruglio, P.~Paradisi and A.~Pattori. arXiv:1705.00929}
+\item Rotation from interaction basis. Flavour structure given by\footnote[1]{F.~Feruglio, P.~Paradisi and A.~Pattori. arXiv:1705.00929}
 
 $$C_{\ell q(1)}^{ijkl} = C_1 \lambda_\ell^{ij}\lambda_q^{kl}\,\qquad\qquad C_{\ell q(3)}^{ijkl} = C_3 \lambda_\ell^{ij}\lambda_q^{kl}\,. $$
 The mixing matrices must be hermitian, idempotent and with $\mathrm{tr}\lambda =1$. Parameterized as
@@ -92,36 +92,32 @@ We work in \texttt{Python3}, using the packages \texttt{wilson}\footnote[1]{J.~A
 \end{frame}
 
 \begin{frame}
-    \frametitle{Global fits: Results}
-    Regions allowed at $1~\sigma$:
-    \begin{center}
-        \begin{tabular}{cc}
-            \includegraphics[width=0.4\textwidth]{figures/alphabeta_l.pdf} & \includegraphics[width=0.4\textwidth]{figures/alphabeta_q.pdf}
-        \end{tabular}
-    \end{center}
-    \begin{itemize}
-        \item $\alpha^\ell$ is constrained by $R_{K^{(*)}}$.
-\item $\beta^\ell$ is constrained by LFV observables.
-    \end{itemize}
-    \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
+\frametitle{Global fits: Results}
+
+\begin{center}
+\begin{tabular}{lc}
+  $R_{K^{(*)}} = \frac{\mathrm{BR}(B\to K^{(*)}\mu^+ \mu^-)}{\mathrm{BR}(B\to K^{(*)}e^+ e^-)}$ & $R_{D^{(*)}} = \frac{\mathrm{BR}(B\to D^{(*)}\tau \nu)}{\mathrm{BR}(B\to D^{(*)}\ell \nu)}$ \\
+  \includegraphics[width=0.55\textwidth]{figures/rotRKplot.pdf}                                 &
+  \includegraphics[width=0.4\textwidth]{figures/rotRDplot.pdf}
+\end{tabular}
+\end{center}
+$R_{K^{(*)}}$ requires mixing with the first generation ($\alpha^\ell$).
+\blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Global fits: Results}
-
-    \begin{center}
-        \begin{tabular}{lc}
-            $R_{K^{(*)}} = \frac{\mathrm{BR}(B\to K^{(*)}\mu^+ \mu^-)}{\mathrm{BR}(B\to K^{(*)}e^+ e^-)}$ & $R_{D^{(*)}} = \frac{\mathrm{BR}(B\to D^{(*)}\tau \nu)}{\mathrm{BR}(B\to D^{(*)}\ell \nu)}$ \\
-            \includegraphics[width=0.55\textwidth]{figures/rotRKplot.pdf} &
-            \includegraphics[width=0.4\textwidth]{figures/rotRDplot.pdf}
-        \end{tabular}
-    \end{center}
-    $R_{K^{(*)}}$ requires mixing with the first generation ($\alpha^\ell$):
-    \begin{align*}
-        C_9^e   & = -C_{10}^e + C_9^\mathrm{loop} = -0.32\,, \qquad\qquad                 &  & C_{10}^e =-0.36\,,             \\
-        C_9^\mu & = {\color{gray}-C_{10}^\mu} + C_9^\mathrm{loop} = -0.67\,, \qquad\qquad &  & {\color{gray}C_{10}^\mu =0}\,.
-    \end{align*}
-    \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
+\frametitle{Global fits: Results}
+Regions allowed at $1~\sigma$:
+\begin{center}
+\begin{tabular}{cc}
+  \includegraphics[width=0.4\textwidth]{figures/alphabeta_l.pdf} & \includegraphics[width=0.4\textwidth]{figures/alphabeta_q.pdf}
+\end{tabular}
+\end{center}
+\begin{itemize}
+  \item $\alpha^\ell$ is constrained by $R_{K^{(*)}}$.
+  \item $\beta^\ell$ is constrained by LFV observables.
+\end{itemize}
+\blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
 \end{frame}
 
 \begin{frame}
@@ -175,7 +171,7 @@ We work in \texttt{Python3}, using the packages \texttt{wilson}\footnote[1]{J.~A
     We have a dataset $\{(x_i, y_i)\}$ with $x_i \in X (\sim\mathbb{R}^n)$ and $y_i \in \mathbb{R}$, and want to find $\phi(x)$ so $\phi(x_i)\approx y_i$. Defining the regularized objective
     $$\mathcal{L}[\phi] = \sum_i \ell(\phi(x_i), y_i) + \sum_k \Omega(f_k)\,. $$
 \begin{itemize}
-    \item $\ell(\tilde{y}_i, y_i)$ is the loss function.
+\item $\ell(\tilde{y}_i, y_i)$ is the loss function (Mean Absolute Error).
     \item $\Omega(f_k)$ penalizes the complexity of the trees.
 \end{itemize}
 The objective is optimized iteratively:
@@ -233,23 +229,12 @@ The objective is optimized iteratively:
 
 \end{frame}
 
-\begin{frame}
-    \frametitle{SHAP values}
-
-    Measure of the importance of each parameter in the Machine Learning prediction for a single datapoint\footnote[1]{S. Lundberg, S. Lee. arXiv:1705.07874}. Based on game theory (Lloyd Shapley, Nobel Prize in Economics '12).
-
-
-    \begin{itemize}
-        \item \textbf{Local accuracy:} The sum of all SHAP values (plus a constant) is the ML prediction.
-        \item \textbf{Missingness:} If some parameter is missing, its SHAP value is zero.
-        \item \textbf{Consistency:} If the model is changed so one parameter has a larger impact, its SHAP value will increase.
-    \end{itemize}
-
-
-\end{frame}
 
 \begin{frame}
     \frametitle{SHAP values}
+
+Measure of the importance of each parameter in the Machine Learning prediction for a single datapoint\footnote[1]{S. Lundberg, S. Lee. arXiv:1705.07874}.
+
     We train $2^n$ simplified models
 
     \begin{columns}
@@ -265,7 +250,7 @@ The objective is optimized iteratively:
         \end{column}
     \end{columns}
     
-    Efficient implementation (poly time) for tree-based Machine Learning models.\footnote[1]{S. Lundberg, G. Erion, S. Lee. arXiv:1802.03888}
+Efficient implementation (poly time) for tree-based Machine Learning models.\footnote[2]{S. Lundberg, G. Erion, S. Lee. arXiv:1802.03888}
 
 \end{frame}
 
