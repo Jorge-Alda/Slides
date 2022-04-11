@@ -27,8 +27,7 @@ Università degli Studi di Padova/INFN \hspace{2em} \texttt{jalda@unizar.es} }
 
 \end{frame}
 
-\begin{frame}
-    \frametitle{Publication List}
+\begin{frame}\frametitle{Publication List}
 
     \begin{itemize}
         \item J. Alda, J. Guasch, S. Peñaranda,
@@ -50,8 +49,7 @@ Università degli Studi di Padova/INFN \hspace{2em} \texttt{jalda@unizar.es} }
     \frametitle{Part I: $B$ physics}
 \end{frame}
 
-\begin{frame}
-    \frametitle{$B$ anomalies}
+\begin{frame}\frametitle{$B$ anomalies}
 
     Flavour-changing neutral currents $b \to s \ell^+ \ell^-$, with $\ell = e, \mu$.
     \begin{itemize}
@@ -69,8 +67,7 @@ Università degli Studi di Padova/INFN \hspace{2em} \texttt{jalda@unizar.es} }
 
 \end{frame}
 
-\begin{frame}
-    \frametitle{$B$ anomalies}
+\begin{frame}\frametitle{$B$ anomalies}
     Flavour-changing charged currents $b\to c \ell \nu$, with $\ell = e/\mu, \tau$.
     \begin{columns}
         \begin{column}{0.55\textwidth}
@@ -93,13 +90,43 @@ Università degli Studi di Padova/INFN \hspace{2em} \texttt{jalda@unizar.es} }
     \footnotetext[1]{Y. S. Ahmis \textit{et al.} (HFLAV) arXiv:1909.12524}
 \end{frame}
 
-\begin{frame}
-    \frametitle{Effective Field Theories}
+\begin{frame}\frametitle{Effective Field Theory}
+    \setbeamercovered{transparent}
+    \def\beamertemplatetransparentcoveredmedium{\setbeamercovered{transparent=50}}
+    \beamertemplatetransparentcoveredmedium
+    \begin{itemize}
+        \item  EFT ``integrates out" heavy degrees of freedom above energy scale $\Lambda$, resulting in operators with dim $> 4$. The short-distance physics is encoded in the Wilson coefficient that multiplies each operator.
+              $$\mathcal{L}_\mathrm{EFT} = \mathcal{L}_\mathrm{SM} + \frac{1}{\Lambda}\sum C^{(5)} \mathcal{O}^{(5)} + \frac{1}{\Lambda^2}\sum C^{(6)} \mathcal{O}^{(6)} + \cdots$$
+              \vspace{-2mm}
+        \item In particular, SMEFT integrates out all NP degrees of freedom.
+              \begin{itemize}
+                  \item Model-independent description.
+                  \item 2499 dimension-6 operators ($\Delta B = \Delta L = 0$).
+                  \item Warsaw basis\footnotemark[2] is the most common choice.
+                  \item We will consider NP contributions to the following operators:
+                        $$\mathcal{O}_{\ell q(1)}^{ijkl} = (\bar{\ell}_i \gamma_\mu \ell_j)(\bar{q}_k \gamma^\mu  q_l), \qquad \mathcal{O}_{\ell q(3)}^{ijkl} = (\bar{\ell}_i \gamma_\mu \tau^I \ell_j)(\bar{q}_k \gamma^\mu \tau^I q_l).$$
+                        \footnotetext[2]{Grzadkowski, M. Iskrzynski, M. Misiak, J. Rosiek,    JHEP 10 (2010) 085. arXiv:1008.4884}
+              \end{itemize}
+    \end{itemize}
+\end{frame}
 
-    Deviations from the SM predictions can be described in a systematic way using Effective Field Theories.
+\begin{frame}\frametitle{Effective Field Theory}
+\begin{itemize}
 
+\item The scale of $B$ decays is $\mu \approx m_b$. We need to integrate out $t$, $H$, $W$ and $Z$.
 
-
+\item The Weak Effective Theory (WET) Lagrangian is given by
+{\scriptsize $$\mathcal{L}_{\text{WET}} = \mathcal{L}_\mathrm{SM} -\frac{4 G_F}{\sqrt{2}}V_{cb}\sum_{\ell = e, \mu, \tau} (1 + C_{VL}^\ell) \mathcal{O}_{VL}^\ell + \frac{4G_F}{\sqrt{2}}V_{tb}V_{ts}^*\frac{e^2}{16\pi^2}\sum_{\ell=e,\mu} (C_9^\ell \mathcal{O}_9^\ell  + C_{10}^\ell \mathcal{O}_{10}^\ell) \ ,$$}
+{ $$\mathcal{O}_{VL}^\ell = (\bar{c}_L \gamma_\alpha b_L)(\bar{\ell}_L \gamma^\alpha \nu_\ell)\ ,$$ $$\mathcal{O}_9^\ell = (\bar{s}_L \gamma_\alpha b_L)(\bar{\ell} \gamma^\alpha \ell)\ , \qquad \mathcal{O}_{10}^\ell = (\bar{s}_L \gamma_\alpha b_L)(\bar{\ell} \gamma^\alpha \gamma_5 \ell) \ .$$}
+    
+\item To relate the Wilson coefficients at both scales:
+\begin{enumerate}
+    \item Run the SMEFT RG equations from $\Lambda$ down to EW scale.
+    \item Match the SMEFT operators to the WET operators.
+    \item Run the WET RG equations from EW scale down to $m_b$.
+\end{enumerate}
+    
+\end{itemize}
 \end{frame}
 
 \end{document}
