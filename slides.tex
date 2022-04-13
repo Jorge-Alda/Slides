@@ -3,6 +3,32 @@
 \usepackage{amsmath, amsfonts}
 \usepackage{appendixnumberbeamer}
 \usepackage{verbatim}
+\usepackage{tikz} %%%Bubbles: https://tex.stackexchange.com/a/83786
+\usetikzlibrary{shapes.callouts}
+
+\tikzset{
+    invisible/.style={opacity=0,text opacity=0},
+    visible on/.style={alt=#1{}{invisible}},
+    alt/.code args={<#1>#2#3}{%
+            \alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}} % \pgfkeysalso doesn't change the path
+        },
+}
+
+\NewDocumentCommand{\mycallout}{r<> O{opacity=0.8,text opacity=1} m m}{%
+    \tikz[remember picture, overlay]\node[align=center, fill=cyan!20, text width=4cm,
+        #2,visible on=<#1>, rounded corners,
+        draw,rectangle callout,anchor=pointer,callout relative pointer={(270:1cm)}]
+    at (#3) {#4};
+}
+
+\NewDocumentCommand{\anothercallout}{r<> O{opacity=0.8,text opacity=1} m m}{%
+    \tikz[remember picture, overlay]\node[align=center, fill=cyan!20, text width=3cm,
+        #2,visible on=<#1>, rounded corners,
+        draw,rectangle callout,anchor=pointer,callout relative pointer={(200:1cm)}]
+    at (#3) {#4};
+}
+
+\newcommand{\tikzmark}[1]{\tikz[overlay,remember picture,baseline=-0.5ex] \node (#1) {};}
 
 \newcommand{\ACPmix}{\ensuremath{A_{CP}^{\rm{mix}}}}
 
@@ -360,6 +386,93 @@ Combined tension of $3.08\,\sigma$.\footnotemark[2]
 
     \begin{center}
         \includegraphics[width=0.6\textwidth]{figures/errorplot_RK2021.pdf}
+    \end{center}
+
+\end{frame}
+
+\begin{frame}\frametitle{SMEFT Fit: Operators and observables}
+    In this fit, we will consider the following SMEFT operators
+    $$\mathcal{O}^i_{\ell q (1)} = (\overline{\ell}_i \gamma_\mu \ell_i)(\overline{q}_3 \gamma^\mu q_3), \qquad
+        \mathcal{O}^i_{\ell q (3)} = (\overline{\ell}_i \gamma_\mu \tau^I \ell_i)(\overline{q}_3 \gamma^\mu \tau^I q_3),$$
+    \begin{itemize}
+        \item Constrains from $\mathrm{BR}(B\to K^{(*)} \nu\overline{\nu})$ impose
+              $$C_{\ell q (1)}^i = C_{\ell q (3)}^i \equiv C_{\ell q}^i.\qquad\qquad$$
+        \item We obtained the running from the SMEFT operators at $\Lambda =$ 1 TeV down to $\mu = m_b$ using the RGE:
+              {\scriptsize\begin{align*}
+                  C_9^{\mathrm{NP}\ e, \mu} = -0.583 \, C_{\ell q(1)}^{e, \mu} - 0.596 \, C_{\ell q(3)}^{e,
+                  \mu}\ ,                                                                                 & \qquad C_{10}^{\mathrm{NP}\ e, \mu} = 0.588 \, C_{\ell q(1)}^{e,
+                  \mu} + 0.591 \, C_{\ell q(3)}^{e, \mu}\ , \nonumber                                                                                                        \\
+                  C_{VL}^{e, \mu} = 0.0012 \, C_{\ell q(1)}^{e, \mu} - 0.0644\, C_{\ell q(3)}^{e, \mu}\ , & \qquad C_{VL}^\tau = -0.0598\, C_{\ell q(3)}^\tau\ .
+                  \label{eq:running}
+              \end{align*}}
+        \item RG causes mixing to other physical sectors (e.g. electroweak tests) $\Longrightarrow$ We need global fits: $B$-physics\tikzmark{Bphys}, EW\tikzmark{EW}, $\beta$ decays, etc.
+    \end{itemize}
+    \mycallout<2>{Bphys}{$R_{K^{(*)}}$ and differential observables, $R_{D^{(*)}}$, $B_{(s)}\to\mu^+\mu^-$, $B\to K^{(*)} \nu\overline{\nu}$}
+    \anothercallout<2>{EW}{$\Gamma_Z$, $M_W$, $A_e$, $A_\mu$, $A_\tau$, $A_b$, $A_c$, $R_e$, $R_\mu$, $R_\tau$, $R_b$, $R_c$, $A^\mathrm{FB}$, $\sigma_0^\mathrm{had}$}
+
+\end{frame}
+
+\begin{frame}\frametitle{SMEFT Fit: Global fits}
+    \begin{center}
+        \includegraphics[width=0.4\textwidth]{figures/scIV_beta.pdf} $\qquad$
+        \includegraphics[width=0.4\textwidth]{figures/scXI_beta.pdf}
+    \end{center}
+    \begin{itemize}
+        \item $\mathcal{O}_{\ell q}^\mu - \mathcal{O}_{\ell q}^e$ describes violations of lepton universality, fit dominated by $R_{K^{(*)}}$ and $R_{D^{(*)}}$ observables. Large deviations from SM.
+        \item $\mathcal{O}_{\ell q}^\mu + \mathcal{O}_{\ell q}^e$ describes flavour-universal contributions, fit dominated by EW observables. Compatible with SM.
+        \item $\beta$ decays are sensitive to deviations in $\mathcal{O}_{\ell q}^\mu$.
+        \item $\mathcal{O}_{\ell q}^\tau$ uncorrelated with the other operators. Compatible with SM (but large uncertainties).
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}\frametitle{SMEFT Fit: Predictions}
+
+    We consider different scenarios for the SMEFT coefficients. The most relevant are:
+    {\scriptsize \begin{itemize}
+        \item Scenario IV: Fit to $C_{\ell q}^e$, $C_{\ell q}^\mu$.
+        \item Scenario VII: Fit to $C_{\ell q}^e$, $C_{\ell q}^\mu$, $C_{\ell q}^\tau$.
+        \item Scenario IX: Fit to $C_{\ell q}^e = C_{\ell q}^\tau = - C_{\ell q}^\mu$.
+        \item Scenario X: Fit to $C_{\ell q}^e =  - C_{\ell q}^\mu$.
+        \item Scenario XI: Fit to $C_{\ell q}^e = - C_{\ell q}^\mu$, $C_{\ell q}^\tau$.
+    \end{itemize}}
+
+    \begin{figure}\begin{center}
+            \resizebox{0.52\textwidth}{!}{\input{figures/RKplot.pgf}}
+            \resizebox{0.37\textwidth}{!}{\input{figures/RDplot.pgf}}
+
+        \end{center}
+    \end{figure}
+    \begin{itemize}
+        \item $C_{\ell q}^e \approx - C_{\ell q}^\mu$ improves the prediction for $R_{K^{(*)}}$.
+        \item $C_{\ell q}^\tau$ needed for $R_{D^{(*)}}$.
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}    \frametitle{SMEFT Fit: Electron colliders}
+
+    Electron colliders are powerful tools in testing neutral currents\footnote[10]{R. K. Ellis \textit{et al.} arXiv:1910.11775 [hep-ex]}:
+    \begin{itemize}
+        \item Clean signatures.
+        \item Small uncertainties.
+        \item Detailed differential analyses in di-fermion final states.
+        \item Different longitudinal polarisation of the beams.
+        \item Experimental sensitivity increases with $\sqrt{s}$.
+    \end{itemize}
+
+    \begin{center}
+        \begin{columns}
+            \begin{column}{0.7\textwidth}
+                \includegraphics[width=\textwidth]{figures/operators_esu}
+            \end{column}
+            \begin{column}{0.19\textwidth}
+                {\small$\begin{matrix}
+                            {\color[HTML]{4285f4} \mathcal{O}_{2W}} \Leftrightarrow \mathcal{O}_{\ell q(3)} \\ {\color[HTML]{ff9900} \mathcal{O}_{2B}} \Leftrightarrow \mathcal{O}_{\ell q(1)}
+                        \end{matrix}  $}
+            \end{column}
+        \end{columns}
+
     \end{center}
 
 \end{frame}
