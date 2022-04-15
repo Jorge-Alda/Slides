@@ -158,16 +158,28 @@ Combined tension of $3.08\,\sigma$.\footnotemark[2]
 \end{itemize}
 \end{frame}
 
+\begin{frame}\frametitle{Codes}
+    Tools used for the global fits (in \texttt{python3}):
+    \begin{itemize}
+        \item \texttt{wilson}\footnote[4]{J.~Aebischer, J.~Kumar and D.~M.~Straub. arXiv:1804.05033}: RG evolution and mixing of the Wilson coefficients.
+        \item \texttt{flavio}\footnote[5]{D.~M.~Straub. arXiv:1810.08132}: Calculation of observables in EFTs and database of experimental measurements.
+        \item \texttt{smelli}\footnote[6]{J.~Aebischer, J.~Kumar, P.~Stangl and D.~M.~Straub. arXiv:1810.07698}: Global likelihood function:
+              {\small$$\Delta \log L = -\frac{1}{2}\Delta\chi^2 = -\frac{1}{2}\sum_{i,j} [\mathcal{O}_i^\mathrm{exp} - \mathcal{O}^\mathrm{th}_i(\vec{C})] (\mathcal{C}^\mathrm{exp}+\mathcal{C}^\mathrm{th}(C))^{-1}_{ij} [\mathcal{O}_j^\mathrm{exp} - \mathcal{O}^\mathrm{th}_j(\vec{C})]\,. $$} % chktex 35
+              $\mathcal{O}_i^\mathrm{exp}$ is the experimental measurements for the $i$-th observable, and $\mathcal{O}_i^\mathrm{th}$ its SMEMT prediction. $\mathcal{C}_{ij}^\mathrm{exp}$ and $\mathcal{C}^\mathrm{th}(C)$ are the covariance matrices (usually block-diagonal).% chktex 35
+        \item Custom-made codes, publicly available at \texttt{https://github.com/Jorge-Alda}.
+    \end{itemize}
+\end{frame}
+
 \begin{frame}\frametitle{Fit to complex WCs: Approach}
     Common explanation for anomalies in $R_{K^{(*)}}$ and $\Delta M_s$.
     \begin{itemize}
         \item $1.8\sigma$ tension with the 2017 theoretical SM prediction for $B_s$ mixing,\\
-              $\Delta M_S^\mathrm{SM} = 20.01 \pm 1.25\,\mathrm{ps}^{-1}$, \qquad$\Delta M_S^\mathrm{exp} = 17.757 \pm 0.021 \,\mathrm{ps}^{-1}$. \footnotemark[4]
+$\Delta M_S^\mathrm{SM} = 20.01 \pm 1.25\,\mathrm{ps}^{-1}$, \qquad$\Delta M_S^\mathrm{exp} = 17.757 \pm 0.021 \,\mathrm{ps}^{-1}$. \footnotemark[7]
         \item $\mathcal{L}_{\Delta M_S} = -\frac{4 G_f}{\sqrt{2}} (V_{tb} V_{ts}^*)^2 C_{bs, \mathrm{NP}}^{LL} \mathcal{O}_{bs}^{LL} + \mathrm{h. c.}$
               \begin{itemize}
                   \item $ \mathcal{O}_{bs}^{LL} = (\bar{s}_L \gamma_\mu b_L)^2$.
                   \item $\Delta M_S = \Delta M_S^\mathrm{SM} \left|1 + \frac{C_{bs}^{LL} }{R^\mathrm{loop}} \right|$.
-                  \item CP asymmetry\footnotemark[4]: $\ACPmix (B_s\to J/\psi \phi)= \sin \left[\mathrm{arg}\left(   1 + \frac{C_{bs}^{LL} }{R^\mathrm{loop}} \right) - 2 \beta_s \right] $.
+\item CP asymmetry\footnotemark[7]: $\ACPmix (B_s\to J/\psi \phi)= \sin \left[\mathrm{arg}\left(   1 + \frac{C_{bs}^{LL} }{R^\mathrm{loop}} \right) - 2 \beta_s \right] $.
               \end{itemize}
     \end{itemize}
 
@@ -178,14 +190,14 @@ Combined tension of $3.08\,\sigma$.\footnotemark[2]
         \item $Z'$: $\mathcal{L}_{Z'} \sim \lambda^Q \bar{d}\gamma^\mu d Z'_\mu + \lambda^L \bar{e}\gamma^\mu e Z'_{\mu}$.
         \item Leptoquarks ($S_3$): $\mathcal{L}_{S_3} \sim y^{QL} \bar{q} \ell S_3$.
     \end{itemize}
-    \footnotetext[4]{{L. Di Luzio, M. Kirk, A. Lenz. arXiv:1712.06572}}
+\footnotetext[7]{{L. Di Luzio, M. Kirk, A. Lenz. arXiv:1712.06572}}
 \end{frame}
 
 \begin{frame}\frametitle{Fit to complex WCs: $Z'$ model}
     \begin{itemize}
         \item $\mathcal{L}_{Z'} =  \frac{1}{2} M_{Z'}^2 (Z'_\mu)^2 + (\lambda_{ij}^Q \bar{d}^i_L \gamma^\mu d^j_L + \lambda_{\alpha\beta}^L \bar{e}^\alpha_L \gamma^\mu e_L^\beta )Z'_\mu $.~\\~\\
         \item $C_9^\mu = - C_{10}^\mu = \frac{-\pi}{\sqrt{2} G_F \alpha V_{tb} V_{ts}^*}\frac{\lambda^Q_{23}}{M_{Z'}^2}\qquad\qquad [\lambda^L_{22} = 1]$.
-        \item $C_{bs}^{LL} = \frac{\eta^{LL}}{4\sqrt{2}G_F (V_{tb} V_{ts}^*)^2}\left(\frac{\lambda_{23}^Q}{M_{Z'}}\right)^2$. \footnote[4]{L. Di Luzio, M. Kirk, A. Lenz. arXiv:1712.06572}
+\item $C_{bs}^{LL} = \frac{\eta^{LL}}{4\sqrt{2}G_F (V_{tb} V_{ts}^*)^2}\left(\frac{\lambda_{23}^Q}{M_{Z'}}\right)^2$. \footnote[7]{L. Di Luzio, M. Kirk, A. Lenz. arXiv:1712.06572}
     \end{itemize}
 
     \begin{columns}
@@ -206,7 +218,7 @@ Combined tension of $3.08\,\sigma$.\footnotemark[2]
     \begin{itemize}
         \item $\mathcal{L}_{S_3} = -M^2_{S_3} |S_3^a|^2 + y_{i\alpha}^{QL} \bar{q^c}^i (\epsilon \sigma^a) \ell^\alpha S_3^a  + \mathrm{h.c.}$~\\~\\
         \item $C_9^\mu = -C_{10}^\mu = \frac{\pi}{\sqrt{2} G_F \alpha V_{tb} V_{ts}^*} \frac{y^{QL}_{32} y^{QL*}_{22}}{M^2_{S_3}}$.
-        \item $C_{bs}^{LL} = \frac{5\eta^{LL}}{256 \sqrt{2} \pi^2 G_F (V_{tb} V_{ts}^*)^2}\left(\frac{y^{QL}_{3\alpha} y^{QL*}_{2\alpha}}{M_{S_3}}\right)^2$. \footnote[4]{L. Di Luzio, M. Kirk, A. Lenz. arXiv:1712.06572}
+\item $C_{bs}^{LL} = \frac{5\eta^{LL}}{256 \sqrt{2} \pi^2 G_F (V_{tb} V_{ts}^*)^2}\left(\frac{y^{QL}_{3\alpha} y^{QL*}_{2\alpha}}{M_{S_3}}\right)^2$. \footnote[7]{L. Di Luzio, M. Kirk, A. Lenz. arXiv:1712.06572}
     \end{itemize}
 
     \begin{columns}
@@ -229,16 +241,16 @@ Combined tension of $3.08\,\sigma$.\footnotemark[2]
             \begin{figure}
                 \centering
                 \includegraphics[width =0.9\textwidth]{figures/contours_cropped.pdf}\\
-                \small{Allowed real $C_9$ and $C_{10}$ \\coefficients. \protect\footnotemark[7]}
+\small{Allowed real $C_9$ and $C_{10}$ \\coefficients. \protect\footnotemark[8]}
             \end{figure}
-        \end{column}\footnotetext[7]{W. Altmannshofer, P. Stangl, D. M. Straub.  arXiv:1704.05435}
+\end{column}\footnotetext[8]{W. Altmannshofer, P. Stangl, D. M. Straub.  arXiv:1704.05435}
         \begin{column}[t]{0.48\textwidth}
             \begin{figure}
                 \centering
                 \includegraphics[width =0.8\textwidth]{figures/BsmixvsRK.pdf}\\
-                \small{Bounds on $Z'$ couplings from $B_s$ mixing and $R_{K^{(*)}}$. \protect\footnotemark[8] }
+\small{Bounds on $Z'$ couplings from $B_s$ mixing and $R_{K^{(*)}}$. \protect\footnotemark[9] }
             \end{figure}
-        \end{column}\footnotetext[8]{L. Di Luzio, M. Kirk, A. Lenz. arXiv:1712.06572}
+\end{column}\footnotetext[9]{L. Di Luzio, M. Kirk, A. Lenz. arXiv:1712.06572}
     \end{columns}
     \begin{itemize}
         \item \textbf{Problem:} Real values for the LQ/$Z'$ couplings increase $\Delta M_S^\mathrm{NP}$.
@@ -379,7 +391,7 @@ Combined tension of $3.08\,\sigma$.\footnotemark[2]
 
 \begin{frame}\frametitle{Fit to complex WCs: Update}
     \begin{itemize}
-        \item The SM prediction for $\Delta M_S$ was updated in 2019 to $\Delta M_S = (18.4^{+0.7}_{-1.2}) \mathrm{ps}^{-1}$,\footnote[9]{L. Di Luzio, M. Kirk, A. Lenz, and T. Rauh, arXiv:1909.11087} compatible with experiment.
+\item The SM prediction for $\Delta M_S$ was updated in 2019 to $\Delta M_S = (18.4^{+0.7}_{-1.2}) \mathrm{ps}^{-1}$,\footnote[10]{L. Di Luzio, M. Kirk, A. Lenz, and T. Rauh, arXiv:1909.11087} compatible with experiment.
         \item Therefore, imaginary or complex WC are no longer necessary. In the following fits we only consider real parameters.
         \item After the 2019 and 2021 $R_K$ measurements by LHCb, our results are not compatible with experimental data.
     \end{itemize}
@@ -450,9 +462,21 @@ Combined tension of $3.08\,\sigma$.\footnotemark[2]
 
 \end{frame}
 
+\begin{frame}\frametitle{SMEFT Fit: Hessian approximation}
+
+    In Scenario VII, we can approximate the likelihood function as
+    $$\Delta\log L (\vec{C}) \approx \Delta\log L_\mathrm{bf} + \vec{C}^T \mathbb{H} \vec{C}\,.$$
+    This allows us to easily explore the area around the best fit point.
+
+    \begin{center}
+        \includegraphics[width=0.4\textwidth]{figures/evo_ax1.pdf} $\qquad$
+        \includegraphics[width=0.4\textwidth]{figures/evo_ax3.pdf}
+    \end{center}
+\end{frame}
+
 \begin{frame}\frametitle{SMEFT Fit: Electron colliders}
 
-    Electron colliders are powerful tools in testing neutral currents\footnote[10]{R. K. Ellis \textit{et al.} arXiv:1910.11775 [hep-ex]}:
+Electron colliders are powerful tools in testing neutral currents\footnote[11]{R. K. Ellis \textit{et al.} arXiv:1910.11775 [hep-ex]}:
     \begin{itemize}
         \item Clean signatures.
         \item Small uncertainties.
@@ -504,5 +528,297 @@ Combined tension of $3.08\,\sigma$.\footnotemark[2]
     \end{itemize}
 
 \end{frame}
+
+\begin{frame}\frametitle{ML Fit: Effective Field Theory}
+    \begin{itemize}
+        \item NP only affects third generation leptons in the ``interaction basis''
+              $$\mathcal{L}_\mathrm{SMEFT} = \frac{C_1}{\Lambda^2}(\bar{\ell}_3 \gamma_\mu \ell_3)(\bar{q}_3 \gamma^\mu  q_3) + \frac{C_3}{\Lambda^2}(\bar{\ell}_3 \gamma_\mu \tau^I \ell_3)(\bar{q}_3 \gamma^\mu \tau^I q_3).$$
+        \item Rotation from interaction basis. Flavour structure given by\footnote[12]{F.~Feruglio, P.~Paradisi and A.~Pattori. arXiv:1705.00929}
+
+              $$C_{\ell q(1)}^{ijkl} = C_1 \lambda_\ell^{ij}\lambda_q^{kl}\,\qquad\qquad C_{\ell q(3)}^{ijkl} = C_3 \lambda_\ell^{ij}\lambda_q^{kl}\,. $$
+              The mixing matrices must be hermitian, idempotent and with $\mathrm{tr}\lambda =1$. Parameterized as
+              $$ \lambda = \frac{1}{1+|\alpha|^2+|\beta|^2}\begin{pmatrix}
+                      |\alpha|^2 & \alpha \beta^* & \alpha \\ \alpha^* \beta & |\beta|^2 & \beta \\ \alpha^* & \beta^* & 1
+                  \end{pmatrix}. $$
+        \item The structure of the $\lambda$ matrices creates Lepton Flavour Violating effects through $\lambda_\ell^{ij}\, (i\neq j)$.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{ML Fit: Global fits}
+    We perform global fits including $b\to s \ell^+\ell^-$ and
+    $b\to c\ell\nu$ observables, and also electroweak precision tests,
+    nuclear precision observables (superallowed $\beta$ decays) and Leptonic Flavour Violating observables.
+
+    ~
+
+    We consider two different scenarios:
+    \begin{itemize}
+        \item \textbf{Scenario I:} Mixing to first generation $\alpha$ are negligible\footnote[12]{F.~Feruglio, P.~Paradisi and A.~Pattori. arXiv:1705.00929}.
+        \item \textbf{Scenario II:} Mixing to first and second generations\footnote[13]{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}.
+    \end{itemize}
+    \begin{center}\small
+        \begin{tabular}{|c|c|c|}\hline
+                                        & Scenario I          & Scenario II                  \\\hline
+            $C$                         & $-0.13 \pm 0.05$    & $-0.13 \pm 0.08$             \\\hline
+            $\alpha^\ell$               &                     & $\pm (0.07^{+0.04}_{-0.07})$ \\\hline
+            $\beta^\ell$                & $0 \pm 0.025$       & $0 \pm 0.025$                \\\hline
+            $\alpha^q$                  &                     & $-0.05^{+0.12}_{-0.07}$      \\\hline
+            $\beta^q$                   & $0.8^{+2.0}_{-0.5}$ & $0.73^{+2.8}_{-0.6}$         \\\hline
+            $\Delta \chi^2_\mathrm{SM}$ & $40.32$             & $57.06$                      \\\hline
+            SM Pull                     & $5.75\,\sigma$      & $6.57\,\sigma$               \\\hline
+        \end{tabular}
+    \end{center}
+\end{frame}
+
+\begin{frame}\frametitle{ML Fit: Results}
+
+    \begin{center}
+        \begin{tabular}{lc}
+            $R_{K^{(*)}} = \frac{\mathrm{BR}(B\to K^{(*)}\mu^+ \mu^-)}{\mathrm{BR}(B\to K^{(*)}e^+ e^-)}$ & $R_{D^{(*)}} = \frac{\mathrm{BR}(B\to D^{(*)}\tau \nu)}{\mathrm{BR}(B\to D^{(*)}\ell \nu)}$ \\
+            \includegraphics[width=0.55\textwidth]{figures/rotRKplot.pdf}                                 &
+            \includegraphics[width=0.4\textwidth]{figures/rotRDplot.pdf}
+        \end{tabular}
+    \end{center}
+    $R_{K^{(*)}}$ requires mixing with the first generation ($\alpha^\ell$).
+    \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
+\end{frame}
+
+\begin{frame}\frametitle{ML Fits Results}
+    Regions allowed at $1~\sigma$:
+    \begin{center}
+        \begin{tabular}{cc}
+            \includegraphics[width=0.4\textwidth]{figures/alphabeta_l.pdf} & \includegraphics[width=0.4\textwidth]{figures/alphabeta_q.pdf}
+        \end{tabular}
+    \end{center}
+    \begin{itemize}
+        \item $\alpha^\ell$ is constrained by $R_{K^{(*)}}$.
+        \item $\beta^\ell$ is constrained by LFV observables.
+    \end{itemize}
+    \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
+\end{frame}
+
+\begin{frame}\frametitle{ML Fit: Exploring the likelihood function}
+
+    \begin{itemize}
+        \item We would like to explore the properties of the likelihood function around the best fit point.
+        \item {\bf Problem:} At each point $(C, \alpha^\ell, \beta^\ell, \alpha^q, \beta^q)$ requires the calculation of 471 observables, many of them need numerical integration.
+        \item In the previous work, we used the Hessian approximation...
+
+        \item ... but it doesn't work in this case because of non-linear relation between fit parameters and Wilson coefficients (equi-probability surfaces are not ellipsoids).
+        \item {\bf Idea:} Teach a machine to approximate $\log L(\vec{C})$.
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}\frametitle{ML Fit: xgboost}
+
+    Regression tree
+    \includegraphics[width=\textwidth]{figures/regtree.png}
+
+    \vspace{1.5cm}
+
+    A regression tree $k$ defines a function $f_k(x)$. We use an ensemble of trees $F$ for the prediction: $$\phi(x) = \sum_{k\in F} f_k(x)\,.$$
+\end{frame}
+
+\begin{frame}\frametitle{ML Fit: xgboost}
+
+    Extreme Gradient Boosting (xgboost)\footnote[14]{T.~Chen and C.~Guestrin. arXiv:1603.02754}.
+
+    ~
+
+    We have a dataset $\{(x_i, y_i)\}$ with $x_i \in X (\sim\mathbb{R}^n)$ and $y_i \in \mathbb{R}$, and want to find $\phi(x)$ so $\phi(x_i)\approx y_i$. Defining the regularized objective
+    $$\mathcal{L}[\phi] = \sum_i \ell(\phi(x_i), y_i) + \sum_k \Omega(f_k)\,. $$
+    \begin{itemize}
+        \item $\ell(\tilde{y}_i, y_i)$ is the loss function (Mean Absolute Error).
+        \item $\Omega(f_k)$ penalizes the complexity of the trees.
+    \end{itemize}
+    The objective is optimized iteratively:
+    \begin{itemize}
+        \item The algorithm starts with one tree with a single leaf.
+        \item At each step, one new tree with one more leaf is added to the ensemble (splitting).
+        \item To prevent overfitting, the weights of the newly added leaf is multiplied by $\eta < 1$ (shrinkage).
+    \end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{ML Fit: Machine Learning training}
+
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            Data sample consisting of
+            \begin{itemize}
+                \item 5000 points re-used from likelihood plots.
+                \item 5000 random points.
+                \item Split in 75\% training set, 25\% validation set.
+            \end{itemize}
+            Results of the training:
+            \begin{itemize}
+                \item Pearson regression coefficient $r=0.971$.
+                \item Mean Absolute Error $0.655$.
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[width=\columnwidth]{figures/regression_xgb.pdf}
+        \end{column}
+    \end{columns}
+    \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
+
+\end{frame}
+
+\begin{frame}\frametitle{ML Fit: Machine-Learning Montecarlo}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            We want to generate a sample of points distributed according to the $\chi^2$ of the fit.
+
+            We generate random points, that are accepted if
+            $$\log \tilde{L}(\vec{C}) = \log L_\mathrm{bf} + \log u\,,$$
+            with $u$ a random number from the uniform distribution in $[0,1)$. % chktex 9
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[width=\columnwidth]{figures/hist_xgb.pdf}
+        \end{column}
+    \end{columns}
+
+    ~
+
+    We use the trained model $\log\tilde{L}(\vec{C})$ to compute an approximation of the likelihood function.
+    \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
+
+\end{frame}
+
+\begin{frame}\frametitle{ML Fit: SHAP values}
+
+    Measure of the importance of each parameter in the Machine Learning prediction for a single datapoint\footnote[15]{S. Lundberg, S. Lee. arXiv:1705.07874}.
+
+    We train $2^n$ simplified models
+
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[width=\columnwidth]{figures/shapgraph.png}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Marginal contributions {\color{red} when adding $x^1$}: $\phi_{100}-\phi_{000}$, $\phi_{110}-\phi_{010}$, $\phi_{101}-\phi_{001}$, $\phi_{111} - \phi_{011}$.
+                \item SHAP value {\color{red}for $x^1$} is a weighted average of all its marginal contributions.
+                \item $\phi_{000}$ is the constant value.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+
+    Efficient implementation (poly time) for tree-based Machine Learning models.\footnote[16]{S. Lundberg, G. Erion, S. Lee. arXiv:1802.03888}
+
+\end{frame}
+
+\begin{frame}\frametitle{ML Fit: SHAP values results}
+
+    The mixing \(\beta^q\) to the second quark generation and $\alpha^\ell$ to the first lepton generation are in general the most important features.
+    \begin{center}
+        \includegraphics[width=0.8\textwidth]{figures/SHAP_summary.pdf}
+    \end{center}
+
+    For the best fit point, the value of $C$ is also important:
+    \begin{center}
+        \begin{tabular}{|*{8}{c|}}\hline
+            Base  & \multicolumn{5}{c|}{SHAP value for} & Final         & Actual                                                        \\ \cline{2-6}
+            value & $C$                                 & $\alpha^\ell$ & $\beta^\ell$ & $\alpha^q$ & $\beta^q$ & prediction & $\log L$ \\\hline
+            39.43 & 3.293                               & 4.056         & 1.993        & 2.671      & 4.086     & 55.537     & 57.06    \\\hline
+        \end{tabular}
+    \end{center}
+    \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
+
+\end{frame}
+
+\begin{frame}\frametitle{ML Fits: SHAP values and likelihood}
+    SHAP importances reproduce the dependence of the $-\log L$:
+    \begin{center}
+        \includegraphics[width=0.32\textwidth]{figures/evoplot_C.pdf}
+        \includegraphics[width=0.32\textwidth]{figures/evoplot_alphal.pdf}
+        \includegraphics[width=0.32\textwidth]{figures/evoplot_betaq.pdf}
+    \end{center}
+    \begin{center}
+        \includegraphics[width=0.32\textwidth]{figures/SHAP_C.pdf}
+        \includegraphics[width=0.32\textwidth]{figures/SHAP_al.pdf}
+        \includegraphics[width=0.32\textwidth]{figures/SHAP_bq.pdf}
+    \end{center}
+
+    \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
+
+\end{frame}
+
+\begin{frame}\frametitle{ML Fits: Correlations between observables}
+
+    \begin{columns}[onlytextwidth]
+        \begin{column}{0.6\textwidth}
+            \includegraphics[width=\columnwidth]{figures/obscorr.pdf}
+        \end{column}
+        \begin{column}{0.4\textwidth}
+            \begin{itemize}
+                \item Moderate correlation between $R_K$ and $\mathrm{BR}(B_s \to \mu^+ \mu^-)$ because $C_9^\mu \neq C_{10}^\mu$.
+                \item Also moderate correlation between $R_K$ and $R_D$.
+                \item Perfect correlation between $R_D$ and $\mathrm{BR}(B\to K^{(*)}\nu\bar{\nu})$.
+                \item No observable displays large correlations to the global likelihood: global fits are needed.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+    \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
+
+\end{frame}
+
+\begin{frame}\frametitle{ML Fits: $R_D$ and $\mathrm{BR}(B\to K^{(*)}\nu\bar{\nu})$}
+
+    \begin{center}
+        \includegraphics[width=0.8\textwidth]{figures/RD_BKnunu.pdf}
+    \end{center}
+
+    An excess in $R_D$ implies an excess in $\mathrm{BR}(B\to K^{(*)}\nu\bar{\nu})$. \\(Note that the {\color{gray}2021 World Average} is not included in our fit).
+
+    \blankfootnote{J. Grygier \textit{et al.} (Belle) arXiv:1702.03224; F. Dattola (Belle-II) arXiv:2105.05754; Y. S. Ahmis \textit{et al.} (HFLAV) arXiv:1909.12524; \textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
+\end{frame}
+
+\begin{frame}\frametitle{ML Fits: Connection to Leptoquarks}
+
+    Vector Leptoquark $U_1 \sim (\bar{\mathbf{3}}, \mathbf{1}, 2/3)$,
+    $$\mathcal{L}_{U_1} = x_L^{ij} \bar{q}_i \gamma_\mu U_1^\mu \ell_j + x_R^{ij} \bar{d}_{Ri} \gamma_\mu U_1^\mu e_{Rj} + \mathrm{h.c.} $$
+
+    Matching to the SMEFT Wilson coefficients
+    $$C_{\ell q(1)}^{ijkl} = C_{\ell q(3)}^{ijkl} = \frac{-\Lambda^2}{2M_U^2}x_L^{li}x_L^{kj*}\,,$$
+    $$C_{ed}^{ijkl} = -\frac{1}{2}C_{qde}^{ijkl} = \frac{-\Lambda^2}{2M_U^2}x_R^{li}x_R^{kj*}\,,$$
+    In terms of the parameters of our fit,
+    $$|x_L^{ji}|^2 = -\frac{2}{M_U^2}C\lambda^\ell_{ii}\lambda^q_{jj}\,,$$
+    $$\mathrm{Arg}(x_L^{ji}) = \mathrm{Arg}(\lambda_{j3}^q)-\mathrm{Arg}(\lambda_{i3}^\ell) + \theta\,.$$ % chktex 21
+
+\end{frame}
+
+\begin{frame}\frametitle{ML Fits: Connection to leptoquarks}
+
+    Couplings to vector leptoquark $U_1$ in Scenario II (mixing to first and second generation):
+    $$x_L = \begin{pmatrix}
+            -2.27\times10^{-3}   & -3.76\times 10^{-10} & -0.0325            \\
+            {\color{blue}0.0319} & 5.29\times 10^{-9}   & {\color{red}0.458} \\
+            {\color{blue}0.0437} & 7.25\times 10^{-9}   & {\color{red}0.627}
+        \end{pmatrix}\,.
+    $$
+    \begin{itemize}
+        \item Couplings {\color{red}$x_L^{23}$} and {\color{red}$x_L^{33}$}, previously proposed to describe the $R_{D^{(*)}}$ anomaly\footnote[17]{A.~Bhaskar, D.~Das, T.~Mandal, S.~Mitra and C.~Neeraj. 2101.12069}. Compatible with experimental limits.
+        \item Additionally, couplings {\color{blue}$x_L^{21}$} and {\color{blue}$x_L^{31}$} to describe the $R_{K^{(*)}}$ anomaly.
+    \end{itemize}
+
+    ~
+
+    Other leptoquark models, and $W'$ and $Z'$ models, do not generate $C_{\ell q(1)} = C_{\ell q (3)}$.
+\end{frame}
+
+\begin{frame}\frametitle{ML Fits: Conclusions}
+
+    \begin{itemize}
+        \item Using EFTs (SMEFT) to describe the $R_{K^{(*)}}$ and $R_{D^{(*)}}$ anomalies: $R_{D^{(*)}}$ generated at tree level and $R_{K^{(*)}}$ from interplay between tree and loop level.
+        \item Global fits are needed to take in account possible side-effects.
+        \item \texttt{xgboost} Machine Learning model is able to approximate the likelihood function.
+        \item SHAP values capture the importance of each parameter in the fit.
+        \item Interesting correlation between $R_{D^{(*)}}$ and $\mathrm{BR}(B\to K^{(*)}\nu\bar{\nu})$.
+        \item Explanation in terms of vector leptoquark $U_1$ coupling to second and third generations of quarks and third ($R_{D^{(*)}}$) and first ($R_{K^{(*)}}$) generation of leptons.
+    \end{itemize}
+
+\end{frame}
+
 
 \end{document}
