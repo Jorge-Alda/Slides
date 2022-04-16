@@ -4,6 +4,7 @@
 \usepackage{appendixnumberbeamer}
 \usepackage{verbatim}
 \usepackage{tikz} %%%Bubbles: https://tex.stackexchange.com/a/83786
+\usepackage{slashed}
 \usetikzlibrary{shapes.callouts}
 
 \tikzset{
@@ -820,5 +821,239 @@ Electron colliders are powerful tools in testing neutral currents\footnote[11]{R
 
 \end{frame}
 
+\begin{frame}\frametitle{ALPs: Introduction}
+    \begin{itemize}
+        \item Pseudo-scalar particles are common features of BSM models with a global $U(1)_\mathrm{PQ}$ symmetry spontaneously broken at scale $f_a \gg v$.
+        \item Axion-like particles (ALP): mass $m_a$ is determined by UV physics, breaking the axion constraint $m_a f_a \approx m_\pi f_\pi$.
+        \item ALP parameter space explored in a wide energy range:
+              \begin{itemize}
+                  \item Constraints on very light ALPs from astrophysics and cosmology.
+                  \item Constraints for MeV-GeV range from fixed target facilities and $B$-physics experiments.
+              \end{itemize}
+        \item The goal of our work is to study the meson leptonic decays $M\to \ell \nu_\ell a$.
+              \begin{itemize}
+                  \item ALP escaping detection (long-lived $\tau_a \gtrsim 100\,\mathrm{ps} $ or decaying into a dark sector).
+                  \item Generic ALP mass $m_a$ ($m_a \approx 10\ \mathrm{MeV}\sim 1\ \mathrm{GeV}$).
+                  \item Generic flavour-conserving couplings to fermions.
+              \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{ALPs: Effective Field Theory}
+    The most general dimension-5 effective Lagrangian describing ALP-fermion flavour-conserving interactions is
+    $$ \delta \mathcal{L}^{a}_{\mathrm{eff}} =
+        -\frac{\partial_\mu a}{ 2 f_a} \sum_{i} c_i \,\overline{\psi}_i \gamma^\mu \gamma_5 \,\psi_i\,. $$
+    Using the equations of motion, we can write the Lagrangian in the ``Yukawa'' basis instead of the derivative basis
+    $$\delta \mathcal{L}^{a}_{\mathrm{eff}} = i \frac{a}{f_a} \sum_{i}  c_i\, m_i \, \overline{\psi}_i \gamma_5 \,\psi_i + \mathcal{O}(1/f_a^2) \,.$$
+\end{frame}
+
+\begin{frame}\frametitle{ALPs: Leptonic Meson Decays in ALP}
+    \begin{itemize}
+        \item At tree level, ALPs can be emitted either from the quarks in the initial meson, or from the final lepton.
+              \vspace{0.5cm}
+
+              ~
+
+              {\centering
+              \includegraphics[width=0.4\textwidth]{figures/Lept1.1}$\qquad$
+              \includegraphics[width=0.4\textwidth]{figures/Lept1.3}}
+              \vspace{0.5cm}
+        \item The ALP coupling to neutrinos is negligible (proportional to $m_\nu$).
+        \item The diagram for $W$ emission vanishes because the $W$-ALP coupling is proportional to the antisymmetric tensor.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{ALPs: Hadronic ALP Emission}
+    The amplitude of ALP emission from quarks ($q$ is light $u$-type, and $Q$ is heavy $d$-type) is given by
+    $$\mathcal{M}_h = \langle 0 |\bar{q}\,\Gamma^\mu_{h}\,Q|M\rangle \left(\bar{\ell} \,\gamma_\mu P_L \,\nu_\ell \right)\,,$$
+    with $\Gamma^\mu_h$ given by
+        {\small $$\Gamma^\mu_h = \frac{4 G_F}{\sqrt{2}} V_{qQ}
+                \left(\frac{c_q\,m_q}{f_a}\,\gamma^\mu P_L\,\frac{\slashed{p}_a-\slashed{p}_q+m_q}{m_a^2 -2 p_a \cdot p_q}\,\gamma_5
+                \,-\, \frac{c_Q\,m_Q}{f_a}\,\gamma_5\,\frac{\slashed{p}_a-\slashed{p}_q-m_Q}{m_a^2- 2 p_a \cdot p_Q}\,\gamma^\mu P_L \right)\,.$$}
+
+    We need a hadronization model to calculate the hadronic matrix element $ \langle 0 |\bar{q}\,\Gamma^\mu_{h}\,Q|M\rangle$.
+
+\end{frame}
+
+\begin{frame}\frametitle{ALPs: Hadronization}
+    We follow the Lepage-Brodsky technique\footnote[18]{G. Lepage, S. J. Brodsky, Phys. Rev. D 22 (1980), p. 2157.}:
+    \begin{itemize}
+        \item We parameterize the ground-state wavefunction of the meson as
+              $$\Psi_M(x)=\frac{1}{4}\phi_M(x)\gamma^5(\slashed{P}_M + g_M(x) M_M)\,.$$
+        \item The distribution of the fraction of momentum $x$ carried by the heavier quark is
+              $$\phi_H(x) \propto  \left[\frac{\xi^2}{1-x}+\frac{1}{x}-1\right]^{-2} \qquad , \qquad \phi_L(x) \propto  x(1-x) \,,$$
+              for heavy and light mesons respectively. $\xi\sim \mathcal{O}(m_q/m_Q)$.
+        \item The hadronic elements are calculated integrating over the fractions of momentum,
+              \begin{align*}
+                  \langle 0| \bar{q}\,\Gamma^{\mu}\,Q |M\rangle          & = i f_M \int_0^1 dx\,\mathrm{Tr}\left[\Gamma^{\mu} \Psi_M (x)\right]\,, \\
+                  \langle 0|\bar{q}\,\gamma^\mu \,\gamma_5 \,Q |M\rangle & = i f_M P_M^\mu \,.
+              \end{align*}
+
+    \end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{ALPs: Hadronic ALP Emission}
+    One obtains the following decay amplitudes for the meson ALP--emission process:
+    {\small $$\mathcal{M}_{h} = \frac{4\,i\,G_F\,V_{qQ}}{\sqrt{2}} \frac{f_M}{f_a} \frac{M_M^2}{2\,p_a \cdot P_M} \,
+        \left[ c_Q \frac{m_Q}{M_M} \Phi^{(Q)}_M(m_a^2) - c_q \frac{m_q}{M_M} \Phi^{(q)}_M (m_a^2) \right]
+        \left(\bar{\ell} \, \slashed{p}_a \,P_L \, \nu_\ell \right)$$}
+    where the functions $\Phi^{(q,Q)}_M (m_a^2)$ contain the integrals over the quark momentum fraction.
+
+    ~
+
+    Improvements compared to previous results\footnote[19]{Y. Aditya, K. J. Healey, A. A. Petrov. 1201.1007 [hep-ph]}:
+    \begin{itemize}
+        \item Formula for massive ALPs.
+        \item We do not rely on the assumption $c_q = c_Q$.
+        \item Corrected a factor 1/2 in the published formula for massless decays
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}\frametitle{ALPs: Leptonic ALP Emission}
+    The leptonic decay amplitude for the lepton ALP--emission process can be obtained straight-forward
+    $$ \mathcal{M}_\ell =  \langle 0|\bar{q}\,\gamma_\mu  P_L\,Q |M\rangle \left(\bar{\ell} \,\Gamma^\mu_\ell \,\nu_\ell \right) \,,
+    $$
+    with
+    $$
+        \Gamma^\mu_\ell = - \frac{4 G_F}{\sqrt{2}} V_{qQ}
+        \left(\frac{c_\ell\,m_\ell}{f_a}\,\gamma_5\,\frac{\slashed{p}_a+\slashed{p}_\ell+m_\ell}{m_a^2 + 2 p_a \cdot p_\ell}\,\gamma^\mu P_L \right)\,.$$
+
+    The amplitude is
+    $$\mathcal{M}_\ell = - \frac{4\,i\, G_F}{\sqrt{2}} V_{qQ} \,\frac{f_M}{f_a}  \left[  c_\ell\,m_\ell\, \left(\bar{\ell} \, P_L \,\nu_\ell \right) -
+            \frac{ c_\ell \, m^2_\ell}{m_a^2\,+\, 2\,p_a\cdot p_\ell} \left(\bar{\ell} \, \slashed{p}_a\, P_L \,\nu_\ell \right) \right] \,.$$
+\end{frame}
+
+\begin{frame} \frametitle{ALPs: Bounds on ALP-fermion couplings}
+    Bounds on leptonic meson decays coming from particle physics experiments:
+    \begin{itemize}
+        \item $B$ meson decays: $B$-factories (Belle).
+        \item Charmed meson decays: BESS, Belle.
+        \item Kaon decays: KLOE and NA62.
+    \end{itemize}
+
+    ~
+
+    We set the bounds to $c_i$ by demanding that
+    $$
+        \begin{matrix}
+            \mathrm{BR}(M\to \ell + \mathrm{inv}) \\
+            (1\,\sigma)
+        \end{matrix} = \left\{ \begin{matrix}
+            \mathrm{BR}(M\to \ell \nu)   &   & [\mathrm{SM}]  \\
+                                         & + &                \\
+            \mathrm{BR}(M\to \ell \nu a) &   & [\mathrm{ALP}]
+        \end{matrix} \right.
+    $$
+
+\end{frame}
+
+\begin{frame}\frametitle{ALPs: Bounds on ALP-$u$ couplings}
+    ALP couplings to $u$-quarks
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[width=\columnwidth]{figures/Fig2aS}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Bounds not competitive compared to top-enhanced penguin decays and tree-level FCNC processes.
+                \item Only exception in $K\to e \nu_e$ decays.
+                \item Limits to the scale $f_a \gtrsim 10^3- 10^4~\mathrm{MeV}$ for light lepton decays and $f_a \gtrsim 10^1 - 10^2~\mathrm{MeV}$ for $\tau$ decays.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{ALPs: Bounds on ALP-$d$ couplings}
+    ALP couplings to $d$-quarks
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[width=\columnwidth]{figures/Fig2bS}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Bounds not competitive compared to $\Upsilon(ns)$ decays.
+                \item Only exception in $K\to e \nu_e$ decays.
+                \item Limits to the scale $f_a \gtrsim 10^3- 10^4~\mathrm{MeV}$ for light lepton decays and $f_a \gtrsim 10^1 - 10^2~\mathrm{MeV}$ for $\tau$ decays.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{ALPs: Bounds on ALP-lepton couplings}
+    ALP couplings to leptons
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[width=\columnwidth]{figures/Fig3aS}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Best bounds available for invisible ALP.
+                \item Better results for muons, $f_a \gtrsim 10^2 - 10^3~\mathrm{MeV}$.
+                \item Electrons are mass-suppressed, $f_a \gtrsim 1~\mathrm{MeV}$.
+                \item Results on ALP-electron couplings can be complementary to future DM searches (EDELWEISS, LDMX) and reactor searches (CONNIE, CONUS, MINE, $\nu$-cleus).
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{ALPs: Bounds on ALP-fermion couplings}
+    Our results show an improvement of $~$ one order of magnitude compared to the previous published bounds\footnote[19]{Y. Aditya, K. J. Healey, A. A. Petrov. 1201.1007 [hep-ph]}:
+    \begin{itemize}
+        \item Improvement of the experimental determination of pseudo-scalar leptonic decays.
+        \item Correction of the 1/2 factor in the hadronic amplitude.
+        \item Individual analysis of each fermion flavour. This removes a partial cancellation between $c_q$ and $c_Q$.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{ALPs: Bounds on ALP-fermion couplings}
+    We also trialed calculating the bounds using the differential distribution.
+    \begin{columns}
+        \begin{column}{0.6\textwidth}
+            \center
+            \includegraphics[width=\columnwidth]{figures/distr}
+            {\small $M_\mathrm{miss}^2\ [\mathrm{GeV}^2]$}
+        \end{column}
+        \begin{column}{0.4\textwidth}
+            In a three-body decay, the differential distribution $d\Gamma/d s$ ($s \equiv M_\mathrm{miss}^2$) is not centered around $M_\mathrm{miss}=0$.
+
+            ~
+
+            We can obtain bounds using only the experimental data in the tail of the differential distribution.
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{ALPs: Bounds on ALP-fermion couplings}
+    $D_s \to \mu \nu_\mu$ decay
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[width=\columnwidth]{figures/Fig3bSpro}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item No clear improvement compared to using the complete BR.
+                \item More detailed experimental data would be needed.
+
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{ALPs: Conclusions}
+    \begin{itemize}
+        \item We have calculated the amplitudes for $M\to \ell \nu a$ decays for generic ALP mass and couplings.
+        \item We have found an improvement of a factor 10 in the couplings to quarks in these decays.
+              \begin{itemize}
+                  \item Most of the channels, except $K\to e\nu_e$, are not competitive with other processes.
+              \end{itemize}
+        \item We have obtained the most stringent limit for ALP-lepton couplings in the (sub)-GeV range.
+              \begin{itemize}
+                  \item Best bounds for muons ($D_S$ and $B$ decays) and electrons ($K$ decays).
+              \end{itemize}
+        \item We have tried using the differential distribution of 2-body vs 3-body decays, but more experimental data is needed.
+    \end{itemize}
+\end{frame}
 
 \end{document}
