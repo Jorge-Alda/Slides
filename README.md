@@ -1,26 +1,26 @@
-# Slides
+# 5th Inter-experiment Machine Learning Workshop, 9-13 May 2022
 
-Collections of slides for all my public presentations starting on 2022
+**Title:** Using Machine Learning techniques in phenomenological studies in flavour physics
 
-## Index of slides
+**Speaker:** Jorge Alda
 
-### 2022
+**Venue:** CERN, Geneva, Switzerland
 
-* Unizar Seminar, 2022-01-20: [Branch](https://github.com/Jorge-Alda/Slides/tree/Unizar202201), [Slides](https://github.com/Jorge-Alda/Slides/releases?q=tag:002).
-* IFT Seminar, 2022-01-27: [Branch](https://github.com/Jorge-Alda/Slides/tree/IFT2022), [Slides](https://github.com/Jorge-Alda/Slides/releases?q=tag:001).
-* XIII CPAN Days, 2022-03-21 [Branch](https://github.com/Jorge-Alda/Slides/tree/CPAN22), [Slides](https://github.com/Jorge-Alda/Slides/releases?q=tag:003).
-* Thesis Defense, 2022: [Branch](https://github.com/Jorge-Alda/Slides/tree/thesisdef), [Slides](https://github.com/Jorge-Alda/Slides/releases?q=tag:004).
+**Webpage:** [Link](https://indico.cern.ch/event/1078970/)
 
-## How does this repo work?
+**Slides:** [Link](https://github.com/Jorge-Alda/Slides/releases?q=tag:005)
 
-This branch (`main`) contains beamer templates and institutional logos. The slides for each event are in their own branch. When a new tag is pushed in a branch, GitHub Actions compiles the beamer files and produces a PDF [IMPORTANT: tags have to be pushed from the command line with `git push --tags`, creating a tag from GitHub's web won't work]. A tag version, like [`001.211218.01`](https://github.com/Jorge-Alda/Test/tree/001.211218.01), is formed of three parts:
+**Abstract:** In the recent years, a series of measurements in the observables RK(\*) and RD(\*)
+concerning the semileptonic decays of the B mesons have shown hints of violations of Lepton Flavour
+Universality (LFU). An updated model-independent analysis of New Physics violating LFU, by using
+the Standard Model Effective Field Theory (SMEFT) Lagrangian with semileptonic dimension six
+operators at Λ = 1 TeV is presented. We perform a global fit, in order to assess the impact of the
+New Physics in a broad range of observables including B-physics, electroweak precision test, Higgs
+physics and nuclear β decays. We discuss the relevance of the mixing in the first generation for the
+observables with heavier lepton flavours. We use for the first time in this context a Montecarlo analysis
+of the likelihood function to extract the confidence intervals and correlations between observables. Our
+results show that a suitable strategy is to use a Gradient Boosting predictor as a proxy of the real
+likelihood function, and to analyze the SHAP values as a measure of the impact of each parameter of
+SMEFT Lagrangian in the fit.
 
-* `slides id`: unique identifier for each event, a number starting on `001`.
-* `timestamp`: date of the tag, output from `date "+%y%m%d"`.
-* `tag id`: in case there are multiple tags the same day.
-
-The file `README.md` of the branch is used as release notes.
-
-GitHub Actions compiles by default the document `slides.tex`. To compile documents with another name, change the variable `env.MAIN_FILE`.
-
-To include the tag in the PDF file (for example, for a perma-link), include the string `++TAGNUM++` in all `.tex`files.
+[Back to the slides main page](https://github.com/Jorge-Alda/Slides/tree/main)
