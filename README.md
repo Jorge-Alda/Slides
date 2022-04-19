@@ -8,8 +8,9 @@ Collections of slides for all my public presentations starting on 2022
 
 * Unizar Seminar, 2022-01-20: [Branch](https://github.com/Jorge-Alda/Slides/tree/Unizar202201), [Slides](https://github.com/Jorge-Alda/Slides/releases?q=tag:002).
 * IFT Seminar, 2022-01-27: [Branch](https://github.com/Jorge-Alda/Slides/tree/IFT2022), [Slides](https://github.com/Jorge-Alda/Slides/releases?q=tag:001).
-* XIII CPAN Days, 2022-03-21 [Branch](https://github.com/Jorge-Alda/Slides/tree/CPAN22), [Slides](https://github.com/Jorge-Alda/Slides/releases?q=tag:003).
-* Thesis Defense, 2022: [Branch](https://github.com/Jorge-Alda/Slides/tree/thesisdef), [Slides](https://github.com/Jorge-Alda/Slides/releases?q=tag:004).
+* XIII CPAN Days, 2022-03-22 [Branch](https://github.com/Jorge-Alda/Slides/tree/CPAN22), [Slides](https://github.com/Jorge-Alda/Slides/releases?q=tag:003).
+* Thesis Defense, 2022-04-27: [Branch](https://github.com/Jorge-Alda/Slides/tree/thesisdef), [Slides](https://github.com/Jorge-Alda/Slides/releases?q=tag:004).
+* 5th Inter-experiment Machine Learning Workshop, 2022-05-09: [Branch](https://github.com/Jorge-Alda/Slides/tree/CERN22), [Slides](https://github.com/Jorge-Alda/Slides/releases?q=tag:005).
 
 ## How does this repo work?
 
