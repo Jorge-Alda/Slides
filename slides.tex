@@ -69,12 +69,23 @@ Università degli Studi di Padova/INFN \hspace{2em} \texttt{jalda@unizar.es} }
               arXiv:2109.07405 [hep-ph].
         \item J. Alda, A. W. M. Guerrera, S. Peñaranda, S. Rigolin,
               \textit{Leptonic Meson Decays into invisible ALP,}\\
-              arXiv:2111.02536 [hep-ph].
+Accepted for publication in Nuclear Physics B. arXiv:2111.02536 [hep-ph].
     \end{itemize}
 
 \end{frame}
 
-\begin{frame}\frametitle{Part I: $B$ physics}
+
+\begin{frame}[plain]%%%OUTLINE
+\begin{block}{\Large Outline}
+    \begin{itemize}
+        \item Introduction
+        \item Fit to complex WCs
+        \item SMEFT Fit
+        \item ML Fit
+        \item ALPs
+        \item General conclusions
+    \end{itemize}
+\end{block}
 \end{frame}
 
 \begin{frame}\frametitle{$B$ anomalies}
@@ -169,6 +180,24 @@ Combined tension of $3.08\,\sigma$.\footnotemark[2]
               $\mathcal{O}_i^\mathrm{exp}$ is the experimental measurements for the $i$-th observable, and $\mathcal{O}_i^\mathrm{th}$ its SMEMT prediction. $\mathcal{C}_{ij}^\mathrm{exp}$ and $\mathcal{C}^\mathrm{th}(C)$ are the covariance matrices (usually block-diagonal).% chktex 35
         \item Custom-made codes, publicly available at \texttt{https://github.com/Jorge-Alda}.
     \end{itemize}
+\end{frame}
+
+\begin{frame}[plain] %%% Fit to complex WCs
+    \begin{block}{{\Large Fit to Complex WCs}\\Eur. Phys. J. C 79.7 (2019), p.588, arXiv:1805.03636 [hep-ph]}
+        \begin{itemize}
+            \item Approach
+            \item $Z'$ model
+            \item Leptoquark $S_3$ model
+            \item Real case
+            \item $C_9$ and $C_{10}$
+            \item Fit to $Z'$ couplings
+            \item Fit to $S_3$ couplings
+            \item Observables
+            \item Conclusions
+            \item Update
+        \end{itemize}
+    \end{block}
+
 \end{frame}
 
 \begin{frame}\frametitle{Fit to complex WCs: Approach}
@@ -403,6 +432,21 @@ $\Delta M_S^\mathrm{SM} = 20.01 \pm 1.25\,\mathrm{ps}^{-1}$, \qquad$\Delta M_S^\
 
 \end{frame}
 
+\begin{frame}[plain] %%% SMEFT Fit
+    \begin{block}{{\Large SMEFT Fit}\\Eur. Phys. J. Plus 137 (2022), p.217, arXiv: 2012.14799 [hep-ph]}
+        \begin{itemize}
+            \item Operators and observables
+            \item Global fits
+            \item Observables
+            \item Hessian approximation
+            \item Electron colliders
+            \item Improved EW prospects
+            \item Conclusions
+        \end{itemize}
+    \end{block}
+
+\end{frame}
+
 \begin{frame}\frametitle{SMEFT Fit: Operators and observables}
     In this fit, we will consider the following SMEFT operators
     $$\mathcal{O}^i_{\ell q (1)} = (\overline{\ell}_i \gamma_\mu \ell_i)(\overline{q}_3 \gamma^\mu q_3), \qquad
@@ -439,7 +483,7 @@ $\Delta M_S^\mathrm{SM} = 20.01 \pm 1.25\,\mathrm{ps}^{-1}$, \qquad$\Delta M_S^\
 
 \end{frame}
 
-\begin{frame}\frametitle{SMEFT Fit: Predictions}
+\begin{frame}\frametitle{SMEFT Fit: Observables}
 
     We consider different scenarios for the SMEFT coefficients. The most relevant are:
     {\scriptsize \begin{itemize}
@@ -530,6 +574,28 @@ Electron colliders are powerful tools in testing neutral currents\footnote[11]{R
 
 \end{frame}
 
+\begin{frame}[plain] %%%ML Fit
+    \begin{block}{{\Large ML Fit}\\arXiv:2109.07405 [hep-ph]}
+        \begin{itemize}
+            \item Effective Field Theory
+            \item Global fits
+            \item Observables
+            \item Fit results
+            \item Exploring the likelihood function
+            \item xgboost
+            \item Machine Learning training
+            \item Machine Learning Montecarlo
+            \item SHAP values
+            \item SHAP values results
+            \item SHAP values and likelihood
+            \item Correlations between observables
+            \item $R_D$ and $\mathrm{BR}(B\to K^{(*)}\nu\bar{\nu})$
+            \item Connection to leptoquarks
+            \item Conclusions
+        \end{itemize}
+    \end{block}
+\end{frame}
+
 \begin{frame}\frametitle{ML Fit: Effective Field Theory}
     \begin{itemize}
         \item NP only affects third generation leptons in the ``interaction basis''
@@ -571,7 +637,7 @@ Electron colliders are powerful tools in testing neutral currents\footnote[11]{R
     \end{center}
 \end{frame}
 
-\begin{frame}\frametitle{ML Fit: Results}
+\begin{frame}\frametitle{ML Fit: Observables}
 
     \begin{center}
         \begin{tabular}{lc}
@@ -584,7 +650,7 @@ Electron colliders are powerful tools in testing neutral currents\footnote[11]{R
     \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
 \end{frame}
 
-\begin{frame}\frametitle{ML Fits Results}
+\begin{frame}\frametitle{ML Fit: Fit results}
     Regions allowed at $1~\sigma$:
     \begin{center}
         \begin{tabular}{cc}
@@ -665,7 +731,7 @@ Electron colliders are powerful tools in testing neutral currents\footnote[11]{R
 
 \end{frame}
 
-\begin{frame}\frametitle{ML Fit: Machine-Learning Montecarlo}
+\begin{frame}\frametitle{ML Fit: Machine Learning Montecarlo}
     \begin{columns}
         \begin{column}{0.5\textwidth}
             We want to generate a sample of points distributed according to the $\chi^2$ of the fit.
@@ -819,6 +885,20 @@ Electron colliders are powerful tools in testing neutral currents\footnote[11]{R
         \item Explanation in terms of vector leptoquark $U_1$ coupling to second and third generations of quarks and third ($R_{D^{(*)}}$) and first ($R_{K^{(*)}}$) generation of leptons.
     \end{itemize}
 
+\end{frame}
+
+\begin{frame}[plain] %%%ALPs
+    \begin{block}{{\Large ALPs}\\arXiv:2111.02536 [hep-ph]}
+        \begin{itemize}
+            \item Introduction
+            \item Effective Field Theory
+            \item Leptonic Meson Decays in ALP
+            \item Hadronic ALP emission
+            \item Leptonic ALP emission
+            \item Bounds on ALP-fermion couplings
+            \item Conclusions
+        \end{itemize}
+    \end{block}
 \end{frame}
 
 \begin{frame}\frametitle{ALPs: Introduction}
@@ -1053,6 +1133,14 @@ Electron colliders are powerful tools in testing neutral currents\footnote[11]{R
                   \item Best bounds for muons ($D_S$ and $B$ decays) and electrons ($K$ decays).
               \end{itemize}
         \item We have tried using the differential distribution of 2-body vs 3-body decays, but more experimental data is needed.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{General conclusions}
+    \begin{itemize}
+        \item Use of Effective Field Theories to describe deviations from Standard Model.
+        \item Need for Global analyses in order to account for all possible effects of the New Physics.
+        \item Machine Learning techniques can help in phenomenological studies.
     \end{itemize}
 \end{frame}
 
