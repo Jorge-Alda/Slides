@@ -37,7 +37,7 @@
 \author[Jorge Alda]{Jorge Alda,\\ Universidad de Zaragoza/CAPA\\
 Università degli Studi di Padova/INFN \hspace{2em} \texttt{jalda@unizar.es} }
 
-\date[PhD Thesis]{28th April 2022}
+\date[PhD Thesis]{27th April 2022}
 
 
 
@@ -69,7 +69,7 @@ Università degli Studi di Padova/INFN \hspace{2em} \texttt{jalda@unizar.es} }
               arXiv:2109.07405 [hep-ph].
         \item J. Alda, A. W. M. Guerrera, S. Peñaranda, S. Rigolin,
               \textit{Leptonic Meson Decays into invisible ALP,}\\
-Accepted for publication in Nuclear Physics B. arXiv:2111.02536 [hep-ph].
+To appear in Nuclear Physics B. arXiv:2111.02536 [hep-ph].
     \end{itemize}
 
 \end{frame}
@@ -88,7 +88,7 @@ Accepted for publication in Nuclear Physics B. arXiv:2111.02536 [hep-ph].
 \end{block}
 \end{frame}
 
-\begin{frame}\frametitle{$B$ anomalies}
+\begin{frame}\frametitle{Introduction: $B$ anomalies}
 
     Flavour-changing neutral currents $b \to s \ell^+ \ell^-$, with $\ell = e, \mu$.
     \begin{itemize}
@@ -106,7 +106,7 @@ Accepted for publication in Nuclear Physics B. arXiv:2111.02536 [hep-ph].
 
 \end{frame}
 
-\begin{frame}\frametitle{$B$ anomalies}
+\begin{frame}\frametitle{Introduction: $B$ anomalies}
     Flavour-changing charged currents $b\to c \ell \nu$, with $\ell = e/\mu, \tau$.
     \begin{columns}
         \begin{column}{0.55\textwidth}
@@ -129,7 +129,7 @@ Combined tension of $3.08\,\sigma$.\footnotemark[2]
 \footnotetext[2]{Y. S. Ahmis \textit{et al.} (HFLAV) arXiv:1909.12524}
 \end{frame}
 
-\begin{frame}\frametitle{Effective Field Theory}
+\begin{frame}\frametitle{Introduction: Effective Field Theory}
     \setbeamercovered{transparent}
     \def\beamertemplatetransparentcoveredmedium{\setbeamercovered{transparent=50}}
     \beamertemplatetransparentcoveredmedium
@@ -149,7 +149,7 @@ Combined tension of $3.08\,\sigma$.\footnotemark[2]
     \end{itemize}
 \end{frame}
 
-\begin{frame}\frametitle{Effective Field Theory}
+\begin{frame}\frametitle{Introduction: Effective Field Theory}
 \begin{itemize}
 
 \item The scale of $B$ decays is $\mu \approx m_b$. We need to integrate out $t$, $H$, $W$ and $Z$.
@@ -170,7 +170,7 @@ Combined tension of $3.08\,\sigma$.\footnotemark[2]
 \end{itemize}
 \end{frame}
 
-\begin{frame}\frametitle{Codes}
+\begin{frame}\frametitle{Introduction: Codes}
     Tools used for the global fits (in \texttt{python3}):
     \begin{itemize}
         \item \texttt{wilson}\footnote[4]{J.~Aebischer, J.~Kumar and D.~M.~Straub. arXiv:1804.05033}: RG evolution and mixing of the Wilson coefficients.
@@ -186,9 +186,7 @@ Combined tension of $3.08\,\sigma$.\footnotemark[2]
     \begin{block}{{\Large Fit to Complex WCs}\\Eur. Phys. J. C 79.7 (2019), p.588, arXiv:1805.03636 [hep-ph]}
         \begin{itemize}
             \item Approach
-            \item $Z'$ model
-            \item Leptoquark $S_3$ model
-            \item Real case
+\item Model matching
             \item $C_9$ and $C_{10}$
             \item Fit to $Z'$ couplings
             \item Fit to $S_3$ couplings
@@ -207,8 +205,8 @@ Combined tension of $3.08\,\sigma$.\footnotemark[2]
 $\Delta M_S^\mathrm{SM} = 20.01 \pm 1.25\,\mathrm{ps}^{-1}$, \qquad$\Delta M_S^\mathrm{exp} = 17.757 \pm 0.021 \,\mathrm{ps}^{-1}$. \footnotemark[7]
         \item $\mathcal{L}_{\Delta M_S} = -\frac{4 G_f}{\sqrt{2}} (V_{tb} V_{ts}^*)^2 C_{bs, \mathrm{NP}}^{LL} \mathcal{O}_{bs}^{LL} + \mathrm{h. c.}$
               \begin{itemize}
-                  \item $ \mathcal{O}_{bs}^{LL} = (\bar{s}_L \gamma_\mu b_L)^2$.
-                  \item $\Delta M_S = \Delta M_S^\mathrm{SM} \left|1 + \frac{C_{bs}^{LL} }{R^\mathrm{loop}} \right|$.
+\item $ \mathcal{O}_{bs}^{LL} = (\bar{s}_L \gamma_\mu b_L)^2$.
+\item $\Delta M_S = \Delta M_S^\mathrm{SM} \left|1 + \frac{C_{bs}^{LL} }{R^\mathrm{loop}} \right|$.\\ $C_{bs}^{LL}< 0$ needed to explain the $\Delta M_S$ anomaly.
 \item CP asymmetry\footnotemark[7]: $\ACPmix (B_s\to J/\psi \phi)= \sin \left[\mathrm{arg}\left(   1 + \frac{C_{bs}^{LL} }{R^\mathrm{loop}} \right) - 2 \beta_s \right] $.
               \end{itemize}
     \end{itemize}
@@ -223,69 +221,32 @@ $\Delta M_S^\mathrm{SM} = 20.01 \pm 1.25\,\mathrm{ps}^{-1}$, \qquad$\Delta M_S^\
 \footnotetext[7]{{L. Di Luzio, M. Kirk, A. Lenz. arXiv:1712.06572}}
 \end{frame}
 
-\begin{frame}\frametitle{Fit to complex WCs: $Z'$ model}
-    \begin{itemize}
-        \item $\mathcal{L}_{Z'} =  \frac{1}{2} M_{Z'}^2 (Z'_\mu)^2 + (\lambda_{ij}^Q \bar{d}^i_L \gamma^\mu d^j_L + \lambda_{\alpha\beta}^L \bar{e}^\alpha_L \gamma^\mu e_L^\beta )Z'_\mu $.~\\~\\
-        \item $C_9^\mu = - C_{10}^\mu = \frac{-\pi}{\sqrt{2} G_F \alpha V_{tb} V_{ts}^*}\frac{\lambda^Q_{23}}{M_{Z'}^2}\qquad\qquad [\lambda^L_{22} = 1]$.
-\item $C_{bs}^{LL} = \frac{\eta^{LL}}{4\sqrt{2}G_F (V_{tb} V_{ts}^*)^2}\left(\frac{\lambda_{23}^Q}{M_{Z'}}\right)^2$. \footnote[7]{L. Di Luzio, M. Kirk, A. Lenz. arXiv:1712.06572}
-    \end{itemize}
+\begin{frame}\frametitle{Fit to complex WCs: Model matching}
+Matching to WET coefficients\footnote[7]{L. Di Luzio, M. Kirk, A. Lenz. arXiv:1712.06572}
 
-    \begin{columns}
-        \begin{column}[t]{0.48\textwidth}
-            \begin{figure}
-                \includegraphics[width=0.7\textwidth]{figures/feynZLFUV.png}
-            \end{figure}
-        \end{column}
-        \begin{column}[t]{0.48\textwidth}
-            \begin{figure}
-                \includegraphics[width=0.7\textwidth]{figures/feynZBs.png}
-            \end{figure}
-        \end{column}
-    \end{columns}
-\end{frame}
+~
 
-\begin{frame}\frametitle{Fit to complex WCs: Leptoquark $S_3$ model}
-    \begin{itemize}
-        \item $\mathcal{L}_{S_3} = -M^2_{S_3} |S_3^a|^2 + y_{i\alpha}^{QL} \bar{q^c}^i (\epsilon \sigma^a) \ell^\alpha S_3^a  + \mathrm{h.c.}$~\\~\\
-        \item $C_9^\mu = -C_{10}^\mu = \frac{\pi}{\sqrt{2} G_F \alpha V_{tb} V_{ts}^*} \frac{y^{QL}_{32} y^{QL*}_{22}}{M^2_{S_3}}$.
-\item $C_{bs}^{LL} = \frac{5\eta^{LL}}{256 \sqrt{2} \pi^2 G_F (V_{tb} V_{ts}^*)^2}\left(\frac{y^{QL}_{3\alpha} y^{QL*}_{2\alpha}}{M_{S_3}}\right)^2$. \footnote[7]{L. Di Luzio, M. Kirk, A. Lenz. arXiv:1712.06572}
-    \end{itemize}
+\begin{columns}
+\begin{column}{0.52\textwidth}
+$$Z'\ \ (\lambda^L_{22} = 1)$$
 
-    \begin{columns}
-        \begin{column}[t]{0.48\textwidth}
-            \begin{figure}
-                \includegraphics[width=0.7\textwidth]{figures/feynLQLFUV.png}
-            \end{figure}
-        \end{column}
-        \begin{column}[t]{0.48\textwidth}
-            \begin{figure}
-                \includegraphics[width=0.7\textwidth]{figures/feynLQBs.png}
-            \end{figure}
-        \end{column}
-    \end{columns}
-\end{frame}
+{\small $$C_9^\mu = - C_{10}^\mu = \frac{-\pi}{\sqrt{2} G_F \alpha V_{tb} V_{ts}^*}\frac{\lambda^Q_{23}}{M_{Z'}^2}.$$}
+{\small $$C_{bs}^{LL} = \frac{\eta^{LL}}{4\sqrt{2}G_F (V_{tb} V_{ts}^*)^2}\left(\frac{\lambda_{23}^Q}{M_{Z'}}\right)^2.$$}
 
-\begin{frame}\frametitle{Fit to complex WCs: Real case}
-    \begin{columns}
-        \begin{column}[t]{0.48\textwidth}
-            \begin{figure}
-                \centering
-                \includegraphics[width =0.9\textwidth]{figures/contours_cropped.pdf}\\
-\small{Allowed real $C_9$ and $C_{10}$ \\coefficients. \protect\footnotemark[8]}
-            \end{figure}
-\end{column}\footnotetext[8]{W. Altmannshofer, P. Stangl, D. M. Straub.  arXiv:1704.05435}
-        \begin{column}[t]{0.48\textwidth}
-            \begin{figure}
-                \centering
-                \includegraphics[width =0.8\textwidth]{figures/BsmixvsRK.pdf}\\
-\small{Bounds on $Z'$ couplings from $B_s$ mixing and $R_{K^{(*)}}$. \protect\footnotemark[9] }
-            \end{figure}
-\end{column}\footnotetext[9]{L. Di Luzio, M. Kirk, A. Lenz. arXiv:1712.06572}
-    \end{columns}
-    \begin{itemize}
-        \item \textbf{Problem:} Real values for the LQ/$Z'$ couplings increase $\Delta M_S^\mathrm{NP}$.
-        \item Why not \alert{imaginary or complex} couplings?
-    \end{itemize}
+        \end{column}
+\begin{column}{0.56\textwidth}
+$$S_3\ \text{leptoquark}$$
+
+{\small $$C_9^\mu = -C_{10}^\mu = \frac{\pi}{\sqrt{2} G_F \alpha V_{tb} V_{ts}^*} \frac{y^{QL}_{32} y^{QL*}_{22}}{M^2_{S_3}}.$$}
+{\small $$C_{bs}^{LL} = \frac{5\eta^{LL}}{256 \sqrt{2} \pi^2 G_F (V_{tb} V_{ts}^*)^2}\left(\frac{y^{QL}_{3\alpha} y^{QL*}_{2\alpha}}{M_{S_3}}\right)^2.$$}
+
+        \end{column}
+\end{columns}
+
+\vspace{1cm}
+
+A negative value for $C_{bs}^{LL}$ implies a complex value for $C_9^\mu$ and $C_{10}^\mu$ in both models.
+
 \end{frame}
 
 \begin{frame}\frametitle{Fit to complex WCs: $C_9$ and $C_{10}$}
