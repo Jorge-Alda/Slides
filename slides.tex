@@ -59,15 +59,15 @@ Università degli Studi di Padova/INFN \hspace{2em} \texttt{jalda@unizar.es} }
 \begin{frame}\frametitle{Publication List}
 
 \begin{itemize}\color{red}
-        \item J. Alda, J. Guasch, S. Peñaranda,
+\item \textbf{J. Alda}, J. Guasch, S. Peñaranda,\\
               \textit{Some Results on Lepton Flavour Universality Violations,}\\
               Eur. Phys. J. C 79.7 (2019), p.588, arXiv:1805.03636 [hep-ph].
-        \item J. Alda, J. Guasch, S. Peñaranda, \textit{Anomalies in B meson decays: A phenomenological approach,}\\
+\item \textbf{J. Alda}, J. Guasch, S. Peñaranda, \\\textit{Anomalies in B meson decays: A phenomenological approach,}\\
               Eur. Phys. J. Plus 137 (2022), p.217, arXiv: 2012.14799 [hep-ph].
-        \item J. Alda, J. Guasch, S. Peñaranda,
+\item \textbf{J. Alda}, J. Guasch, S. Peñaranda,\\
               \textit{Using Machine Learning techniques in phenomenological studies in flavour physics,}\\
               arXiv:2109.07405 [hep-ph].
-        \item J. Alda, A. W. M. Guerrera, S. Peñaranda, S. Rigolin,
+\item \textbf{J. Alda}, A. W. M. Guerrera, S. Peñaranda, S. Rigolin,\\
               \textit{Leptonic Meson Decays into invisible ALP,}\\
 To appear in Nuclear Physics B (2022). arXiv:2111.02536 [hep-ph].
     \end{itemize}
@@ -78,10 +78,15 @@ To appear in Nuclear Physics B (2022). arXiv:2111.02536 [hep-ph].
 \begin{frame}\frametitle{Outline}
     \begin{itemize}
         \item Introduction
-        \item Fit to complex WCs
-        \item SMEFT Fit
-        \item ML Fit
-        \item ALPs
+\item Fit to complex Wilson coefficients \\{\color{red}\scriptsize \textbf{J. Alda}, J. Guasch, S. Peñaranda, Eur. Phys. J. C 79.7 (2019), p.588, arXiv:1805.03636 [hep-ph].}
+\item Fit to SMEFT coefficients and future prospects \\
+{\color{red}\scriptsize \textbf{J. Alda}, J. Guasch, S. Peñaranda,
+Eur. Phys. J. Plus 137 (2022), p.217, arXiv: 2012.14799 [hep-ph].}
+\item Using Machine Learning techniques in flavour physics \\
+{\color{red}\scriptsize \textbf{J. Alda}, J. Guasch, S. Peñaranda, arXiv:2109.07405 [hep-ph].}
+\item Leptonic meson decays into invisible ALP \\
+{\color{red}\scriptsize \textbf{J. Alda}, A. W. M. Guerrera, S. Peñaranda, S. Rigolin,
+Nuclear Physics B (2022). arXiv:2111.02536 [hep-ph].}
         \item General conclusions
     \end{itemize}
 \end{frame}
@@ -105,10 +110,10 @@ Chapters 2, 3
         \item Universality ratios $R_{K^{(*)}}$
               $$R_{K^{(*)}} = \frac{\mathrm{BR}(B\to K^{(*)}\mu^+ \mu^-)}{\mathrm{BR}(B\to K^{(*)}e^+ e^-)}\,, $$
               In the SM, theoretically clean, and $R_{K^{(*)}}=1$.\\
-              LHCb measurements\footnote{R. Aaij \textit{et al.} (LHCb) arXiv:2103.11769, arXiv:1705.05802}:
+LHCb measurements ($3.1\,\sigma$ tension):
               \begin{itemize}
-                  \item $R_{K^+} = 0.846^{+0.042}_{-0.039}{}^{+0.013}_{-0.012}$,
-                  \item $R_{K^{*0}} = 0.685^{+0.113}_{-0.069}\pm0.047$. ($3.1\,\sigma$ tension)
+\item $R_{K^+} = 0.846^{+0.042}_{-0.039}{}^{+0.013}_{-0.012}$ \colorcite{R. Aaij \textit{et al.} (LHCb) arXiv:2103.11769},
+\item $R_{K^{*0}} = 0.685^{+0.113}_{-0.069}\pm0.047$ \colorcite{R. Aaij \textit{et al.} (LHCb) arXiv:1705.05802}.
               \end{itemize}
         \item Angular observables for $B\to K^* \ell^+\ell^-$: $P'_4$, $P'_5\ldots$
         \item Also $B_s \to \phi \mu^+ \mu^-$ decays.
@@ -126,17 +131,17 @@ Chapters 2, 3
                       $$R_{D^{(*)}} = \frac{\mathrm{BR}(B\to D^{(*)}\tau \nu)}{\mathrm{BR}(B\to D^{(*)}\ell \nu)}\,, $$
                       $$R_D = 0.340 \pm 0.027 \pm 0.013\,,$$
                       $$R_{D^*} = 0.295 \pm 0.011 \pm 0.008\,.$$
-Combined tension of $3.08\,\sigma$.\footnotemark[2]
+Combined tension of $3.08\,\sigma$.
                 \item Longitudinal polarization of $D^*$.
                 \item Also $B_c \to J/\psi \ell\nu$ decays.
             \end{itemize}
 
         \end{column}
         \begin{column}{0.5\textwidth}
-            \includegraphics[width=\columnwidth]{figures/rdrds_spring2019.pdf}
+\includegraphics[width=\columnwidth]{figures/rdrds_spring2019.pdf}\\
+\colorcite{Y. S. Ahmis \textit{et al.} (HFLAV) arXiv:1909.12524}
         \end{column}
-    \end{columns}
-\footnotetext[2]{Y. S. Ahmis \textit{et al.} (HFLAV) arXiv:1909.12524}
+\end{columns}
 \end{frame}
 
 \begin{frame}\frametitle{Introduction: Effective Field Theory}
@@ -151,10 +156,9 @@ Combined tension of $3.08\,\sigma$.\footnotemark[2]
               \begin{itemize}
                   \item Model-independent description.
                   \item 2499 dimension-6 operators ($\Delta B = \Delta L = 0$).
-\item Warsaw basis\footnotemark[3] is the most common choice.
+\item Warsaw basis is the most common choice \colorcite{B. Grzadkowski, Iskrzynski, M. Misiak, J. Rosiek, arXiv:1008.4884}.
                   \item We will consider NP contributions to the following operators:
-                        $$\mathcal{O}_{\ell q(1)}^{ijkl} = (\bar{\ell}_i \gamma_\mu \ell_j)(\bar{q}_k \gamma^\mu  q_l), \qquad \mathcal{O}_{\ell q(3)}^{ijkl} = (\bar{\ell}_i \gamma_\mu \tau^I \ell_j)(\bar{q}_k \gamma^\mu \tau^I q_l).$$
-\footnotetext[3]{Grzadkowski, M. Iskrzynski, M. Misiak, J. Rosiek,    JHEP 10 (2010) 085. arXiv:1008.4884}
+$$\mathcal{O}_{\ell q(1)}^{ijkl} = (\bar{\ell}_i \gamma_\mu \ell_j)(\bar{q}_k \gamma^\mu  q_l), \qquad \mathcal{O}_{\ell q(3)}^{ijkl} = (\bar{\ell}_i \gamma_\mu \tau^I \ell_j)(\bar{q}_k \gamma^\mu \tau^I q_l).$$
               \end{itemize}
     \end{itemize}
 \end{frame}
@@ -164,8 +168,8 @@ Combined tension of $3.08\,\sigma$.\footnotemark[2]
 
 \item The scale of $B$ decays is $\mu \approx m_b$. We need to integrate out $t$, $H$, $W$ and $Z$.
 
-\item The Weak Effective Theory (WET) Lagrangian is given by
-{\scriptsize $$\mathcal{L}_{\text{WET}} = \mathcal{L}_\mathrm{SM} -\frac{4 G_F}{\sqrt{2}}V_{cb}\sum_{\ell = e, \mu, \tau} (1 + C_{VL}^\ell) \mathcal{O}_{VL}^\ell + \frac{4G_F}{\sqrt{2}}V_{tb}V_{ts}^*\frac{e^2}{16\pi^2}\sum_{\ell=e,\mu} (C_9^\ell \mathcal{O}_9^\ell  + C_{10}^\ell \mathcal{O}_{10}^\ell) \ ,$$}
+\item The Weak Effective Theory (WET) Lagrangian contains
+{\scriptsize $$\mathcal{L}_{\text{WET}} \supset -\frac{4 G_F}{\sqrt{2}}V_{cb}\sum_{\ell = e, \mu, \tau} (1 + C_{VL}^\ell) \mathcal{O}_{VL}^\ell + \frac{4G_F}{\sqrt{2}}V_{tb}V_{ts}^*\frac{e^2}{16\pi^2}\sum_{\ell=e,\mu} (C_9^\ell \mathcal{O}_9^\ell  + C_{10}^\ell \mathcal{O}_{10}^\ell) \ ,$$}
 { $$\mathcal{O}_{VL}^\ell = (\bar{c}_L \gamma_\alpha b_L)(\bar{\ell}_L \gamma^\alpha \nu_\ell)\ ,$$ $$\mathcal{O}_9^\ell = (\bar{s}_L \gamma_\alpha b_L)(\bar{\ell} \gamma^\alpha \ell)\ , \qquad \mathcal{O}_{10}^\ell = (\bar{s}_L \gamma_\alpha b_L)(\bar{\ell} \gamma^\alpha \gamma_5 \ell) \ .$$}
 
 \item $\mathcal{O}_{VL}^\ell$ contributes to $R_{D^{(*)}}$ and $\mathcal{O}_9^\ell$, $\mathcal{O}_{10}^\ell$ to $R_{K^{(*)}}$
@@ -183,25 +187,26 @@ Combined tension of $3.08\,\sigma$.\footnotemark[2]
 \begin{frame}\frametitle{Introduction: Codes}
     Tools used for the global fits (in \texttt{python3}):
     \begin{itemize}
-        \item \texttt{wilson}\footnote[4]{J.~Aebischer, J.~Kumar and D.~M.~Straub. arXiv:1804.05033}: RG evolution and mixing of the Wilson coefficients.
-        \item \texttt{flavio}\footnote[5]{D.~M.~Straub. arXiv:1810.08132}: Calculation of observables in EFTs and database of experimental measurements.
-        \item \texttt{smelli}\footnote[6]{J.~Aebischer, J.~Kumar, P.~Stangl and D.~M.~Straub. arXiv:1810.07698}: Global likelihood function:
+\item \texttt{wilson}: RG evolution and mixing of the Wilson coefficients.\\ \colorcite{J.~Aebischer, J.~Kumar and D.~M.~Straub. arXiv:1804.05033}
+\item \texttt{flavio}: Calculation of observables in EFTs and database of experimental measurements. \\ \colorcite{D.~M.~Straub. arXiv:1810.08132}
+\item \texttt{smelli}: Global likelihood function:
               {\small$$\Delta \log L = -\frac{1}{2}\Delta\chi^2 = -\frac{1}{2}\sum_{i,j} [\mathcal{O}_i^\mathrm{exp} - \mathcal{O}^\mathrm{th}_i(\vec{C})] (\mathcal{C}^\mathrm{exp}+\mathcal{C}^\mathrm{th}(C))^{-1}_{ij} [\mathcal{O}_j^\mathrm{exp} - \mathcal{O}^\mathrm{th}_j(\vec{C})]\,. $$} % chktex 35
               $\mathcal{O}_i^\mathrm{exp}$ is the experimental measurements for the $i$-th observable, and $\mathcal{O}_i^\mathrm{th}$ its SMEMT prediction. $\mathcal{C}_{ij}^\mathrm{exp}$ and $\mathcal{C}^\mathrm{th}(C)$ are the covariance matrices (usually block-diagonal).% chktex 35
+\\ \colorcite{J.~Aebischer, J.~Kumar, P.~Stangl and D.~M.~Straub. arXiv:1810.07698}
         \item Custom-made codes, publicly available at \texttt{https://github.com/Jorge-Alda}.
     \end{itemize}
 \end{frame}
 
 \begin{frame}[plain] %%% Fit to complex WCs
-\begin{block}{\Huge Fit to\\ complex Wilson coefficients}
+\begin{block}{\huge Fit to complex Wilson coefficients}
     Chapter 5 \\
-    {\color{red}J. Alda, J. Guasch, S. Peñaranda,
+{\color{red}\textbf{J. Alda}, J. Guasch, S. Peñaranda,\\
     \textit{Some Results on Lepton Flavour Universality Violations,}\\
     Eur. Phys. J. C 79.7 (2019), p.588, arXiv:1805.03636 [hep-ph].}
 
 \end{block}
 
-\vspace{0.5cm}
+\vspace{1.2cm}
 
 \begin{columns}
 \begin{column}{0.48\textwidth}
@@ -229,13 +234,13 @@ Combined tension of $3.08\,\sigma$.\footnotemark[2]
 \begin{frame}\frametitle{Fit to complex WCs: Approach}
     Common explanation for anomalies in $R_{K^{(*)}}$ and $\Delta M_s$.
     \begin{itemize}
-        \item $1.8\sigma$ tension with the 2017 theoretical SM prediction for $B_s$ mixing,\\
-$\Delta M_S^\mathrm{SM} = 20.01 \pm 1.25\,\mathrm{ps}^{-1}$, \qquad$\Delta M_S^\mathrm{exp} = 17.757 \pm 0.021 \,\mathrm{ps}^{-1}$. \footnotemark[7]
+        \item $1.8\ \sigma$ tension with the 2017 theoretical SM prediction for $B_s$ mixing,\\
+$\Delta M_S^\mathrm{SM} = 20.01 \pm 1.25\,\mathrm{ps}^{-1}$, \qquad$\Delta M_S^\mathrm{exp} = 17.757 \pm 0.021 \,\mathrm{ps}^{-1}$. \\ \colorcite{{L. Di Luzio, M. Kirk, A. Lenz. arXiv:1712.06572}}
         \item $\mathcal{L}_{\Delta M_S} = -\frac{4 G_f}{\sqrt{2}} (V_{tb} V_{ts}^*)^2 C_{bs, \mathrm{NP}}^{LL} \mathcal{O}_{bs}^{LL} + \mathrm{h. c.}$
               \begin{itemize}
 \item $ \mathcal{O}_{bs}^{LL} = (\bar{s}_L \gamma_\mu b_L)^2$.
-\item $\Delta M_S = \Delta M_S^\mathrm{SM} \left|1 + \frac{C_{bs}^{LL} }{R^\mathrm{loop}} \right|$.\\ $C_{bs}^{LL}< 0$ needed to explain the $\Delta M_S$ anomaly.
-\item CP asymmetry\footnotemark[7]: $\ACPmix (B_s\to J/\psi \phi)= \sin \left[\mathrm{arg}\left(   1 + \frac{C_{bs}^{LL} }{R^\mathrm{loop}} \right) - 2 \beta_s \right] $.
+\item $\Delta M_S = \Delta M_S^\mathrm{SM} \left|1 + \frac{C_{bs}^{LL} }{R^\mathrm{loop}} \right|$.\\ $\mathrm{Re}(C_{bs}^{LL})< 0$ needed to explain the $\Delta M_S$ anomaly.
+\item CP asymmetry: $\ACPmix (B_s\to J/\psi \phi)= \sin \left[\mathrm{arg}\left(   1 + \frac{C_{bs}^{LL} }{R^\mathrm{loop}} \right) - 2 \beta_s \right] $.
               \end{itemize}
     \end{itemize}
 
@@ -243,14 +248,14 @@ $\Delta M_S^\mathrm{SM} = 20.01 \pm 1.25\,\mathrm{ps}^{-1}$, \qquad$\Delta M_S^\
 
     We need a model-dependant connection between $R_{K^{(*)}}$ and $\Delta M_s$:
     \begin{itemize}
-        \item $Z'$: $\mathcal{L}_{Z'} \sim \lambda^Q \bar{d}\gamma^\mu d Z'_\mu + \lambda^L \bar{e}\gamma^\mu e Z'_{\mu}$.
-        \item Leptoquarks ($S_3$): $\mathcal{L}_{S_3} \sim y^{QL} \bar{q} \ell S_3$.
+\item $Z'$: $\mathcal{L}_{Z'} = \frac{1}{2} M_{Z'}^2 (Z'_\mu)^2 + (\lambda_{ij}^Q \bar{d}^i_L \gamma^\mu d^j_L + \lambda_{\alpha\beta}^L \bar{e}^\alpha_L \gamma^\mu e_L^\beta )Z'_\mu $.
+\item Leptoquarks ($S_3$): $\mathcal{L}_{S_3} = -M^2_{S_3} |S_3^a|^2 + y_{i\alpha}^{QL} \bar{q^c}^i (\epsilon \sigma^a) \ell^\alpha S_3^a  + \mathrm{h.c.}$.
     \end{itemize}
-\footnotetext[7]{{L. Di Luzio, M. Kirk, A. Lenz. arXiv:1712.06572}}
+
 \end{frame}
 
 \begin{frame}\frametitle{Fit to complex WCs: Model matching}
-Matching to WET coefficients\footnote[7]{L. Di Luzio, M. Kirk, A. Lenz. arXiv:1712.06572}
+Matching to WET coefficients \colorcite{L. Di Luzio, M. Kirk, A. Lenz. arXiv:1712.06572}
 
 ~
 
@@ -374,6 +379,7 @@ A negative value for $C_{bs}^{LL}$ implies a complex value for $C_9^\mu$ and $C_
         \begin{columns}
             \begin{column}{0.48\textwidth}
                 \centering
+$$R_{K^{(*)}}$$
                 \includegraphics[width = 0.8\textwidth]{figures/errorplot_RKmodels.pdf}
             \end{column}
             \begin{column}{0.48\textwidth}
@@ -383,14 +389,17 @@ A negative value for $C_{bs}^{LL}$ implies a complex value for $C_9^\mu$ and $C_
             \end{column}
         \end{columns}
     \end{figure}
+\vspace{-0.2cm}
     \begin{figure}
         \begin{columns}
             \begin{column}{0.48\textwidth}
                 \centering
+$$\Delta M_S$$
                 \includegraphics[width = 0.8\textwidth]{figures/errorplot_DMsmodels.pdf}
             \end{column}
             \begin{column}{0.48\textwidth}
                 \centering
+$$A_{CP}^\mathrm{mix}$$
                 \includegraphics[width = 0.8\textwidth]{figures/errorplot_ACPmodels.pdf}
             \end{column}
         \end{columns}
@@ -410,7 +419,7 @@ A negative value for $C_{bs}^{LL}$ implies a complex value for $C_9^\mu$ and $C_
 
 \begin{frame}\frametitle{Fit to complex WCs: Update}
     \begin{itemize}
-\item The SM prediction for $\Delta M_S$ was updated in 2019 to $\Delta M_S = (18.4^{+0.7}_{-1.2}) \mathrm{ps}^{-1}$,\footnote[10]{L. Di Luzio, M. Kirk, A. Lenz, and T. Rauh, arXiv:1909.11087} compatible with experiment.
+\item The SM prediction for $\Delta M_S$ was updated in 2019 to $\Delta M_S = (18.4^{+0.7}_{-1.2}) \mathrm{ps}^{-1}$, compatible with experiment.\\ \colorcite{L. Di Luzio, M. Kirk, A. Lenz, and T. Rauh, arXiv:1909.11087}
         \item Therefore, imaginary or complex WC are no longer necessary. In the following fits we only consider real parameters.
         \item After the 2019 and 2021 $R_K$ measurements by LHCb, our results are not compatible with experimental data.
     \end{itemize}
@@ -422,17 +431,33 @@ A negative value for $C_{bs}^{LL}$ implies a complex value for $C_9^\mu$ and $C_
 \end{frame}
 
 \begin{frame}[plain] %%% SMEFT Fit
-    \begin{block}{{\Large SMEFT Fit}\\Eur. Phys. J. Plus 137 (2022), p.217, arXiv: 2012.14799 [hep-ph]}
-        \begin{itemize}
-            \item Operators and observables
-            \item Global fits
-            \item Observables
-            \item Hessian approximation
-            \item Electron colliders
-            \item Improved EW prospects
-            \item Conclusions
-        \end{itemize}
-    \end{block}
+\begin{block}{\huge Fit to SMEFT coefficients\\ and future prospects}
+    Chapter 6\\
+    {\color{red} \textbf{J. Alda}, J. Guasch, S. Peñaranda,\\
+    \textit{Anomalies in B meson decays: A phenomenological approach,}\\
+    Eur. Phys. J. Plus 137 (2022), p.217, arXiv:2012.14799 [hep-ph]}
+\end{block}
+
+\vspace{1.3cm}
+
+\begin{columns}
+\begin{column}{0.48\textwidth}
+\begin{itemize}
+\item Operators and observables
+\item Global fits
+\item Observables
+\item Hessian approximation
+
+\end{itemize}
+\end{column}
+\begin{column}{0.48\textwidth}
+\begin{itemize}
+\item Electron colliders
+\item Improved EW prospects
+\item Conclusions
+\end{itemize}
+\end{column}
+\end{columns}
 
 \end{frame}
 
@@ -475,23 +500,33 @@ A negative value for $C_{bs}^{LL}$ implies a complex value for $C_9^\mu$ and $C_
 \begin{frame}\frametitle{SMEFT Fit: Observables}
 
     We consider different scenarios for the SMEFT coefficients. The most relevant are:
-    {\scriptsize \begin{itemize}
-        \item Scenario IV: Fit to $C_{\ell q}^e$, $C_{\ell q}^\mu$.
-        \item Scenario VII: Fit to $C_{\ell q}^e$, $C_{\ell q}^\mu$, $C_{\ell q}^\tau$.
-        \item Scenario IX: Fit to $C_{\ell q}^e = C_{\ell q}^\tau = - C_{\ell q}^\mu$.
-        \item Scenario X: Fit to $C_{\ell q}^e =  - C_{\ell q}^\mu$.
-        \item Scenario XI: Fit to $C_{\ell q}^e = - C_{\ell q}^\mu$, $C_{\ell q}^\tau$.
-    \end{itemize}}
-
+{\scriptsize
+\begin{columns}
+\begin{column}{0.48\textwidth}
+\begin{itemize}
+\item Scenario IV: Fit to $C_{\ell q}^e$, $C_{\ell q}^\mu$.
+\item Scenario VII: Fit to $C_{\ell q}^e$, $C_{\ell q}^\mu$, $C_{\ell q}^\tau$.
+\end{itemize}
+\end{column}
+\begin{column}{0.48\textwidth}
+\begin{itemize}
+\item Scenario IX: Fit to $C_{\ell q}^e = C_{\ell q}^\tau = - C_{\ell q}^\mu$.
+\item Scenario X: Fit to $C_{\ell q}^e =  - C_{\ell q}^\mu$.
+\item Scenario XI: Fit to $C_{\ell q}^e = - C_{\ell q}^\mu$, $C_{\ell q}^\tau$.
+\end{itemize}
+\end{column}
+\end{columns}
+}
     \begin{figure}\begin{center}
+$$R_{K^{(*)}}\qquad\qquad\qquad\qquad\qquad\qquad R_{D^{(*)}}$$
             \resizebox{0.52\textwidth}{!}{\input{figures/RKplot.pgf}}
             \resizebox{0.37\textwidth}{!}{\input{figures/RDplot.pgf}}
 
         \end{center}
     \end{figure}
     \begin{itemize}
-        \item $C_{\ell q}^e \approx - C_{\ell q}^\mu$ improves the prediction for $R_{K^{(*)}}$.
-        \item $C_{\ell q}^\tau$ needed for $R_{D^{(*)}}$.
+\item $C_{\ell q}^e \approx - C_{\ell q}^\mu$ required for $R_{K^{(*)}}$.
+\item $C_{\ell q}^\tau$ improves the prediction for $R_{D^{(*)}}$.
     \end{itemize}
 
 \end{frame}
@@ -520,7 +555,7 @@ A negative value for $C_{bs}^{LL}$ implies a complex value for $C_9^\mu$ and $C_
 
 \begin{frame}\frametitle{SMEFT Fit: Electron colliders}
 
-Electron colliders are powerful tools in testing neutral currents\footnote[11]{R. K. Ellis \textit{et al.} arXiv:1910.11775 [hep-ex]}:
+Electron colliders are powerful tools in testing neutral currents:
     \begin{itemize}
         \item Clean signatures.
         \item Small uncertainties.
@@ -540,7 +575,7 @@ Electron colliders are powerful tools in testing neutral currents\footnote[11]{R
                         \end{matrix}  $}
             \end{column}
         \end{columns}
-
+\colorcite{R. K. Ellis \textit{et al.} arXiv:1910.11775 [hep-ex]}
     \end{center}
 
 \end{frame}
@@ -579,32 +614,47 @@ Electron colliders are powerful tools in testing neutral currents\footnote[11]{R
 \end{frame}
 
 \begin{frame}[plain] %%%ML Fit
-    \begin{block}{{\Large ML Fit}\\arXiv:2109.07405 [hep-ph]}
-        \begin{itemize}
-            \item Effective Field Theory
-            \item Global fits
-            \item Observables
-            \item Fit results
-            \item Exploring the likelihood function
-            \item xgboost
-            \item Machine Learning training
-            \item Machine Learning Montecarlo
-            \item SHAP values
-            \item SHAP values results
-            \item SHAP values and likelihood
-            \item Correlations between observables
-            \item $R_D$ and $\mathrm{BR}(B\to K^{(*)}\nu\bar{\nu})$
-            \item Connection to leptoquarks
-            \item Conclusions
-        \end{itemize}
-    \end{block}
+\begin{block}{\huge Using Machine Learning techniques \\ in flavour physics}
+    Chapter 7\\
+    {\color{red} \textbf{J. Alda}, J. Guasch, S. Peñaranda,\\
+    \textit{\footnotesize Using Machine Learning techniques in phenomenological studies in flavour physics,}\\
+    arXiv:2109.07405 [hep-ph]}
+\end{block}
+\vspace{0.5cm}
+
+\begin{columns}
+\begin{column}{0.48\textwidth}
+\begin{itemize}
+\item Effective Field Theory
+\item Global fits
+\item Observables
+\item Fit results
+\item Exploring the likelihood function
+\item xgboost
+\item Machine Learning training
+\item Machine Learning Montecarlo
+\end{itemize}
+\end{column}
+\begin{column}{0.48\textwidth}
+\begin{itemize}
+\item SHAP values
+\item SHAP values results
+\item SHAP values and likelihood
+\item Correlations between observables
+\item $R_D$ and $\mathrm{BR}(B\to K^{(*)}\nu\bar{\nu})$
+\item Connection to leptoquarks
+\item Conclusions
+\end{itemize}
+\end{column}
+\end{columns}
+
 \end{frame}
 
 \begin{frame}\frametitle{ML Fit: Effective Field Theory}
     \begin{itemize}
         \item NP only affects third generation leptons in the ``interaction basis''
               $$\mathcal{L}_\mathrm{SMEFT} = \frac{C_1}{\Lambda^2}(\bar{\ell}_3 \gamma_\mu \ell_3)(\bar{q}_3 \gamma^\mu  q_3) + \frac{C_3}{\Lambda^2}(\bar{\ell}_3 \gamma_\mu \tau^I \ell_3)(\bar{q}_3 \gamma^\mu \tau^I q_3).$$
-        \item Rotation from interaction basis. Flavour structure given by\footnote[12]{F.~Feruglio, P.~Paradisi and A.~Pattori. arXiv:1705.00929}
+\item Rotation from interaction basis. Flavour structure given by \colorcite{F.~Feruglio, P.~Paradisi and A.~Pattori. arXiv:1705.00929}
 
               $$C_{\ell q(1)}^{ijkl} = C_1 \lambda_\ell^{ij}\lambda_q^{kl}\,\qquad\qquad C_{\ell q(3)}^{ijkl} = C_3 \lambda_\ell^{ij}\lambda_q^{kl}\,. $$
               The mixing matrices must be hermitian, idempotent and with $\mathrm{tr}\lambda =1$. Parameterized as
@@ -624,8 +674,8 @@ Electron colliders are powerful tools in testing neutral currents\footnote[11]{R
 
     We consider two different scenarios:
     \begin{itemize}
-        \item \textbf{Scenario I:} Mixing to first generation $\alpha$ are negligible\footnote[12]{F.~Feruglio, P.~Paradisi and A.~Pattori. arXiv:1705.00929}.
-        \item \textbf{Scenario II:} Mixing to first and second generations\footnote[13]{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}.
+\item \textbf{Scenario I:} Mixing to first generation $\alpha$ are negligible \\\colorcite{F.~Feruglio, P.~Paradisi and A.~Pattori. arXiv:1705.00929}.
+\item \textbf{Scenario II:} Mixing to first and second generations \\{\scriptsize \color{red} \textbf{J. Alda}, J. Guasch and S. Peñaranda. arXiv:2109.07404}.
     \end{itemize}
     \begin{center}\small
         \begin{tabular}{|c|c|c|}\hline
@@ -639,6 +689,8 @@ Electron colliders are powerful tools in testing neutral currents\footnote[11]{R
             SM Pull                     & $5.75\,\sigma$      & $6.57\,\sigma$               \\\hline
         \end{tabular}
     \end{center}
+
+$\beta^\ell$ (mixing to the second generation of leptons) compatible with SM!
 \end{frame}
 
 \begin{frame}\frametitle{ML Fit: Observables}
@@ -653,21 +705,21 @@ Electron colliders are powerful tools in testing neutral currents\footnote[11]{R
 $R_{K^{(*)}}$ requires mixing with the first generation ($\alpha^\ell$).\\
 The predictions for $R_{D^{(*)}}$ are in agreement with the experiments in both scenarios.
 
-    \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
+    
 \end{frame}
 
 \begin{frame}\frametitle{ML Fit: Fit results}
     Regions allowed at $1~\sigma$:
     \begin{center}
         \begin{tabular}{cc}
+            {\small $\alpha^\ell$ and $\beta^\ell$} & {\small $\alpha^q$ and $\beta^q$} \\
             \includegraphics[width=0.4\textwidth]{figures/alphabeta_l.pdf} & \includegraphics[width=0.4\textwidth]{figures/alphabeta_q.pdf}
         \end{tabular}
     \end{center}
     \begin{itemize}
         \item $\alpha^\ell$ is constrained by $R_{K^{(*)}}$.
         \item $\beta^\ell$ is constrained by LFV observables.
-    \end{itemize}
-    \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
+\end{itemize}
 \end{frame}
 
 \begin{frame}\frametitle{ML Fit: Exploring the likelihood function}
@@ -695,7 +747,7 @@ The predictions for $R_{D^{(*)}}$ are in agreement with the experiments in both 
 
 \begin{frame}\frametitle{ML Fit: xgboost}
 
-    Extreme Gradient Boosting (xgboost)\footnote[14]{T.~Chen and C.~Guestrin. arXiv:1603.02754}.
+Extreme Gradient Boosting (xgboost) \\\colorcite{T.~Chen and C.~Guestrin. arXiv:1603.02754}.
 
     ~
 
@@ -732,8 +784,7 @@ The predictions for $R_{D^{(*)}}$ are in agreement with the experiments in both 
         \begin{column}{0.5\textwidth}
             \includegraphics[width=\columnwidth]{figures/regression_xgb.pdf}
         \end{column}
-    \end{columns}
-    \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
+\end{columns}
 
 \end{frame}
 
@@ -753,14 +804,13 @@ The predictions for $R_{D^{(*)}}$ are in agreement with the experiments in both 
 
     ~
 
-    We use the trained model $\log\tilde{L}(\vec{C})$ to compute an approximation of the likelihood function.
-    \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
+We use the trained model $\log\tilde{L}(\vec{C})$ to compute an approximation of the likelihood function.
 
 \end{frame}
 
 \begin{frame}\frametitle{ML Fit: SHAP values}
 
-    Measure of the importance of each parameter in the Machine Learning prediction for a single datapoint\footnote[15]{S. Lundberg, S. Lee. arXiv:1705.07874}.
+Measure of the importance of each parameter in the Machine Learning prediction for a single datapoint \colorcite{S. Lundberg, S. Lee. arXiv:1705.07874}.
 
     We train $2^n$ simplified models
 
@@ -777,7 +827,9 @@ The predictions for $R_{D^{(*)}}$ are in agreement with the experiments in both 
         \end{column}
     \end{columns}
 
-    Efficient implementation (poly time) for tree-based Machine Learning models.\footnote[16]{S. Lundberg, G. Erion, S. Lee. arXiv:1802.03888}
+~
+
+Efficient implementation (poly time) for tree-based Machine Learning models.\colorcite{S. Lundberg, G. Erion, S. Lee. arXiv:1802.03888}
 
 \end{frame}
 
@@ -795,8 +847,7 @@ The predictions for $R_{D^{(*)}}$ are in agreement with the experiments in both 
             value & $C$                                 & $\alpha^\ell$ & $\beta^\ell$ & $\alpha^q$ & $\beta^q$ & prediction & $\log L$ \\\hline
             39.43 & 3.293                               & 4.056         & 1.993        & 2.671      & 4.086     & 55.537     & 57.06    \\\hline
         \end{tabular}
-    \end{center}
-    \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
+\end{center}
 
 \end{frame}
 
@@ -812,8 +863,6 @@ The predictions for $R_{D^{(*)}}$ are in agreement with the experiments in both 
         \includegraphics[width=0.32\textwidth]{figures/SHAP_al.pdf}
         \includegraphics[width=0.32\textwidth]{figures/SHAP_bq.pdf}
     \end{center}
-
-    \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
 
 \end{frame}
 
@@ -831,8 +880,7 @@ The predictions for $R_{D^{(*)}}$ are in agreement with the experiments in both 
                 \item No observable displays large correlations to the global likelihood: global fits are needed.
             \end{itemize}
         \end{column}
-    \end{columns}
-    \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
+\end{columns}
 
 \end{frame}
 
@@ -871,7 +919,7 @@ The predictions for $R_{D^{(*)}}$ are in agreement with the experiments in both 
         \end{pmatrix}\,.
     $$
     \begin{itemize}
-        \item Couplings {\color{red}$x_L^{23}$} and {\color{red}$x_L^{33}$}, previously proposed to describe the $R_{D^{(*)}}$ anomaly\footnote[17]{A.~Bhaskar, D.~Das, T.~Mandal, S.~Mitra and C.~Neeraj. 2101.12069}. Compatible with experimental limits.
+\item Couplings {\color{red}$x_L^{23}$} and {\color{red}$x_L^{33}$}, previously proposed to describe the $R_{D^{(*)}}$ anomaly \colorcite{A.~Bhaskar, D.~Das, T.~Mandal, S.~Mitra and C.~Neeraj. 2101.12069}. Compatible with experimental limits.
         \item Additionally, couplings {\color{blue}$x_L^{21}$} and {\color{blue}$x_L^{31}$} to describe the $R_{K^{(*)}}$ anomaly.
     \end{itemize}
 
@@ -894,17 +942,32 @@ The predictions for $R_{D^{(*)}}$ are in agreement with the experiments in both 
 \end{frame}
 
 \begin{frame}[plain] %%%ALPs
-    \begin{block}{{\Large ALPs}\\arXiv:2111.02536 [hep-ph]}
-        \begin{itemize}
-            \item Introduction
-            \item Effective Field Theory
-            \item Leptonic Meson Decays in ALP
-            \item Hadronic ALP emission
-            \item Leptonic ALP emission
-            \item Bounds on ALP-fermion couplings
-            \item Conclusions
-        \end{itemize}
-    \end{block}
+\begin{block}{\huge Leptonic meson decays\\ into invisible ALP}
+    Chapter 8 \\
+    {\color{red}\textbf{J. Alda}, A. W. M. Guerrera, S. Peñaranda, S. Rigolin, \\
+    \textit{Leptonic Meson Decays into invisible ALP,}\\
+    Nuclear Physics B (2022). arXiv:2111.02536 [hep-ph]}
+\end{block}
+
+\vspace{1.2cm}
+
+\begin{columns}
+\begin{column}{0.48\textwidth}
+\begin{itemize}
+\item Introduction
+\item Effective Field Theory
+\item Leptonic Meson Decays in ALP
+\item Hadronic ALP emission
+\end{itemize}
+\end{column}
+\begin{column}{0.48\textwidth}
+\begin{itemize}
+\item Leptonic ALP emission
+\item Bounds on ALP-fermion couplings
+\item Conclusions
+\end{itemize}
+\end{column}
+\end{columns}
 \end{frame}
 
 \begin{frame}\frametitle{ALPs: Introduction}
@@ -962,7 +1025,7 @@ The predictions for $R_{D^{(*)}}$ are in agreement with the experiments in both 
 \end{frame}
 
 \begin{frame}\frametitle{ALPs: Hadronization}
-    We follow the Lepage-Brodsky technique\footnote[18]{G. Lepage, S. J. Brodsky, Phys. Rev. D 22 (1980), p. 2157.}:
+We follow the Lepage-Brodsky technique \colorcite{G. Lepage, S. J. Brodsky, Phys. Rev. D 22 (1980), p. 2157.}:
     \begin{itemize}
         \item We parameterize the ground-state wavefunction of the meson as
               $$\Psi_M(x)=\frac{1}{4}\phi_M(x)\gamma^5(\slashed{P}_M + g_M(x) M_M)\,.$$
@@ -987,7 +1050,7 @@ The predictions for $R_{D^{(*)}}$ are in agreement with the experiments in both 
 
     ~
 
-    Improvements compared to previous results\footnote[19]{Y. Aditya, K. J. Healey, A. A. Petrov. 1201.1007 [hep-ph]}:
+Improvements compared to previous results \colorcite{Y. Aditya, K. J. Healey, A. A. Petrov. 1201.1007 [hep-ph]}:
     \begin{itemize}
         \item Formula for massive ALPs.
         \item We do not rely on the assumption $c_q = c_Q$.
@@ -1084,7 +1147,7 @@ The predictions for $R_{D^{(*)}}$ are in agreement with the experiments in both 
 \end{frame}
 
 \begin{frame}\frametitle{ALPs: Bounds on ALP-fermion couplings}
-    Our results show an improvement of $~$ one order of magnitude compared to the previous published bounds\footnote[19]{Y. Aditya, K. J. Healey, A. A. Petrov. 1201.1007 [hep-ph]}:
+Our results show an improvement of $~$ one order of magnitude compared to the previous published bounds \colorcite{Y. Aditya, K. J. Healey, A. A. Petrov. 1201.1007 [hep-ph]}:
     \begin{itemize}
         \item Improvement of the experimental determination of pseudo-scalar leptonic decays.
         \item Correction of the 1/2 factor in the hadronic amplitude.
@@ -1142,9 +1205,22 @@ The predictions for $R_{D^{(*)}}$ are in agreement with the experiments in both 
     \end{itemize}
 \end{frame}
 
+\begin{frame}[plain]
+    \vspace{1.3cm}
+    \begin{block}{\huge General conclusions}
+        Chapter 9
+    \end{block}
+    \vspace{1.3cm}
+    \begin{itemize}
+        \item General conclusions
+        \item Conclusiones generales
+    \end{itemize}
+
+\end{frame}
+
 \begin{frame}\frametitle{General Conclusions}
     \begin{itemize}
-        \item We have performed an analysis to the $R_K$ observables, $\Delta M_S$ and $A_{CP}^\mathrm{mix}$ in the context of complex $Z'$ and $S_3$ leptoquarks, obtaining an slight improvement compared to the real case.
+\item We have performed an analysis to the $R_{K^{(*)}}$ observables, $\Delta M_S$ and $A_{CP}^\mathrm{mix}$ in the context of $Z'$ and $S_3$ leptoquarks with complex couplings, obtaining an slightly improved fit compared to the real case.
         \item After the 2019 SM prediction for $\Delta M_S$, we can assume real Wilson coefficients.
         \item We have studied global fits to the Wilson coefficients $C_{\ell q(1)}^{ii33}$ and $C_{\ell q(3)}^{ii33}$, concluding that maximal violation of Lepton Flavour Universality between the first and second generations is required by the $R_{K^{(*)}}$ anomaly, and that contributions to the $\tau$ sector improve the prediction for the $R_{D^{(*)}}$ anomaly.
         \item We have shown that future measurements in the linear electron colliders will significantly improve the constrains to lepton-universal NP contributions.
@@ -1154,7 +1230,7 @@ The predictions for $R_{D^{(*)}}$ are in agreement with the experiments in both 
 
 \begin{frame}\frametitle{General Conclusions}
     \begin{itemize}
-        \item We have analyzed a proposal where the New Physics only affects the third generation in the interaction basis. When we rotate to the mass basis, we have found that the mixing to the first generation of leptons is necessary to describe the $R_{K^{(*)}}$ anomaly, since the mixing to the second generation is heavily constrained by LFV observables. In this proposal, we have identified an interesting correlation between $R_D$ and $\mathrm{BR}(B\to K \nu \bar{\nu})$.
+\item We have analyzed a proposal where the New Physics only affects the third generation in the interaction basis. When we rotate to the mass basis, we have found that the mixing to the first generation of leptons is necessary to describe the $R_{K^{(*)}}$ anomaly, since the mixing to the second generation (muons) is heavily constrained by LFV observables. In this proposal, we have identified an interesting correlation between $R_D$ and $\mathrm{BR}(B\to K \nu \bar{\nu})$.
         \item  Our work marks a novel approach to the study of the flavour anomalies, with a Machine Learning analysis being used to extract confidence intervals and correlations
               between observables. We have shown that the Machine Learning techniques constitute a suitable and useful tool for this kind of analyses.
         \item We have presented an analysis of invisible ALP production in $M\to \ell \nu a$ decays. The bounds obtained for the couplings of leptons to ALPs in the mass range of MeV-GeV are the most stringent to date.
@@ -1162,11 +1238,48 @@ The predictions for $R_{D^{(*)}}$ are in agreement with the experiments in both 
 \end{frame}
 
 \begin{frame}\frametitle{General conclusions}
+
+Key points:
+
+\vspace{0.5cm}
+
     \begin{itemize}
         \item Use of Effective Field Theories to describe deviations from Standard Model.
         \item Need for Global analyses in order to account for all possible effects of the New Physics.
         \item Machine Learning techniques can help in phenomenological studies.
     \end{itemize}
 \end{frame}
+
+\begin{frame}\frametitle{Conclusiones generales}
+    \begin{itemize}
+        \item Hemos realizado un análisis de los observables $R_{K^{(*)}}$, $\Delta M_S$ y $A_{CP}^\mathrm{mix}$ en el contexto de $Z'$ y leptoquarks $S_3$ con acoplamientos complejos, obteniendo un ajuste ligeramente mejor que en el caso real.
+        \item Tras la predicción de $\Delta M_S$ en el SM actualizada en 2019, podemos asumir que los coeficientes de Wilson sean reales.
+        \item Hemos estudiado ajustes globales a los coeficientes de Wilson $C_{\ell q(1)}^{ii33}$ y $C_{\ell q (3)}^{ii33}$, y hemos concluido que la anomalía en $R_{K^{(*)}}$ requiere una violación máxima de la universalidad del sabor leptónico entre las dos primeras generaciones, y que las contribuciones en el sector $\tau$ pueden mejorar la predicción de $R_{D^{(*)}}$.
+        \item Hemos mostrado que los futuros experimentos en colisionadores lineales de electrones mejorarán significativamente los límites experimentales a las contribuciones de Nueva Física con universalidad del sabor leptónico.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Conclusiones generales}
+    \begin{itemize}
+        \item Hemos analizado una propuesta en la cual la Nueva Física solo afecta a la tercera generación en la base de interacción. Al rotar a la base de masa, hemos concluido que la mezcla con la primera generación es necesaria para describir la anomalía de $R_{K^{(*)}}$, ya que la mezcla con la segunda generación (muones) está muy limitada por los observables de violación del sabor leptónico. Con esta propuesta, hemos identificado una correlación entre $R_D$ y $\mathrm{BR}(B\to K\nu\bar{\nu})$ que puede ser interesante experimentalmente.
+        \item Una novedad relevante de nuestro trabajo es que utilizamos por primera vez en el contexto de las anomalías de sabor un análisis de \textit{Machine-Learning} para extraer los intervalos de confianza y las correlaciones entre observables, demostrando que es una herramienta útil y adecuada en este tipo de análisis.
+        \item Hemos presentado un análisis de la producción de ALPs invisibles en las desintegraciones $M\to \ell \nu a$. Los límites obtenidos para los acoplamientos de leptones con ALPs en el rango de masas de MeV-GeV son los más estrictos hasta la fecha.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Conclusiones generales}
+
+    Ideas clave:
+
+    \vspace{0.5cm}
+
+    \begin{itemize}
+        \item Utilidad de las Teorías de Campos Efectivas para describir desviaciones respecto al Modelo Estándar.
+        \item Necesidad de realizar análisis globales para dar cuenta de todos los efectos posibles de la Nueva Física.
+        \item Aplicabilidad de técnicas de \textit{Machine Learning} para ayudar en los estudios fenomenológicos.
+    \end{itemize}
+\end{frame}
+
+
 
 \end{document}
