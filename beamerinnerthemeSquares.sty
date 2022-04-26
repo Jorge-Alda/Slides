@@ -1,7 +1,7 @@
-\newcommand{\Zaragoza@titlepagelogoA}{}
-\newcommand{\Zaragoza@titlepagelogoB}{}
-\newcommand{\titlepagelogoA}[1]{\renewcommand{\Zaragoza@titlepagelogoA}{#1}}
-\newcommand{\titlepagelogoB}[1]{\renewcommand{\Zaragoza@titlepagelogoB}{#1}}
+\newcommand{\Squares@titlepagelogoA}{}
+\newcommand{\Squares@titlepagelogoB}{}
+\newcommand{\titlepagelogoA}[1]{\renewcommand{\Squares@titlepagelogoA}{#1}}
+\newcommand{\titlepagelogoB}[1]{\renewcommand{\Squares@titlepagelogoB}{#1}}
 \usetikzlibrary{positioning}
 \mode<presentation>
 
@@ -22,7 +22,7 @@
 }
 
 % Title page
-\defbeamertemplate*{title page}{Zaragoza}[1][]
+\defbeamertemplate*{title page}{Squares}[1][]
 { 
 %   \begin{textblock*}{12cm}(0cm, 3cm)
 %    \begin{beamercolorbox}[wd=12cm,leftskip=-0.8cm,sep=8pt,#1]{title page header}
@@ -45,13 +45,14 @@
 \usebeamercolor{palette primary}
 \node[align=left, font=\usebeamerfont{subtitle}, anchor= south west, color=fg] (sub) at (0.2, 2.1)  {\insertsubtitle};
 \usebeamercolor{palette primary}
-\node[align=left, font=\usebeamerfont{title}, anchor= south west, color=fg] at ([shift={(0, 0.2)}]sub.north west) {\inserttitle};
+\node[align=center, font=\usebeamerfont{title}, anchor= south west, color=fg] at ([shift={(0.7, 2.0)}]sub.north west) {\inserttitle};
 \usebeamercolor{palette tertiary}
-\node[align=left, font=\usebeamerfont{author}, anchor= north west, color=fg] at (3.0, 1.9) {\insertauthor\\ \insertdate};
+\node[align=left, font=\usebeamerfont{author}, anchor= north west, color=fg] at (3.0, 1.9) {\insertauthor};
+\usebeamercolor{palette secondary}
+\node[align=left, font=\usebeamerfont{author}, anchor= north west, color=fg] at (0.0, 0.5) {\insertdate};
+\node[left, anchor=north west] at (0, \the\paperheight){\Squares@titlepagelogoA}; 
 
-\node[left, anchor=north west] at (0, \the\paperheight){\Zaragoza@titlepagelogoA}; 
-
-\node[right, anchor=north east] at (\the\paperwidth, \the\paperheight){\Zaragoza@titlepagelogoB};  
+\node[right, anchor=north east] at (\the\paperwidth, \the\paperheight){\Squares@titlepagelogoB};  
 \end{tikzpicture}
 }
 

@@ -1,10 +1,11 @@
-\documentclass[mathserif, 10pt]{beamer}
+\documentclass[mathserif, 10pt, dvipsnames]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath, amsfonts}
 \usepackage{appendixnumberbeamer}
 \usepackage{verbatim}
 \usepackage{tikz} %%%Bubbles: https://tex.stackexchange.com/a/83786
 \usepackage{slashed}
+\usepackage{multirow}
 \usetikzlibrary{shapes.callouts}
 
 \tikzset{
@@ -31,23 +32,22 @@
 
 \newcommand{\tikzmark}[1]{\tikz[overlay,remember picture,baseline=-0.5ex] \node (#1) {};}
 
-\newcommand{\ACPmix}{\ensuremath{A_{CP}^{\rm{mix}}}}
 
-\title[A Glance into Flavour Physics...]{A Glance into Flavour Physics \\with Effective Field Theories\\ and Machine Learning}
-\author[Jorge Alda]{Jorge Alda,\\ Universidad de Zaragoza/CAPA\\
-Università degli Studi di Padova/INFN \hspace{2em} \texttt{jalda@unizar.es} }
+\title[A Glance into Flavour Physics...]{A Glance into Flavour Physics \\with Effective Field Theories and Machine Learning}
+\author[Jorge Alda]{Jorge Alda \hspace{6em} \texttt{jalda@unizar.es} \\ Universidad de Zaragoza/CAPA\\~\\
+    \scriptsize{PhD Advisor: Siannah Peñaranda} }
 
 \date[PhD Thesis]{27th April 2022}
 
+\subtitle{Supported by:\hspace{0.4cm} \includegraphics[width=0.7\textwidth]{logos/financ.png}}
 
-
-\usetheme{Zaragoza}
+\usetheme{Squares}
 \usecolortheme{Unizar}
 \titlepagelogoA{\includegraphics[width=6cm]{logos/CAPA.png}}
 \titlepagelogoB{\includegraphics[width=4cm]{logos/dftuz2.png}}
 
 
-\newcommand\colorcite[1]{{\scriptsize\color{blue}#1}}
+\newcommand\colorcite[1]{{\scriptsize\color{unizarblue}#1}}
 
 \begin{document}
 \begin{frame}[noframenumbering,plain]
@@ -69,7 +69,7 @@ Università degli Studi di Padova/INFN \hspace{2em} \texttt{jalda@unizar.es} }
               arXiv:2109.07405 [hep-ph].
 \item \textbf{J. Alda}, A. W. M. Guerrera, S. Peñaranda, S. Rigolin,\\
               \textit{Leptonic Meson Decays into invisible ALP,}\\
-To appear in Nuclear Physics B (2022). arXiv:2111.02536 [hep-ph].
+Nuclear Physics B 979 (2022), 115791. arXiv:2111.02536 [hep-ph].
     \end{itemize}
 
 \end{frame}
@@ -86,8 +86,8 @@ Eur. Phys. J. Plus 137 (2022), p.217, arXiv: 2012.14799 [hep-ph].}
 {\color{red}\scriptsize \textbf{J. Alda}, J. Guasch, S. Peñaranda, arXiv:2109.07405 [hep-ph].}
 \item Leptonic meson decays into invisible ALP \\
 {\color{red}\scriptsize \textbf{J. Alda}, A. W. M. Guerrera, S. Peñaranda, S. Rigolin,
-Nuclear Physics B (2022). arXiv:2111.02536 [hep-ph].}
-        \item General conclusions
+Nuclear Physics B 979 (2022), 115791. arXiv:2111.02536 [hep-ph].}
+\item Summary and Conclusions
     \end{itemize}
 \end{frame}
 
@@ -109,11 +109,11 @@ Chapters 2, 3
     \begin{itemize}
         \item Universality ratios $R_{K^{(*)}}$
               $$R_{K^{(*)}} = \frac{\mathrm{BR}(B\to K^{(*)}\mu^+ \mu^-)}{\mathrm{BR}(B\to K^{(*)}e^+ e^-)}\,, $$
-              In the SM, theoretically clean, and $R_{K^{(*)}}=1$.\\
-LHCb measurements ($3.1\,\sigma$ tension):
+In the SM, theoretically clean, and $R_{K^{(*)}}=1$.\\[0.5em]
+LHCb measurements ($3.1\,\sigma$ tension):\\[0.3em]
               \begin{itemize}
 \item $R_{K^+} = 0.846^{+0.042}_{-0.039}{}^{+0.013}_{-0.012}$ \colorcite{R. Aaij \textit{et al.} (LHCb) arXiv:2103.11769},
-\item $R_{K^{*0}} = 0.685^{+0.113}_{-0.069}\pm0.047$ \colorcite{R. Aaij \textit{et al.} (LHCb) arXiv:1705.05802}.
+\item $R_{K^{*0}} = 0.685^{+0.113}_{-0.069}\pm0.047$ \colorcite{R. Aaij \textit{et al.} (LHCb) arXiv:1705.05802}.\\[0.5em]
               \end{itemize}
         \item Angular observables for $B\to K^* \ell^+\ell^-$: $P'_4$, $P'_5\ldots$
         \item Also $B_s \to \phi \mu^+ \mu^-$ decays.
@@ -131,7 +131,7 @@ LHCb measurements ($3.1\,\sigma$ tension):
                       $$R_{D^{(*)}} = \frac{\mathrm{BR}(B\to D^{(*)}\tau \nu)}{\mathrm{BR}(B\to D^{(*)}\ell \nu)}\,, $$
                       $$R_D = 0.340 \pm 0.027 \pm 0.013\,,$$
                       $$R_{D^*} = 0.295 \pm 0.011 \pm 0.008\,.$$
-Combined tension of $3.08\,\sigma$.
+Combined tension of $3.08\,\sigma$.\\[0.6em]
                 \item Longitudinal polarization of $D^*$.
                 \item Also $B_c \to J/\psi \ell\nu$ decays.
             \end{itemize}
@@ -180,7 +180,7 @@ $$\mathcal{O}_{\ell q(1)}^{ijkl} = (\bar{\ell}_i \gamma_\mu \ell_j)(\bar{q}_k \g
     \item Match the SMEFT operators to the WET operators.
     \item Run the WET RG equations from EW scale down to $m_b$.
 \end{enumerate}
-    
+
 \end{itemize}
 \end{frame}
 
@@ -191,7 +191,7 @@ $$\mathcal{O}_{\ell q(1)}^{ijkl} = (\bar{\ell}_i \gamma_\mu \ell_j)(\bar{q}_k \g
 \item \texttt{flavio}: Calculation of observables in EFTs and database of experimental measurements. \\ \colorcite{D.~M.~Straub. arXiv:1810.08132}
 \item \texttt{smelli}: Global likelihood function:
               {\small$$\Delta \log L = -\frac{1}{2}\Delta\chi^2 = -\frac{1}{2}\sum_{i,j} [\mathcal{O}_i^\mathrm{exp} - \mathcal{O}^\mathrm{th}_i(\vec{C})] (\mathcal{C}^\mathrm{exp}+\mathcal{C}^\mathrm{th}(C))^{-1}_{ij} [\mathcal{O}_j^\mathrm{exp} - \mathcal{O}^\mathrm{th}_j(\vec{C})]\,. $$} % chktex 35
-              $\mathcal{O}_i^\mathrm{exp}$ is the experimental measurements for the $i$-th observable, and $\mathcal{O}_i^\mathrm{th}$ its SMEMT prediction. $\mathcal{C}_{ij}^\mathrm{exp}$ and $\mathcal{C}^\mathrm{th}(C)$ are the covariance matrices (usually block-diagonal).% chktex 35
+$\mathcal{O}_i^\mathrm{exp}$ is the experimental measurements for the $i$-th observable, and $\mathcal{O}_i^\mathrm{th}$ its SMEFT prediction. $\mathcal{C}_{ij}^\mathrm{exp}$ and $\mathcal{C}^\mathrm{th}(C)$ are the covariance matrices (usually block-diagonal).% chktex 35
 \\ \colorcite{J.~Aebischer, J.~Kumar, P.~Stangl and D.~M.~Straub. arXiv:1810.07698}
         \item Custom-made codes, publicly available at \texttt{https://github.com/Jorge-Alda}.
     \end{itemize}
@@ -199,10 +199,10 @@ $$\mathcal{O}_{\ell q(1)}^{ijkl} = (\bar{\ell}_i \gamma_\mu \ell_j)(\bar{q}_k \g
 
 \begin{frame}[plain] %%% Fit to complex WCs
 \begin{block}{\huge Fit to complex Wilson coefficients}
-    Chapter 5 \\
+Chapter 5 \\
 {\color{red}\textbf{J. Alda}, J. Guasch, S. Peñaranda,\\
-    \textit{Some Results on Lepton Flavour Universality Violations,}\\
-    Eur. Phys. J. C 79.7 (2019), p.588, arXiv:1805.03636 [hep-ph].}
+\textit{Some Results on Lepton Flavour Universality Violations,}\\
+Eur. Phys. J. C 79.7 (2019), p.588, arXiv:1805.03636 [hep-ph].}
 
 \end{block}
 
@@ -210,21 +210,21 @@ $$\mathcal{O}_{\ell q(1)}^{ijkl} = (\bar{\ell}_i \gamma_\mu \ell_j)(\bar{q}_k \g
 
 \begin{columns}
 \begin{column}{0.48\textwidth}
-        \begin{itemize}
-            \item Approach
+\begin{itemize}
+\item Approach
 \item Model matching
-            \item $C_9$ and $C_{10}$
-            \item Fit to $Z'$ couplings
+\item $C_9$ and $C_{10}$
+\item Fit to $Z'$ couplings
 
 \end{itemize}
 \end{column}
 \begin{column}{0.48\textwidth}
 \begin{itemize}
-            \item Fit to $S_3$ couplings
-            \item Observables
-            \item Conclusions
+\item Fit to $S_3$ couplings
+\item Observables
+\item Conclusions
 \item Update
-        \end{itemize}
+\end{itemize}
 \end{column}
 \end{columns}
 
@@ -235,12 +235,17 @@ $$\mathcal{O}_{\ell q(1)}^{ijkl} = (\bar{\ell}_i \gamma_\mu \ell_j)(\bar{q}_k \g
     Common explanation for anomalies in $R_{K^{(*)}}$ and $\Delta M_s$.
     \begin{itemize}
         \item $1.8\ \sigma$ tension with the 2017 theoretical SM prediction for $B_s$ mixing,\\
-$\Delta M_S^\mathrm{SM} = 20.01 \pm 1.25\,\mathrm{ps}^{-1}$, \qquad$\Delta M_S^\mathrm{exp} = 17.757 \pm 0.021 \,\mathrm{ps}^{-1}$. \\ \colorcite{{L. Di Luzio, M. Kirk, A. Lenz. arXiv:1712.06572}}
-        \item $\mathcal{L}_{\Delta M_S} = -\frac{4 G_f}{\sqrt{2}} (V_{tb} V_{ts}^*)^2 C_{bs, \mathrm{NP}}^{LL} \mathcal{O}_{bs}^{LL} + \mathrm{h. c.}$
+$\Delta M_S^\mathrm{SM} = 20.01 \pm 1.25\,\mathrm{ps}^{-1}$, \qquad
+$\Delta M_S^\mathrm{exp} = 17.757 \pm 0.021
+    \,\mathrm{ps}^{-1}$. \\
+\colorcite{{L. Di Luzio, M. Kirk, A. Lenz. arXiv:1712.06572}}\\[0.5em]
+\item $\mathcal{L}_{\Delta M_S} = -\frac{4 G_f}{\sqrt{2}}
+    (V_{tb} V_{ts}^*)^2 C_{bs, \mathrm{NP}}^{LL}
+    \mathcal{O}_{bs}^{LL} + \mathrm{h. c.}$
               \begin{itemize}
 \item $ \mathcal{O}_{bs}^{LL} = (\bar{s}_L \gamma_\mu b_L)^2$.
 \item $\Delta M_S = \Delta M_S^\mathrm{SM} \left|1 + \frac{C_{bs}^{LL} }{R^\mathrm{loop}} \right|$.\\ $\mathrm{Re}(C_{bs}^{LL})< 0$ needed to explain the $\Delta M_S$ anomaly.
-\item CP asymmetry: $\ACPmix (B_s\to J/\psi \phi)= \sin \left[\mathrm{arg}\left(   1 + \frac{C_{bs}^{LL} }{R^\mathrm{loop}} \right) - 2 \beta_s \right] $.
+\item CP asymmetry: $A_{CP}^\mathrm{mix} (B_s\to J/\psi \phi)= \sin \left[\mathrm{arg}\left(   1 + \frac{C_{bs}^{LL} }{R^\mathrm{loop}} \right) - 2 \beta_s \right] $.
               \end{itemize}
     \end{itemize}
 
@@ -248,57 +253,68 @@ $\Delta M_S^\mathrm{SM} = 20.01 \pm 1.25\,\mathrm{ps}^{-1}$, \qquad$\Delta M_S^\
 
     We need a model-dependant connection between $R_{K^{(*)}}$ and $\Delta M_s$:
     \begin{itemize}
-\item $Z'$: $\mathcal{L}_{Z'} = \frac{1}{2} M_{Z'}^2 (Z'_\mu)^2 + (\lambda_{ij}^Q \bar{d}^i_L \gamma^\mu d^j_L + \lambda_{\alpha\beta}^L \bar{e}^\alpha_L \gamma^\mu e_L^\beta )Z'_\mu $.
-\item Leptoquarks ($S_3$): $\mathcal{L}_{S_3} = -M^2_{S_3} |S_3^a|^2 + y_{i\alpha}^{QL} \bar{q^c}^i (\epsilon \sigma^a) \ell^\alpha S_3^a  + \mathrm{h.c.}$.
+\item {\color{blue}$Z'$}: $\mathcal{L}_{Z'} = \frac{1}{2} M_{Z'}^2 (Z'_\mu)^2 + (\lambda_{ij}^Q \bar{d}^i_L \gamma^\mu d^j_L + \lambda_{\alpha\beta}^L \bar{e}^\alpha_L \gamma^\mu e_L^\beta )Z'_\mu $.
+\item {\color{red}Leptoquarks ($S_3$)}: $\mathcal{L}_{S_3} = -M^2_{S_3} |S_3^a|^2 + y_{i\alpha}^{QL} \bar{q^c}^i (\epsilon \sigma^a) \ell^\alpha S_3^a  + \mathrm{h.c.}$.
     \end{itemize}
 
 \end{frame}
 
 \begin{frame}\frametitle{Fit to complex WCs: Model matching}
-Matching to WET coefficients \colorcite{L. Di Luzio, M. Kirk, A. Lenz. arXiv:1712.06572}
+Matching to WET coefficients\\ \colorcite{L. Di Luzio, M. Kirk, A. Lenz. arXiv:1712.06572}
 
-~
+% ~
 
-\begin{columns}
-\begin{column}{0.52\textwidth}
-$$Z'\ \ (\lambda^L_{22} = 1)$$
+% \begin{columns}
+% \begin{column}{0.52\textwidth}
+% $$Z'\ \ (\lambda^L_{22} = 1)$$
 
-{\small $$C_9^\mu = - C_{10}^\mu = \frac{-\pi}{\sqrt{2} G_F \alpha V_{tb} V_{ts}^*}\frac{\lambda^Q_{23}}{M_{Z'}^2}.$$}
-{\small $$C_{bs}^{LL} = \frac{\eta^{LL}}{4\sqrt{2}G_F (V_{tb} V_{ts}^*)^2}\left(\frac{\lambda_{23}^Q}{M_{Z'}}\right)^2.$$}
+% {\small $$C_9^\mu = - C_{10}^\mu = \frac{-\pi}{\sqrt{2} G_F \alpha V_{tb} V_{ts}^*}\frac{\lambda^Q_{23}}{M_{Z'}^2}.$$}
+% {\small $$C_{bs}^{LL} = \frac{\eta^{LL}}{4\sqrt{2}G_F (V_{tb} V_{ts}^*)^2}\left(\frac{\lambda_{23}^Q}{M_{Z'}}\right)^2.$$}
 
-        \end{column}
-\begin{column}{0.56\textwidth}
-$$S_3\ \text{leptoquark}$$
+%         \end{column}
+% \begin{column}{0.56\textwidth}
+% $$S_3\ \text{leptoquark}$$
 
-{\small $$C_9^\mu = -C_{10}^\mu = \frac{\pi}{\sqrt{2} G_F \alpha V_{tb} V_{ts}^*} \frac{y^{QL}_{32} y^{QL*}_{22}}{M^2_{S_3}}.$$}
-{\small $$C_{bs}^{LL} = \frac{5\eta^{LL}}{256 \sqrt{2} \pi^2 G_F (V_{tb} V_{ts}^*)^2}\left(\frac{y^{QL}_{3\alpha} y^{QL*}_{2\alpha}}{M_{S_3}}\right)^2.$$}
+% {\small $$C_9^\mu = -C_{10}^\mu = \frac{\pi}{\sqrt{2} G_F \alpha V_{tb} V_{ts}^*} \frac{y^{QL}_{32} y^{QL*}_{22}}{M^2_{S_3}}.$$}
+% {\small $$C_{bs}^{LL} = \frac{5\eta^{LL}}{256 \sqrt{2} \pi^2 G_F (V_{tb} V_{ts}^*)^2}\left(\frac{y^{QL}_{3\alpha} y^{QL*}_{2\alpha}}{M_{S_3}}\right)^2.$$}
 
-        \end{column}
-\end{columns}
+%         \end{column}
+% \end{columns}
+\begin{table}
+    \centering
+    \begin{tabular}{|c|c|}\hline
+        {\color{blue}$Z'\ \ (\lambda^L_{22} = 1)$}                 & {\color{red}$S_3\ \text{leptoquark}$} \\\hline
+                                                                   &                                       \\
+        {\small $C_9^\mu = - C_{10}^\mu = \frac{-\pi}{\sqrt{2} G_F \alpha
+        V_{tb} V_{ts}^*}\frac{\lambda^Q_{23}}{M_{Z'}^2}$}          &
+        {\small $C_9^\mu = -C_{10}^\mu = \frac{\pi}{\sqrt{2} G_F \alpha V_{tb}
+        V_{ts}^*} \frac{y^{QL}_{32} y^{QL*}_{22}}{M^2_{S_3}}$}                                             \\
+                                                                   &                                       \\\hline
+                                                                   &                                       \\
+        {\small $C_{bs}^{LL} = \frac{\eta^{LL}}{4\sqrt{2}G_F (V_{tb}
+        V_{ts}^*)^2}\left(\frac{\lambda_{23}^Q}{M_{Z'}}\right)^2$} &
+        {\small $C_{bs}^{LL} = \frac{5\eta^{LL}}{256 \sqrt{2} \pi^2 G_F
+                        (V_{tb} V_{ts}^*)^2}\left(\frac{y^{QL}_{3\alpha}
+                        y^{QL*}_{2\alpha}}{M_{S_3}}\right)^2$}
+        \\
+                                                                   &                                       \\\hline
+    \end{tabular}
+\end{table}
 
-\vspace{1cm}
+\vspace{0.5cm}
 
 A negative value for $C_{bs}^{LL}$ implies a complex value for $C_9^\mu$ and $C_{10}^\mu$ in both models.
 
 \end{frame}
 
 \begin{frame}\frametitle{Fit to complex WCs: $C_9$ and $C_{10}$}
-    \begin{columns}
-        \begin{column}[t]{0.48\textwidth}
+
             \begin{figure}
                 \centering
-                \includegraphics[width=0.95\textwidth]{figures/fitim_C9C10.pdf}\\
-                Allowed imaginary Wilson coefficients.
-            \end{figure}
-        \end{column}
-        \begin{column}[t]{0.48\textwidth}
-            \begin{figure}
-                \centering
-                \includegraphics[width=0.95\textwidth]{figures/RK_im.pdf}\\
+\includegraphics[width=0.7\textwidth]{figures/RK_im.pdf}\\
                 Values of $R_{K^{(*)}}$ with imaginary Wilson coefficients.
             \end{figure}
-        \end{column}
-    \end{columns}
+
 
     ~
 
@@ -314,29 +330,29 @@ A negative value for $C_{bs}^{LL}$ implies a complex value for $C_9^\mu$ and $C_
 \end{frame}
 
 \begin{frame}\frametitle{Fit to complex WCs: Fit to $Z'$ couplings}
-    Fit to $R_K$, $R_{K^*}$, $P_4'$, $P_5'$, $\mathcal{B}(B_s \to \mu^+ \mu^-)$, $\Delta M_S$, $A_\mathrm{CP}^\mathrm{mix}(B_s \to J/\psi\, \phi)$.
+Fit to $R_K$, $R_{K^*}$, $P_4'$, $P_5'$, $\mathcal{B}(B_s \to \mu^+ \mu^-)$, $\Delta M_S$, $A_\mathrm{CP}^\mathrm{mix}(B_s \to J/\psi\, \phi)$.\\[0.3em]
 
     \begin{figure}
         \begin{columns}
             \begin{column}{0.48\textwidth}
                 \centering
-                \includegraphics[width=0.9\textwidth]{figures/fitim_Z.pdf}
-                \\ {\small Imaginary $Z'$ fit.}
+{\small Imaginary $Z'$ fit.}\\
+\includegraphics[width=0.9\textwidth]{figures/fitim_Z.pdf}
             \end{column}
             \begin{column}{0.48\textwidth}
-                \includegraphics[width=0.9\textwidth]{figures/fitcompl_Z.pdf}
-                \\ {\small Complex $Z'$ fit.}
-
+\hspace*{1.5cm}{\small Complex $Z'$ fit.}\\
+\includegraphics[width=1.0\textwidth]{figures/fitcompl_Z.pdf}
             \end{column}
         \end{columns}
     \end{figure}
     \begin{table}
         \centering
-        \begin{tabular}{|l|c|c|c|}\hline
-            \textbf{Best fits} & $\lambda^Q_{23}$    & $M_{Z'}$             & $\sqrt{\chi^2_\mathrm{SM} - \chi^2_\mathrm{fit}}$ \\\hline
-            Real               & $-0.002$            & $1.31\,\mathrm{TeV}$ & $5.70$ \quad (\alert{$5.39\sigma$})               \\\hline
-            Imaginary          & $\pm 0.047\;i$      & $12\,\mathrm{TeV}$   & $1.61$  \quad (\alert{$1.1\sigma$})               \\\hline
-            Complex            & $-0.0020-0.0021\;i$ & $1.08\,\mathrm{TeV}$ & $6.05$ \quad (\alert{$5.43\sigma$})               \\\hline
+\begin{tabular}{|l|c|c|c|c|}\hline
+\textbf{Best fits} & $\lambda^Q_{23}$                                  & $M_{Z'}$
+& $\sqrt{\chi^2_\mathrm{SM} - \chi^2_\mathrm{fit}}$ & Pull ($\sigma$)                                      \\\hline
+Real               & $-0.002$                                          & $1.31\,\mathrm{TeV}$ & $5.70$ & \alert{$5.39\sigma$} \\\hline
+Imaginary          & $\pm 0.047\;i$                                    & $12\,\mathrm{TeV}$   & $1.61$ & \alert{$1.1\sigma$}  \\\hline
+Complex            & $-0.0020-0.0021\;i$                               & $1.08\,\mathrm{TeV}$ & $6.05$ & \alert{$5.43\sigma$} \\\hline
         \end{tabular}
     \end{table}
 
@@ -344,18 +360,18 @@ A negative value for $C_{bs}^{LL}$ implies a complex value for $C_9^\mu$ and $C_
 \end{frame}
 
 \begin{frame}\frametitle{Fit to complex WCs: Fit to $S_3$ couplings}
-    Fit to $R_K$, $R_{K^*}$, $P_4'$, $P_5'$, $\mathcal{B}(B_s \to \mu^+ \mu^-)$, $\Delta M_S$, $A_\mathrm{CP}^\mathrm{mix}(B_s \to J/\psi\, \phi)$.
+Fit to $R_K$, $R_{K^*}$, $P_4'$, $P_5'$, $\mathcal{B}(B_s \to \mu^+ \mu^-)$, $\Delta M_S$, $A_\mathrm{CP}^\mathrm{mix}(B_s \to J/\psi\, \phi)$.\\[0.3em]
 
     \begin{figure}
         \begin{columns}
             \begin{column}{0.48\textwidth}
                 \centering
-                \includegraphics[width=0.9\textwidth]{figures/fitim_LQ.pdf}
-                \\ {\small Imaginary $S_3$ fit.}
+{\small Imaginary $S_3$ fit.}\\
+\includegraphics[width=0.9\textwidth]{figures/fitim_LQ.pdf}
             \end{column}
             \begin{column}{0.48\textwidth}
-                \includegraphics[width=0.9\textwidth]{figures/fitcompl_LQ.pdf}
-                \\ {\small Complex $S_3$ fit.}
+\hspace*{1.5cm}{\small Complex $S_3$ fit.}\\
+\includegraphics[width=1.0\textwidth]{figures/fitcompl_LQ.pdf}
 
             \end{column}
         \end{columns}
@@ -363,18 +379,23 @@ A negative value for $C_{bs}^{LL}$ implies a complex value for $C_9^\mu$ and $C_
 
     \begin{table}
         \centering
-        \begin{tabular}{|l|c|c|c|}\hline
-            \textbf{Best fits} & $y^{QL}_{32} y^{QL*}_{22}$ & $M_{S_3}$            & $\sqrt{\chi^2_\mathrm{SM} - \chi^2_\mathrm{fit}}$ \\\hline
-            Real               & $ 0.04 $                   & $5.19\,\mathrm{TeV}$ & $5.82$ \quad (\alert{$5.47\sigma$})               \\\hline
-            Imaginary          & $-1.67\;i$                 & $50\,\mathrm{TeV}$   & $1.15$ \quad (\alert{$0.6\sigma$})                \\\hline
-            Complex            & $0.033+0.034\;i$           & $4.10\,\mathrm{TeV}$ & $5.90$ \quad (\alert{$5.27\sigma$})               \\\hline
+\begin{tabular}{|l|c|c|c|c|}\hline
+\textbf{Best fits}   & $y^{QL}_{32} y^{QL*}_{22}$                        & $M_{S_3}$
+& $\sqrt{\chi^2_\mathrm{SM} - \chi^2_\mathrm{fit}}$ & Pull ($\sigma$)      \\\hline
+Real                 & $ 0.04 $                                          &
+$5.19\,\mathrm{TeV}$ & $5.82$                                            & \alert{$5.47\sigma$} \\\hline
+Imaginary            & $-1.67\;i$                                        &
+$50\,\mathrm{TeV}$   & $1.15$                                            & \alert{$0.6\sigma$}  \\\hline
+Complex              & $0.033+0.034\;i$                                  &
+$4.10\,\mathrm{TeV}$ & $5.90$                                            & \alert{$5.27\sigma$} \\\hline
         \end{tabular}
     \end{table}
+
+Complex couplings provide a similar fit compared to real case.
 
 \end{frame}
 
 \begin{frame}\frametitle{Fit to complex WCs: Observables}
-
     \begin{figure}
         \begin{columns}
             \begin{column}{0.48\textwidth}
@@ -383,9 +404,10 @@ $$R_{K^{(*)}}$$
                 \includegraphics[width = 0.8\textwidth]{figures/errorplot_RKmodels.pdf}
             \end{column}
             \begin{column}{0.48\textwidth}
-                $1\sigma$ intervals for observables in the {\color{blue}$Z'$} and {\color{red} LQ} fits, compared to the {\color{green} experimental values} and {\color{orange} SM predictions}.
-
-
+$1\sigma$ intervals for observables in the
+    {\color{blue}$Z'$} and {\color{red} LQ} fits, compared
+to the {\color{green} experimental values} and
+    {\color{orange} SM predictions}.
             \end{column}
         \end{columns}
     \end{figure}
@@ -425,7 +447,7 @@ $$A_{CP}^\mathrm{mix}$$
     \end{itemize}
 
     \begin{center}
-        \includegraphics[width=0.6\textwidth]{figures/errorplot_RK2021.pdf}
+\includegraphics[width=0.54\textwidth]{figures/errorplot_RK2021.pdf}
     \end{center}
 
 \end{frame}
@@ -446,13 +468,14 @@ $$A_{CP}^\mathrm{mix}$$
 \item Operators and observables
 \item Global fits
 \item Observables
-\item Hessian approximation
+%\item Hessian approximation
 
 \end{itemize}
 \end{column}
 \begin{column}{0.48\textwidth}
 \begin{itemize}
-\item Electron colliders
+% \item Electron colliders
+\item Hessian approximation
 \item Improved EW prospects
 \item Conclusions
 \end{itemize}
@@ -470,10 +493,12 @@ $$A_{CP}^\mathrm{mix}$$
               $$C_{\ell q (1)}^i = C_{\ell q (3)}^i \equiv C_{\ell q}^i.\qquad\qquad$$
         \item We obtained the running from the SMEFT operators at $\Lambda =$ 1 TeV down to $\mu = m_b$ using the RGE:
               {\scriptsize\begin{align*}
-                  C_9^{\mathrm{NP}\ e, \mu} = -0.583 \, C_{\ell q(1)}^{e, \mu} - 0.596 \, C_{\ell q(3)}^{e,
-                  \mu}\ ,                                                                                 & \qquad C_{10}^{\mathrm{NP}\ e, \mu} = 0.588 \, C_{\ell q(1)}^{e,
-                  \mu} + 0.591 \, C_{\ell q(3)}^{e, \mu}\ , \nonumber                                                                                                        \\
-                  C_{VL}^{e, \mu} = 0.0012 \, C_{\ell q(1)}^{e, \mu} - 0.0644\, C_{\ell q(3)}^{e, \mu}\ , & \qquad C_{VL}^\tau = -0.0598\, C_{\ell q(3)}^\tau\ .
+C_9^{\mathrm{NP}\ e, \mu} = -0.583 \, C_{\ell
+        q(1)}^{e, \mu} - 0.596 \, C_{\ell q(3)}^{e, \mu}\ , & \qquad C_{10}^{\mathrm{NP}\ e, \mu} = 0.588 \, C_{\ell q(1)}^{e,
+        \mu} + 0.591 \, C_{\ell q(3)}^{e, \mu}\ , \nonumber                                                                    \\
+C_{VL}^{e, \mu} = 0.0012 \, C_{\ell q(1)}^{e, \mu} -
+0.0644\, C_{\ell q(3)}^{e, \mu}\ ,                  & \qquad
+C_{VL}^\tau =  -0.0598\,  C_{\ell  q(3)}^\tau\   .
                   \label{eq:running}
               \end{align*}}
         \item RG causes mixing to other physical sectors (e.g. electroweak tests) $\Longrightarrow$ We need global fits: $B$-physics\tikzmark{Bphys}, EW\tikzmark{EW}, $\beta$ decays, etc.
@@ -485,47 +510,51 @@ $$A_{CP}^\mathrm{mix}$$
 
 \begin{frame}\frametitle{SMEFT Fit: Global fits}
     \begin{center}
+{\footnotesize Fit to $C_{\ell q}^e$ and $C_{\ell q}^\mu$ $\qquad\qquad\qquad   \qquad$ Fit to $C_{\ell q}^e = -C_{\ell q}^\mu$ and $C_{\ell q}^\tau$}
         \includegraphics[width=0.4\textwidth]{figures/scIV_beta.pdf} $\qquad$
         \includegraphics[width=0.4\textwidth]{figures/scXI_beta.pdf}
     \end{center}
     \begin{itemize}
-        \item $\mathcal{O}_{\ell q}^\mu - \mathcal{O}_{\ell q}^e$ describes violations of lepton universality, fit dominated by $R_{K^{(*)}}$ and $R_{D^{(*)}}$ observables. Large deviations from SM.
-        \item $\mathcal{O}_{\ell q}^\mu + \mathcal{O}_{\ell q}^e$ describes flavour-universal contributions, fit dominated by EW observables. Compatible with SM.
-        \item $\beta$ decays are sensitive to deviations in $\mathcal{O}_{\ell q}^\mu$.
-        \item $\mathcal{O}_{\ell q}^\tau$ uncorrelated with the other operators. Compatible with SM (but large uncertainties).
+        \item $C_{\ell q}^\mu - C_{\ell q}^e$ describes violations of lepton universality, fit dominated by $R_{K^{(*)}}$ and $R_{D^{(*)}}$ observables. Large deviations from SM.
+        \item $C_{\ell q}^\mu + C_{\ell q}^e$ describes flavour-universal contributions, fit dominated by EW observables. Compatible with SM.
+        \item $\beta$ decays are sensitive to deviations in $C_{\ell q}^\mu$.
+        \item $C_{\ell q}^\tau$ uncorrelated with the other operators. Compatible with SM (but large uncertainties).
     \end{itemize}
 
 \end{frame}
 
 \begin{frame}\frametitle{SMEFT Fit: Observables}
 
-    We consider different scenarios for the SMEFT coefficients. The most relevant are:
+We consider different scenarios for the SMEFT coefficients.\\[0.3em]
+The most relevant are: \vspace{-0.5cm}
 {\scriptsize
-\begin{columns}
-\begin{column}{0.48\textwidth}
+\hspace*{-2em}%
+\begin{minipage}[t][2.5cm][t]{\textwidth}
+\begin{columns}[onlytextwidth]
+\begin{column}{0.52\textwidth}
 \begin{itemize}
-\item Scenario IV: Fit to $C_{\ell q}^e$, $C_{\ell q}^\mu$.
-\item Scenario VII: Fit to $C_{\ell q}^e$, $C_{\ell q}^\mu$, $C_{\ell q}^\tau$.
+\item Scenario IV: Fit to $C_{\ell q}^e$, $C_{\ell q}^\mu\ [4.73\,\sigma]$.
+\item Scenario VII: Fit to $C_{\ell q}^e$, $C_{\ell q}^\mu$, $C_{\ell q}^\tau\ [4.97\,\sigma]$.
 \end{itemize}
 \end{column}
-\begin{column}{0.48\textwidth}
+\begin{column}{0.58\textwidth}
 \begin{itemize}
-\item Scenario IX: Fit to $C_{\ell q}^e = C_{\ell q}^\tau = - C_{\ell q}^\mu$.
-\item Scenario X: Fit to $C_{\ell q}^e =  - C_{\ell q}^\mu$.
-\item Scenario XI: Fit to $C_{\ell q}^e = - C_{\ell q}^\mu$, $C_{\ell q}^\tau$.
+\item Scenario IX: Fit to $C_{\ell q}^e = C_{\ell q}^\tau = - C_{\ell q}^\mu\ [5.27\,\sigma]$.
+\item Scenario X: Fit to $C_{\ell q}^e =  - C_{\ell q}^\mu\ [4.94\,\sigma]$.
+\item Scenario XI: Fit to $C_{\ell q}^e = - C_{\ell q}^\mu$, $C_{\ell q}^\tau\ [4.94\,\sigma]$.
 \end{itemize}
 \end{column}
 \end{columns}
-}
+\end{minipage}
+}\vspace*{-1.0cm}
     \begin{figure}\begin{center}
-$$R_{K^{(*)}}\qquad\qquad\qquad\qquad\qquad\qquad R_{D^{(*)}}$$
-            \resizebox{0.52\textwidth}{!}{\input{figures/RKplot.pgf}}
-            \resizebox{0.37\textwidth}{!}{\input{figures/RDplot.pgf}}
-
+{\small{$$\qquad R_{K^{(*)}}\qquad\qquad\qquad\qquad\qquad\qquad\qquad R_{D^{(*)}}$$}}
+\resizebox{0.50\textwidth}{!}{\input{figures/RKplot.pgf}}
+\resizebox{0.35\textwidth}{!}{\input{figures/RDplot.pgf}}
         \end{center}
     \end{figure}
     \begin{itemize}
-\item $C_{\ell q}^e \approx - C_{\ell q}^\mu$ required for $R_{K^{(*)}}$.
+\item Maximal violation of LFU $C_{\ell q}^e \approx - C_{\ell q}^\mu$ required for $R_{K^{(*)}}$.
 \item $C_{\ell q}^\tau$ improves the prediction for $R_{D^{(*)}}$.
     \end{itemize}
 
@@ -533,59 +562,67 @@ $$R_{K^{(*)}}\qquad\qquad\qquad\qquad\qquad\qquad R_{D^{(*)}}$$
 
 \begin{frame}\frametitle{SMEFT Fit: Hessian approximation}
 
-    In Scenario VII, we can approximate the likelihood function as
-    $$\Delta\log L (\vec{C}) \approx \Delta\log L_\mathrm{bf} + \vec{C}^T \mathbb{H} \vec{C}\,.$$
+% In Scenario VII (fit to $C_{\ell q}^e$, $C_{\ell q}^\mu$, $C_{\ell
+%   q}^\tau$),
+We can approximate the likelihood function as
+$$\Delta\log L (\vec{C}) \approx \Delta\log L_\mathrm{bf} +
+    \vec{C}^T \mathbb{H} \vec{C}\,.$$
+{\footnotesize{$\Delta L_\mathrm{bf}$ is the likelihood of the best fit.}}\\[0.3em]
     This allows us to easily explore the area around the best fit point.
 
-\vspace{0.5cm}
-
+\vspace{0.3cm}
+Scenario VII (fit to $C_{\ell q}^e$, $C_{\ell q}^\mu$, $C_{\ell
+            q}^\tau$):
 \begin{columns}
-    \begin{column}{0.52\textwidth}
-        \includegraphics[width=\textwidth]{figures/evo_sm.pdf}
-    \end{column}
-    \begin{column}{0.45\textwidth}
-        \begin{itemize}
-            \item $R_{K^{(*)}}$, $R_{D^{(*)}}$ and EW observables show preference for larger deviations from SM.
-            \item Nuclear $\beta$ decays and leptonic decays show preference for SM-like values.
-        \end{itemize}
-    \end{column}
+\begin{column}{0.52\textwidth}
+\hspace*{0.6cm}{\footnotesize{Evolution of the pull of the observables\\\hspace*{0.6cm}along the SM direction:}}\\
+\includegraphics[width=\textwidth]{figures/evo_sm.pdf}
+\end{column}
+\begin{column}{0.40\textwidth}
+    \begin{itemize}
+        \item $R_{K^{(*)}}$, $R_{D^{(*)}}$ and EW observables show preference for larger deviations from SM.
+        \item Nuclear $\beta$ decays and leptonic decays show preference for SM-like values.
+    \end{itemize}
+\end{column}
 \end{columns}
 
 \end{frame}
 
-\begin{frame}\frametitle{SMEFT Fit: Electron colliders}
+% \begin{frame}\frametitle{SMEFT Fit: Electron colliders}
 
-Electron colliders are powerful tools in testing neutral currents:
-    \begin{itemize}
-        \item Clean signatures.
-        \item Small uncertainties.
-        \item Detailed differential analyses in di-fermion final states.
-        \item Different longitudinal polarisation of the beams.
-        \item Experimental sensitivity increases with $\sqrt{s}$.
-    \end{itemize}
+% Electron colliders are powerful tools in testing neutral currents:
+%     \begin{itemize}
+%         \item Clean signatures.
+%         \item Small uncertainties.
+%         \item Detailed differential analyses in di-fermion final states.
+%         \item Different longitudinal polarisation of the beams.
+%         \item Experimental sensitivity increases with $\sqrt{s}$.
+%     \end{itemize}
 
-    \begin{center}
-        \begin{columns}
-            \begin{column}{0.7\textwidth}
-                \includegraphics[width=\textwidth]{figures/operators_esu}
-            \end{column}
-            \begin{column}{0.19\textwidth}
-                {\small$\begin{matrix}
-                            {\color[HTML]{4285f4} \mathcal{O}_{2W}} \Leftrightarrow \mathcal{O}_{\ell q(3)} \\ {\color[HTML]{ff9900} \mathcal{O}_{2B}} \Leftrightarrow \mathcal{O}_{\ell q(1)}
-                        \end{matrix}  $}
-            \end{column}
-        \end{columns}
-\colorcite{R. K. Ellis \textit{et al.} arXiv:1910.11775 [hep-ex]}
-    \end{center}
+%     \begin{center}
+%         \begin{columns}
+%             \begin{column}{0.7\textwidth}
+%                 \includegraphics[width=\textwidth]{figures/operators_esu}
+%             \end{column}
+%             \begin{column}{0.19\textwidth}
+%                 {\small$\begin{matrix}
+%                             {\color[HTML]{4285f4} \mathcal{O}_{2W}} \Leftrightarrow \mathcal{O}_{\ell q(3)} \\ {\color[HTML]{ff9900} \mathcal{O}_{2B}} \Leftrightarrow \mathcal{O}_{\ell q(1)}
+%                         \end{matrix}  $}
+%             \end{column}
+%         \end{columns}
+% \colorcite{R. K. Ellis \textit{et al.} arXiv:1910.11775 [hep-ex]}
+%     \end{center}
 
-\end{frame}
+% \end{frame}
 
 \begin{frame}\frametitle{SMEFT Fit: Improved EW prospects}
-
-    Effect of the improved precision in EW observables at ILC
+Electron colliders are powerful tools in testing neutral currents:
+Clean signatures, small uncertainties,...\\[0.1em]
+Effect of the improved precision in EW observables at ILC:
     \begin{center}
-        \includegraphics[width=0.45\textwidth]{figures/scIV_ILC.pdf}
-        \includegraphics[width=0.45\textwidth]{figures/scXI_ILC.pdf}
+{\footnotesize Fit to $C_{\ell q}^e$ and $C_{\ell q}^\mu$ $\qquad\qquad\qquad   \qquad$ Fit to $C_{\ell q}^e = -C_{\ell q}^\mu$ and $C_{\ell q}^\tau$}
+\includegraphics[width=0.40\textwidth]{figures/scIV_ILC.pdf}
+\includegraphics[width=0.40\textwidth]{figures/scXI_ILC.pdf}
     \end{center}
 
 \begin{itemize}
@@ -603,12 +640,8 @@ Electron colliders are powerful tools in testing neutral currents:
                   \item $C_{\ell q}^\mu-C_{\ell q}^e$ contributes to  $R_{K^{(*)}}$.
                   \item $C_{\ell q}^\tau$ contributes to  $R_{D^{(*)}}$.
               \end{itemize}
-        \item Linear $e^+ e^-$ colliders will clear the picture...
-              \begin{itemize}
-                  \item ... by probing Wilson coefficients,
-                  \item ... by constraining the global fits through Electroweak precision tests,
-                  \item ... by searching for New Physics particles (LQs, $Z'$).
-              \end{itemize}
+\item We can explore the vicinity of the best fit point using the Hessian approximation.
+\item Linear $e^+ e^-$ colliders will clear the picture by constraining the global fits through Electroweak precision tests.
     \end{itemize}
 
 \end{frame}
@@ -630,7 +663,7 @@ Electron colliders are powerful tools in testing neutral currents:
 \item Observables
 \item Fit results
 \item Exploring the likelihood function
-\item xgboost
+\item \texttt{xgboost}
 \item Machine Learning training
 \item Machine Learning Montecarlo
 \end{itemize}
@@ -705,21 +738,29 @@ $\beta^\ell$ (mixing to the second generation of leptons) compatible with SM!
 $R_{K^{(*)}}$ requires mixing with the first generation ($\alpha^\ell$).\\
 The predictions for $R_{D^{(*)}}$ are in agreement with the experiments in both scenarios.
 
-    
+
 \end{frame}
 
 \begin{frame}\frametitle{ML Fit: Fit results}
-    Regions allowed at $1~\sigma$:
+%Regions allowed at $1~\sigma$:
+Two-dimensional sections of the
+likelihood function $\Delta \log L$ in Scenario~II, at $1 \sigma$ and
+$2 \sigma$:
     \begin{center}
         \begin{tabular}{cc}
-            {\small $\alpha^\ell$ and $\beta^\ell$} & {\small $\alpha^q$ and $\beta^q$} \\
-            \includegraphics[width=0.4\textwidth]{figures/alphabeta_l.pdf} & \includegraphics[width=0.4\textwidth]{figures/alphabeta_q.pdf}
+{\small $\alpha^\ell$ and $\beta^\ell$}                         & {\small $\alpha^q$ and $\beta^q$}                               \\
+\includegraphics[width=0.34\textwidth]{figures/alphabeta_l.pdf} & \includegraphics[width=0.34\textwidth]{figures/alphabeta_q.pdf}
         \end{tabular}
     \end{center}
     \begin{itemize}
         \item $\alpha^\ell$ is constrained by $R_{K^{(*)}}$.
         \item $\beta^\ell$ is constrained by LFV observables.
+\item The regions of
+equal probability are highly non-ellipsoidal\\
+$\Rightarrow$ we cannot use
+the Hessian approximation to characterise the fit.
 \end{itemize}
+
 \end{frame}
 
 \begin{frame}\frametitle{ML Fit: Exploring the likelihood function}
@@ -740,9 +781,13 @@ The predictions for $R_{D^{(*)}}$ are in agreement with the experiments in both 
     Regression tree
     \includegraphics[width=\textwidth]{figures/regtree.png}
 
-    \vspace{1.5cm}
+\vspace{1.0cm}
 
-    A regression tree $k$ defines a function $f_k(x)$. We use an ensemble of trees $F$ for the prediction: $$\phi(x) = \sum_{k\in F} f_k(x)\,.$$
+A regression tree $k$ defines a function $f_k(x)$. We use an
+ensemble of trees $F$ for the prediction: $$\phi(x) = \sum_{k\in F}
+    f_k(x)\,.$$\\
+The function $\phi(x)$ will represent the approximation for the log-likelihood
+function.
 \end{frame}
 
 \begin{frame}\frametitle{ML Fit: xgboost}
@@ -752,7 +797,7 @@ Extreme Gradient Boosting (xgboost) \\\colorcite{T.~Chen and C.~Guestrin. arXiv:
     ~
 
     We have a dataset $\{(x_i, y_i)\}$ with $x_i \in X (\sim\mathbb{R}^n)$ and $y_i \in \mathbb{R}$, and want to find $\phi(x)$ so $\phi(x_i)\approx y_i$. Defining the regularized objective
-    $$\mathcal{L}[\phi] = \sum_i \ell(\phi(x_i), y_i) + \sum_k \Omega(f_k)\,. $$
+$$\mathcal{L}[\phi] = \sum_i \ell(\phi(x_i), y_i) + \sum_k \Omega(f_k)\,.$$
     \begin{itemize}
         \item $\ell(\tilde{y}_i, y_i)$ is the loss function (Mean Absolute Error).
         \item $\Omega(f_k)$ penalizes the complexity of the trees.
@@ -782,6 +827,9 @@ Extreme Gradient Boosting (xgboost) \\\colorcite{T.~Chen and C.~Guestrin. arXiv:
             \end{itemize}
         \end{column}
         \begin{column}{0.5\textwidth}
+Regression of the predicted values
+of $\Delta\chi^2$ compared to the real ones in the validation
+dataset:\\[0.2em]
             \includegraphics[width=\columnwidth]{figures/regression_xgb.pdf}
         \end{column}
 \end{columns}
@@ -798,6 +846,8 @@ Extreme Gradient Boosting (xgboost) \\\colorcite{T.~Chen and C.~Guestrin. arXiv:
             with $u$ a random number from the uniform distribution in $[0,1)$. % chktex 9
         \end{column}
         \begin{column}{0.5\textwidth}
+{\small Montecarlo points generated using the
+Machine Learning algorithm:}\\[0.2em]
             \includegraphics[width=\columnwidth]{figures/hist_xgb.pdf}
         \end{column}
     \end{columns}
@@ -810,9 +860,11 @@ We use the trained model $\log\tilde{L}(\vec{C})$ to compute an approximation of
 
 \begin{frame}\frametitle{ML Fit: SHAP values}
 
-Measure of the importance of each parameter in the Machine Learning prediction for a single datapoint \colorcite{S. Lundberg, S. Lee. arXiv:1705.07874}.
+Measure of the importance of each parameter in the Machine Learning
+prediction for a single datapoint \colorcite{S. Lundberg,
+    S. Lee. arXiv:1705.07874}.\\[0.3em]
 
-    We train $2^n$ simplified models
+We train $2^n$ simplified models\\[0.3em]
 
     \begin{columns}
         \begin{column}{0.5\textwidth}
@@ -822,7 +874,7 @@ Measure of the importance of each parameter in the Machine Learning prediction f
             \begin{itemize}
                 \item Marginal contributions {\color{red} when adding $x^1$}: $\phi_{100}-\phi_{000}$, $\phi_{110}-\phi_{010}$, $\phi_{101}-\phi_{001}$, $\phi_{111} - \phi_{011}$.
                 \item SHAP value {\color{red}for $x^1$} is a weighted average of all its marginal contributions.
-                \item $\phi_{000}$ is the constant value.
+\item $\phi_{000}$ is the constant value.\\[0.5em]
             \end{itemize}
         \end{column}
     \end{columns}
@@ -854,29 +906,45 @@ Efficient implementation (poly time) for tree-based Machine Learning models.\col
 \begin{frame}\frametitle{ML Fits: SHAP values and likelihood}
     SHAP importances reproduce the dependence of the $-\log L$:
     \begin{center}
-        \includegraphics[width=0.32\textwidth]{figures/evoplot_C.pdf}
-        \includegraphics[width=0.32\textwidth]{figures/evoplot_alphal.pdf}
-        \includegraphics[width=0.32\textwidth]{figures/evoplot_betaq.pdf}
+{\small \qquad\qquad$C\qquad\qquad\qquad\qquad \alpha^\ell \qquad\qquad\qquad\qquad\qquad\beta^q\qquad$} \\
+\rotatebox{90}{\small $\qquad\Delta \log L$}
+\includegraphics[width=0.30\textwidth]{figures/evoplot_C.pdf}
+\includegraphics[width=0.30\textwidth]{figures/evoplot_alphal.pdf}
+\includegraphics[width=0.30\textwidth]{figures/evoplot_betaq.pdf}
     \end{center}
     \begin{center}
-        \includegraphics[width=0.32\textwidth]{figures/SHAP_C.pdf}
-        \includegraphics[width=0.32\textwidth]{figures/SHAP_al.pdf}
-        \includegraphics[width=0.32\textwidth]{figures/SHAP_bq.pdf}
+\rotatebox{90}{\small $\qquad\qquad\mathrm{SHAP}$}
+\includegraphics[width=0.30\textwidth]{figures/SHAP_C.pdf}
+\includegraphics[width=0.30\textwidth]{figures/SHAP_al.pdf}
+\includegraphics[width=0.30\textwidth]{figures/SHAP_bq.pdf}
     \end{center}
+\begin{itemize}
+    %\item Agreement between the results obtained by the
+    %      Machine Learning Montecarlo algorithm proposed and the ones
+    %      obtained by following the RG equations.
+    \item The SHAP values reproduce correctly the
+          general features of the fit.
+\end{itemize}
 
 \end{frame}
 
 \begin{frame}\frametitle{ML Fits: Correlations between observables}
-
+Matrix of Pearson correlation coefficients for selected observables in the 15000 points sample:
     \begin{columns}[onlytextwidth]
         \begin{column}{0.6\textwidth}
-            \includegraphics[width=\columnwidth]{figures/obscorr.pdf}
+\begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[width=\columnwidth]{figures/obscorr.pdf}};
+    \draw[color = OliveGreen, line width=0.5mm] (1.95,1.1) circle (8pt);
+    \draw[color = OliveGreen, line width=0.5mm] (4.7,3.8) circle (8pt);
+\end{tikzpicture}
+
         \end{column}
         \begin{column}{0.4\textwidth}
             \begin{itemize}
                 \item Moderate correlation between $R_K$ and $\mathrm{BR}(B_s \to \mu^+ \mu^-)$ because $C_9^\mu \neq C_{10}^\mu$.
                 \item Also moderate correlation between $R_K$ and $R_D$.
-                \item Perfect correlation between $R_D$ and $\mathrm{BR}(B\to K^{(*)}\nu\bar{\nu})$.
+\item {\color{OliveGreen}{Perfect correlation between} $R_D$
+            $\mathrm{BR}(B\to K^{(*)}\nu\bar{\nu})$}.
                 \item No observable displays large correlations to the global likelihood: global fits are needed.
             \end{itemize}
         \end{column}
@@ -887,12 +955,27 @@ Efficient implementation (poly time) for tree-based Machine Learning models.\col
 \begin{frame}\frametitle{ML Fits: $R_D$ and $\mathrm{BR}(B\to K^{(*)}\nu\bar{\nu})$}
 
     \begin{center}
-        \includegraphics[width=0.8\textwidth]{figures/RD_BKnunu.pdf}
+\begin{columns}[onlytextwidth]
+    \begin{column}{0.55\textwidth}
+        \includegraphics[width=\textwidth]{figures/RD_BKnunu_plot.pdf}
+    \end{column}
+    \begin{column}{0.45\textwidth}
+        \includegraphics[width=\textwidth]{figures/RD_BKnunu_leg1.pdf}\\[2pt]
+        \includegraphics[width=\textwidth]{figures/RD_BKnunu_leg2.pdf}\\[2pt]
+        \includegraphics[width=\textwidth]{figures/RD_BKnunu_leg3.pdf}\\[-6pt]
+        \colorcite{Y. Ahmis \textit{et al.} (HFLAV) arXiv:1909.12524}\\[4pt]
+        \includegraphics[width=\textwidth]{figures/RD_BKnunu_leg4.pdf}\\[2pt]
+        \includegraphics[width=\textwidth]{figures/RD_BKnunu_leg5.pdf}\\[-6pt]
+        \colorcite{J. Grygier \textit{et al.} (Belle) arXiv:1702.03224}\\[4pt]
+        \includegraphics[width=\textwidth]{figures/RD_BKnunu_leg6.pdf}\\[-6pt]
+        \colorcite{F. Dattola (Belle-II) arXiv:2105.05754}
+    \end{column}
+\end{columns}
+
     \end{center}
 
     An excess in $R_D$ implies an excess in $\mathrm{BR}(B\to K^{(*)}\nu\bar{\nu})$. \\(Note that the {\color{gray}2021 World Average} is not included in our fit).
 
-    \blankfootnote{J. Grygier \textit{et al.} (Belle) arXiv:1702.03224; F. Dattola (Belle-II) arXiv:2105.05754; Y. S. Ahmis \textit{et al.} (HFLAV) arXiv:1909.12524; \textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
 \end{frame}
 
 \begin{frame}\frametitle{ML Fits: Connection to Leptoquarks}
@@ -942,14 +1025,14 @@ Efficient implementation (poly time) for tree-based Machine Learning models.\col
 \end{frame}
 
 \begin{frame}[plain] %%%ALPs
-\begin{block}{\huge Leptonic meson decays\\ into invisible ALP}
+\begin{block}{\huge Leptonic meson decays into invisible ALP}
     Chapter 8 \\
     {\color{red}\textbf{J. Alda}, A. W. M. Guerrera, S. Peñaranda, S. Rigolin, \\
     \textit{Leptonic Meson Decays into invisible ALP,}\\
-    Nuclear Physics B (2022). arXiv:2111.02536 [hep-ph]}
+    Nuclear Physics B 979 (2022), 115791. arXiv:2111.02536 [hep-ph]}
 \end{block}
 
-\vspace{1.2cm}
+\vspace{0.6cm}
 
 \begin{columns}
 \begin{column}{0.48\textwidth}
@@ -968,6 +1051,13 @@ Efficient implementation (poly time) for tree-based Machine Learning models.\col
 \end{itemize}
 \end{column}
 \end{columns}
+
+\vspace{0.6cm}
+Research stay at \textit{Università degli Studi di Padova} (Italy)\\
+\begin{center}
+    \includegraphics[height = 1.2cm]{logos/Padova.png}
+\end{center}
+
 \end{frame}
 
 \begin{frame}\frametitle{ALPs: Introduction}
@@ -1025,7 +1115,8 @@ Efficient implementation (poly time) for tree-based Machine Learning models.\col
 \end{frame}
 
 \begin{frame}\frametitle{ALPs: Hadronization}
-We follow the Lepage-Brodsky technique \colorcite{G. Lepage, S. J. Brodsky, Phys. Rev. D 22 (1980), p. 2157.}:
+We follow the Lepage-Brodsky technique:\\
+\colorcite{G. Lepage, S. J. Brodsky, Phys. Rev. D 22 (1980), p. 2157.}
     \begin{itemize}
         \item We parameterize the ground-state wavefunction of the meson as
               $$\Psi_M(x)=\frac{1}{4}\phi_M(x)\gamma^5(\slashed{P}_M + g_M(x) M_M)\,.$$
@@ -1054,7 +1145,7 @@ Improvements compared to previous results \colorcite{Y. Aditya, K. J. Healey, A.
     \begin{itemize}
         \item Formula for massive ALPs.
         \item We do not rely on the assumption $c_q = c_Q$.
-        \item Corrected a factor 1/2 in the published formula for massless decays
+\item Corrected a factor 1/2 in the published formula for massless decays.
     \end{itemize}
 
 \end{frame}
@@ -1207,18 +1298,18 @@ Our results show an improvement of $~$ one order of magnitude compared to the pr
 
 \begin{frame}[plain]
     \vspace{1.3cm}
-    \begin{block}{\huge General conclusions}
+\begin{block}{\huge Summary and Conclusions}
         Chapter 9
     \end{block}
     \vspace{1.3cm}
     \begin{itemize}
-        \item General conclusions
-        \item Conclusiones generales
+\item Summary and Conclusions
+\item Resumen y Conclusiones
     \end{itemize}
 
 \end{frame}
 
-\begin{frame}\frametitle{General Conclusions}
+\begin{frame}\frametitle{Summary and Conclusions}
     \begin{itemize}
 \item We have performed an analysis to the $R_{K^{(*)}}$ observables, $\Delta M_S$ and $A_{CP}^\mathrm{mix}$ in the context of $Z'$ and $S_3$ leptoquarks with complex couplings, obtaining an slightly improved fit compared to the real case.
         \item After the 2019 SM prediction for $\Delta M_S$, we can assume real Wilson coefficients.
@@ -1228,7 +1319,7 @@ Our results show an improvement of $~$ one order of magnitude compared to the pr
 
 \end{frame}
 
-\begin{frame}\frametitle{General Conclusions}
+\begin{frame}\frametitle{Summary and Conclusions}
     \begin{itemize}
 \item We have analyzed a proposal where the New Physics only affects the third generation in the interaction basis. When we rotate to the mass basis, we have found that the mixing to the first generation of leptons is necessary to describe the $R_{K^{(*)}}$ anomaly, since the mixing to the second generation (muons) is heavily constrained by LFV observables. In this proposal, we have identified an interesting correlation between $R_D$ and $\mathrm{BR}(B\to K \nu \bar{\nu})$.
         \item  Our work marks a novel approach to the study of the flavour anomalies, with a Machine Learning analysis being used to extract confidence intervals and correlations
@@ -1237,7 +1328,7 @@ Our results show an improvement of $~$ one order of magnitude compared to the pr
     \end{itemize}
 \end{frame}
 
-\begin{frame}\frametitle{General conclusions}
+\begin{frame}\frametitle{Summary and Conclusions}
 
 Key points:
 
@@ -1250,7 +1341,50 @@ Key points:
     \end{itemize}
 \end{frame}
 
-\begin{frame}\frametitle{Conclusiones generales}
+\begin{frame}\frametitle{Summary}
+    \scriptsize
+    In the last years there has been a growing interest in the study of
+    deviations from the predictions of the Standard Model of particle
+    physics in the context of Flavour Physics. This dissertation is devoted
+    to the study of these deviations, with special focus on those involving
+    $B$ mesons.
+
+    ~
+
+    The interest on deviations from the Standard Model predictions is
+    twofold: theoretical questions not yet solved and recent experimental
+    measurements showing this kind of deviations. In our research we study
+    two classes of these experimentally-interesting observables: the
+    semileptonic decays of $B$ mesons into $K$ or $K^*$ mesons and a pair of
+    charged leptons through flavour-changing neutral currents, characterized
+    by the $R_{K^{(*)}}$ ratios between the muonic and the electronic branching
+    ratios; and the semileptonic decays of $B$ mesons into $D$ or $D^*$ mesons, a
+    charged lepton and a neutrino through flavour-changing charged currents,
+    characterized by the $R_{D^{(*)}}$ ratios between the tauonic and the light
+    branching ratios. We use the framework of Effective Field Theories,
+    being able to obtain constraints on New Physics contributions to the
+    Wilson coefficients of the effective Lagrangian from the experimental
+    results. A global fit, including observables from all affected sectors,
+    is considered. The sheer number of observables involved makes mandatory
+    the use of numerical calculations, and in the most extreme cases, even
+    using Machine Learning tools such as regression trees and SHAP (SHAPley
+    Additive exPlanation) values. We use for the first time in the flavour
+    context a Montecarlo analysis to extract the confidence intervals and
+    correlations between observables, showing that it constitutes a suitable
+    strategy to use in this kind of analysis.
+
+    ~
+
+    We have also extrapolated our results to specific models of New Physics;
+    leptoquarks and $Z'$ bosons. We have also performed a more in-deep
+    analysis of a model for Axion-Like Particles, pseudoscalars that could
+    appear as pseudo-Nambu-Goldstone bosons for new global $U(1)$ symmetries.
+    Unlike the traditional approaches, we have examined the case where the
+    Axion-Like Particles have a non-trivial flavour structure in their
+    couplings to quarks and leptons.
+\end{frame}
+
+\begin{frame}\frametitle{Resumen y Conclusiones}
     \begin{itemize}
         \item Hemos realizado un análisis de los observables $R_{K^{(*)}}$, $\Delta M_S$ y $A_{CP}^\mathrm{mix}$ en el contexto de $Z'$ y leptoquarks $S_3$ con acoplamientos complejos, obteniendo un ajuste ligeramente mejor que en el caso real.
         \item Tras la predicción de $\Delta M_S$ en el SM actualizada en 2019, podemos asumir que los coeficientes de Wilson sean reales.
@@ -1259,7 +1393,7 @@ Key points:
     \end{itemize}
 \end{frame}
 
-\begin{frame}\frametitle{Conclusiones generales}
+\begin{frame}\frametitle{Resumen y Conclusiones}
     \begin{itemize}
         \item Hemos analizado una propuesta en la cual la Nueva Física solo afecta a la tercera generación en la base de interacción. Al rotar a la base de masa, hemos concluido que la mezcla con la primera generación es necesaria para describir la anomalía de $R_{K^{(*)}}$, ya que la mezcla con la segunda generación (muones) está muy limitada por los observables de violación del sabor leptónico. Con esta propuesta, hemos identificado una correlación entre $R_D$ y $\mathrm{BR}(B\to K\nu\bar{\nu})$ que puede ser interesante experimentalmente.
         \item Una novedad relevante de nuestro trabajo es que utilizamos por primera vez en el contexto de las anomalías de sabor un análisis de \textit{Machine-Learning} para extraer los intervalos de confianza y las correlaciones entre observables, demostrando que es una herramienta útil y adecuada en este tipo de análisis.
@@ -1267,7 +1401,7 @@ Key points:
     \end{itemize}
 \end{frame}
 
-\begin{frame}\frametitle{Conclusiones generales}
+\begin{frame}\frametitle{Resumen y Conclusiones}
 
     Ideas clave:
 
@@ -1275,11 +1409,273 @@ Key points:
 
     \begin{itemize}
         \item Utilidad de las Teorías de Campos Efectivas para describir desviaciones respecto al Modelo Estándar.
-        \item Necesidad de realizar análisis globales para dar cuenta de todos los efectos posibles de la Nueva Física.
-        \item Aplicabilidad de técnicas de \textit{Machine Learning} para ayudar en los estudios fenomenológicos.
-    \end{itemize}
+\item Necesidad de realizar análisis globales para tener en cuenta todos los efectos posibles de la Nueva Física.
+\item Aplicación y utilidad de técnicas de \textit{Machine Learning} en los estudios fenomenológicos.
+\end{itemize}
 \end{frame}
 
+\appendix
+
+\begin{frame}[plain, noframenumbering]
+    \begin{center}
+        {\huge \color{unizarblue} Thank you\\ for your attention}
+    \end{center}
+\end{frame}
+
+\begin{frame}[plain, noframenumbering]
+    \begin{block}{\huge Backup slides}
+
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{$B$-meson Observables in EFT}
+
+    
+    We obtained the analytical expression for the $R_{K^{(*)}}$ observables  defined at $\mu = m_b$ as
+    {\scriptsize \begin{equation*}
+    R_{K^*}^{[1.1,6]} \simeq \frac{0.9875+0.1759\, \mathrm{Re}\,C_9^\mu - 0.2954\,  \mathrm{Re}\, C_{10}^\mu + 0.0212|C_{9}^\mu|^2 + 0.0350 |C_{10}^\mu|^2}{1\,\  \ \ \ \ +0.1760\, \mathrm{Re}\,C_9^e - 0.3013\, \mathrm{Re}\,  C_{10}^e + 0.0212|C_9^e|^2 + 0.0357 |C_{10}^e|^2}\ .
+    \end{equation*}}
+    
+    We performed a fit to the WET operators
+    
+    \includegraphics[width=0.39\textwidth]{figures/fitre}
+    \includegraphics[width=0.39\textwidth]{figures/fitIm_C9C10.pdf}\\
+    
+    
+    
+    $$R_{D^{(*)}}^\ell = R_{D^{(*)}}^{\ell, \mathrm{SM}} \frac{|1+ C_{VL}^\tau|^2}{ (|1+C_{VL}^e|^2 + |1+C_{VL}^\mu|^2)/2}\ .$$
+    \end{frame}
+
+\frame{
+    \frametitle{Fits to complex Wilson coefficients (I)}
+    \begin{table}
+        \caption{Best fit Wilson coefficients complex values to semi-leptonic decay observables
+            $R_{K^+}, R_{K^*}, P_4'$ and $P_5'$ (all available bins), allowing only one free coefficient at a
+            time. Shown are also the corresponding pulls. }
+        \centering
+        \begin{tabular}{|c|c|c|c|c|}\hline
+            & Best fit(s)      & Pull ($\sqrt{\Delta\chi^2}$) & Pull ($\sigma$)                & $\chi^2/\mathrm{d.o.f.}$ \\\hline
+            $C_9^{\mu\,\mathrm{NP}}$                                               & $-1.11-0.02\;i$  & 5.94                         & 5.60 $\sigma$                  & 1.35                     \\\hline
+            \multirow{2}{*}{$C_{10}^{\mu\,\mathrm{NP}}$}                            & $1.66+1.99\;i$   & \multirow{2}{*}{5.02}        & \multirow{2}{*}{4.65 $\sigma$} & \multirow{2}{*}{1.62}    \\ & $1.67-2.01\;i$ & & & \\\hline
+            \multirow{2}{*}{$C_9^{\mu\,\mathrm{NP}} = -C_{10}^{\mu\,\mathrm{NP}}$} & $-1.16+1.14\;i$  & \multirow{2}{*}{6.06}        & \multirow{2}{*}{5.72 $\sigma$} & \multirow{2}{*}{1.31}    \\ & $-1.18-1.18\;i$ & & & \\\hline
+            $C_9^{'\,\mu\,\mathrm{NP}}$                                            & $-0.24-0.003\;i$ & 1.07                         & 0.57 $\sigma$                  & 2.27                     \\\hline
+            $C_{10}^{'\,\mu\,\mathrm{NP}}$                                         & $0.33-0.014\;i$  & 2.22                         & 1.72 $\sigma$                  & 2.17                     \\\hline
+        \end{tabular}
+    \end{table}
+}
+
+\frame{
+    \frametitle{Fits to complex Wilson coefficients (II)}
+    \begin{table}
+        \caption{Best fit Wilson coefficients complex values to semi-leptonic decay observables
+            $R_{K^+}, R_{K^*}, P_4'$ and $P_5'$ (all available bins), allowing only one free coefficient at a
+            time. Shown are also the corresponding pulls. }
+        \label{tableWC2}
+        \centering
+        \begin{tabular}{|c|c|c|c|c|}\hline
+                                                                               & Best fit(s)     & Pull ($\sqrt{\Delta\chi^2}$) & Pull ($\sigma$)                & $\chi^2/\mathrm{d.o.f.}$ \\\hline
+            \multirow{2}{*}{$C_9^{e\,\mathrm{NP}}$}                            & $-3.29+5.02\;i$ & \multirow{2}{*}{4.85}        & \multirow{2}{*}{4.47 $\sigma$} & \multirow{2}{*}{1.67}    \\ & $-3.35-5.04\;i$ & & & \\\hline
+            \multirow{2}{*}{$C_{10}^{e\,\mathrm{NP}}$}                         & $-0.27+3.48\;i$ & \multirow{2}{*}{4.72}        & \multirow{2}{*}{4.34 $\sigma$} & \multirow{2}{*}{1.70}    \\ &  $-0.27-3.48\;i$ & & & \\\hline
+            \multirow{2}{*}{$C_9^{e\,\mathrm{NP}} = -C_{10}^{e\,\mathrm{NP}}$} & $-3.29+4.58\;i$ & \multirow{2}{*}{4.85}        & \multirow{2}{*}{4.47 $\sigma$} & \multirow{2}{*}{1.67}    \\ & $-3.35-4.59\;i$ & & & \\\hline
+            \multirow{2}{*}{$C_9^{'\,e\,\mathrm{NP}}$}                         & $-0.59+3.89\;i$ & \multirow{2}{*}{4.81}        & \multirow{2}{*}{4.43 $\sigma$} & \multirow{2}{*}{1.68}    \\ & $-0.59-3.89\;i$ & & & \\\hline
+            \multirow{2}{*}{$C_{10}^{'\,\mu\,\mathrm{NP}}$}                    & $0.52+3.88\;i$  & \multirow{2}{*}{4.81}        & \multirow{2}{*}{4.43 $\sigma$} & \multirow{2}{*}{1.68}    \\ & $0.53-3.88\;i$ & & &  \\\hline
+        \end{tabular}
+    \end{table}
+}
+
+\frame{
+    \frametitle{Observables in the $Z'$ model}
+    \section{Model dependant}
+    \begin{table}
+        \caption{Best fits, and corresponding pulls, to $R_{K^+}, R_{K^*}, \Delta M_s$
+            and $A_{CP}^\mathrm{mix}$; considering real,
+            imaginary and complex Wilson coefficients on the $Z^{'}$
+            model.}
+        \label{tableZ}
+        \centering
+        \begin{tabular}{|c|c|c|c|}\hline
+            Best fits                     & Real                           & Imaginary                   & Complex                      \\\hline
+            $\lambda_{23}^{Q}$            & $-0.002 $                      & $\pm 0.047\;i$              & $-0.0020-0.0021\;i$          \\\hline
+            $M_{Z'}$                      & 1.31  TeV                      & 12  TeV                     & 1.08  TeV                    \\\hline
+            Pull ($\sqrt{\Delta \chi^2}$) & 5.70                           & 1.61                        & 6.05                         \\\hline
+            Pull ($\sigma$)               & 5.39 $\sigma$                  & 1.09 $\sigma$               & 5.43 $\sigma$                \\\hline
+            $\chi^2/\mathrm{d.o.f}$       & 1.41                           & 2.12                        & 1.34                         \\\hline
+            $R_{K^+}$                     & $0.66 \pm 0.05$                & $ 1.00 \pm 0.01 $           & $0.65 \pm 0.07 $             \\\hline
+            $R_{K^*}^{[0.045,1.1]}$       & $0.849 \pm 0.013$              & $ 0.93 \pm 0.02$            & $ 0.84\pm 0.02$              \\\hline
+            $R_{K^*}^{[1.1, 6]}$          & $0.68 \pm 0.05$                & $1.00 \pm 0.01$             & $ 0.68\pm 0.07$              \\\hline
+            $\Delta M_s$                  & $ 20.41 \pm 1.26 $ ps${}^{-1}$ & $18.0 \pm 1.7 $ ps${}^{-1}$ & $ 19.95\pm 1.27$ ps${}^{-1}$ \\\hline
+            $A_{CP}^\mathrm{mix}$         & $-0.0369 \pm 0.0002$           & $ -0.041 \pm 0.002 $        & $-0.035 \pm 0.003$           \\\hline
+        \end{tabular}
+    \end{table}
+}
+
+\frame{
+    \frametitle{Observables in the $S_3$ model}
+    \begin{table}
+        \caption{Best fits, and corresponding pulls, to $R_{K^+}, R_{K^*}, \Delta M_s$
+            and $A_{CP}^\mathrm{mix}$; considering real,
+            imaginary and complex Wilson coefficients on the $S_3$ leptoquark.}
+        \label{tableLQ}
+        \centering
+        \begin{tabular}{|c|c|c|c|}\hline
+            Best fits                     & Real                         & Imaginary                  & Complex                    \\\hline
+            $y^{QL}_{32} y^{QL*}_{22}$    & $0.04 $                      & $ -1.67\;i$                & $0.033+0.034\;i$           \\\hline
+            $M_{S_3}$                     & 5.19  TeV                    & 50  TeV                    & 4.10  TeV                  \\\hline
+            Pull ($\sqrt{\Delta \chi^2}$) & 5.82                         & 1.10                       & 5.90                       \\\hline
+            Pull ($\sigma$)               & 5.47 $\sigma$                & 0.60 $\sigma$              & 5.27 $\sigma$              \\\hline
+            $\chi^2/\mathrm{d.o.f}$       & 1.38                         & 2.16                       & 1.39                       \\\hline
+            $R_{K^+}$                     & $0.64 \pm 0.06$              & $1.00 \pm 0.01$            & $0.62 \pm 0.14$            \\\hline
+            $R_{K^*}^{[0.045,1.1]}$       & $0.835 \pm 0.015$            & $ 0.93\pm 0.02 $           & $0.84 \pm 0.04$            \\\hline
+            $R_{K^*}^{[1.1, 6]}$          & $ 0.66 \pm 0.06$             & $1.00 \pm 0.01$            & $0.66 \pm 0.14$            \\\hline
+            $\Delta M_s$                  & $20.07 \pm 1.27$ ps${}^{-1}$ & $18.8 \pm 1.7$ ps${}^{-1}$ & $20.0 \pm 1.2$ ps${}^{-1}$ \\\hline
+            $A_{CP}^\mathrm{mix}$         & $-0.0374 \pm 0.0006$         & $ -0.039 \pm 0.002$        & $-0.032 \pm 0.003$         \\\hline
+        \end{tabular}
+    \end{table}
+
+}
+
+\begin{frame}\frametitle{SMEFT Fits: Scenarios}
+    
+    \begin{table}
+        \centering \scriptsize \hspace{-1cm}
+        \begin{tabular}{|c|c|c|c|c|c|c|c|}\hline
+      \multicolumn{2}{|c|}{\multirow{2}*{Scenario}}&\multirow{2}*{$C_{\ell
+          q}^e$} &\multirow{2}*{$C_{\ell q}^\mu$}&\multirow{2}*{$C_{\ell
+          q}^\tau$} &\multirow{2}*{$\Delta\chi^2_\mathrm{SM}$} & Pull & Pull
+      \\ \multicolumn{2}{|c|}{} & & & & & from SM & to VII\\\hline
+      I& $e$	& $-0.15 \pm 0.04$ & & & 8.19 &	$2.86\,\sigma$ & $4.07\,\sigma$\\\hline
+      II& $\mu$ & & $0.15 \pm 0.03$ & & 17.89 & $4.23\,\sigma$ & $2.75\,\sigma$\\\hline
+      III& $\tau$ & & & $-0.30\pm 0.19$ & 2.55 & $1.60\,\sigma$ & $4.68\,\sigma$\\\hline
+      IV& $e$ and $\mu$ & $-0.15 \pm 0.09$ &	$0.15 \pm 0.06$	& & 26.10 & $4.73\,\sigma$ & $1.42\,\sigma$\\\hline
+      V& $e$ and $\tau$ & $-0.15 \pm 0.06$ & & $-0.3 \pm 0.3$ & 10.68 & $2.82\,\sigma$ & $4.18\,\sigma$\\\hline
+      VI& $\mu$ and $\tau$ &	& $0.15 \pm 0.05$ & $-0.3 \pm 0.3$ & 19.96 & $4.07\,\sigma$ & $2.86\,\sigma$\\\hline
+      VII& $e$, $\mu$ and $\tau$ & $-0.15 \pm 0.11$ & $0.15 \pm 0.07$ &
+      $-0.3 \pm 0.3$ & 28.12 & $4.64\,\sigma$ &\\\hline
+      VIII& $e = \mu = \tau$	& $0.04 \pm 0.03$ & $0.04 \pm 0.03$ &
+      $0.04 \pm 0.03$ & 1.98 & $1.40\,\sigma$ & $4.74\,\sigma$\\\hline
+      IX& $e = -\mu = \tau$ & $-0.152\pm0.005$ & $0.152\pm0.005$ &
+      $-0.152\pm0.005$ & 27.73 & $5.27\,\sigma$ & $0.62\,\sigma$\\\hline
+      X & $e = -\mu$ & $-0.15\pm 0.03$ & $0.15\pm 0.03$ & & 26.10 & $4.94\,\sigma$ & $1.42\,\sigma$\\\hline
+      XI & $e = -\mu$, $\tau$ & $-0.15 \pm 0.05$ & $0.15\pm0.05$ & $-0.3 \pm 0.3 $ & 28.12 & $4.94\,\sigma$ & $0\,\sigma$ \\\hline
+        \end{tabular}
+      \end{table}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Electron colliders and Flavour Physics}
+    Electron colliders are powerful tools in testing neutral currents:
+    \begin{itemize}
+    \item Clean signatures.
+    \item Small uncertainties.
+    \item Detailed differential analyses in di-fermion final states.
+    \item Different longitudinal polarisation of the beams.
+    \item Experimental sensitivity increases with $\sqrt{s}$,
+    $$\mathcal{A}_\mathrm{dim 6} \sim C \frac{E^2}{\Lambda^2}.$$
+    \end{itemize}
+\end{frame}
+    
+\begin{frame}
+    \frametitle{Probing Wilson coefficients}
+    \begin{itemize}
+    \item ILC at $\sqrt{s} = 250 \mathrm{GeV}$ has better sensitivity than HL-LHC.
+    \item ILC at $\sqrt{s} = 1000 \mathrm{GeV}$ can probe up to $\Lambda \sim 100 \mathrm{TeV}$.
+    \end{itemize}
+    \begin{center}
+    \includegraphics[width=0.9\textwidth]{figures/operators_esu}\\
+    \colorcite{R. K. Ellis \textit{et al.} arXiv:1910.11775 [hep-ex]}
+    \end{center}
+    $$\mathrm{EOM}\left\{ \begin{matrix}
+    {\color[HTML]{4285f4} \mathcal{O}_{2W}} \Leftrightarrow \mathcal{O}_{\ell q(3)}\\ {\color[HTML]{ff9900} \mathcal{O}_{2B}} \Leftrightarrow \mathcal{O}_{\ell q(1)}
+    \end{matrix} \right.  $$
+\end{frame}
+
+\begin{frame}
+        \frametitle{Electroweak precission tests}
+        ILC can improve the precission of EW observables that enter in the global fit, both in Giga-$Z$ configuration and at $\sqrt{s} = 250 \mathrm{GeV}$.
+        \begin{center}
+        \includegraphics[width=0.75\textwidth]{figures/EWPO}\\
+        \colorcite{R. K. Ellis \textit{et al.} arXiv:1910.11775 [hep-ex]}
+        \end{center}
+\end{frame}
+        
+        
+
+\begin{frame}\frametitle{ML Fit: Matching and $R_{K^{(*)}}$}
+    Translating between the two EFTs: 1-loop RG running $\Lambda \to \mu_\mathrm{EW}$ + matching:
+    \begin{itemize}
+        \item {\small $C_9^\ell \approx \frac{\sqrt{2}}{V_{tb}V_{ts}^* G_F \Lambda^2}\left[ \frac{2\pi^2}{e^2}(C_{\ell q(1)}^{\ell\ell23}+C_{\ell q(3)}^{\ell\ell23}) + \textcolor{blue}{\frac{\log(m_b/\Lambda)}{3}(C_{\ell q(1)}^{3323}+C_{\ell q(3)}^{3323})}\right]\, $.}
+        \item {\small $C_{10}^\ell \approx \frac{-\sqrt{2}}{V_{tb}V_{ts}^* G_F \Lambda^2} \frac{2\pi^2}{e^2}(C_{\ell q(1)}^{\ell\ell23}+C_{\ell q(3)}^{\ell\ell23}) \, $.}
+        \item {\small $C_{VL}^\ell \approx \frac{-1}{\sqrt{2}G_F\Lambda^2}\left(C_{\ell q(3)}^{\ell\ell33}+ \frac{V_{cs}}{V_{cb}}C_{\ell q(3)}^{\ell\ell 23}\right)$\,.}
+        \item {\small $C_\nu^\ell \approx \frac{\sqrt{2}}{e^2 V_{tb}V_{ts}^* G_F \Lambda^2}\left[2\pi^2(C_{\ell q(1)}^{\ell\ell 23}-C_{\ell q(3)}^{\ell\ell 23})+\textcolor{blue}{\frac{2{g'}^2}{3}\log(m_b/\Lambda)C_{\ell q(3)}^{\ell\ell 23}}\right]\,$.}
+    \end{itemize}
+
+    \textcolor{blue}{Loop-level corrections} break the relation $C_9^\ell = -C_{10}^\ell$.
+
+    ~
+
+    $R_{K^{(*)}}$ requires mixing with the first generation ($\alpha^\ell$):
+    \begin{align*}
+        C_9^e   & = -C_{10}^e + C_9^\mathrm{loop} = -0.32\,, \qquad\qquad                 &  & C_{10}^e =-0.36\,,             \\
+        C_9^\mu & = {\color{gray}-C_{10}^\mu} + C_9^\mathrm{loop} = -0.67\,, \qquad\qquad &  & {\color{gray}C_{10}^\mu =0}\,.
+    \end{align*}
+
+\end{frame}
+
+\begin{frame}\frametitle{ML Fit: Correlations between WCs}
+
+\begin{columns}[onlytextwidth]
+\begin{column}{0.6\textwidth}
+    \includegraphics[width=\columnwidth,clip]{figures/coeffcorr.pdf}
+
+\end{column}
+\begin{column}{0.4\textwidth}
+\begin{itemize}
+    \item Correlation in $C_{10}^e$, $C_{VL}^e$ and $C_\nu^e$, all proportional to $C \lambda^q_{23} \lambda^\ell_{11}$.
+    \item Correlation in $C_{10}^\mu$, $C_{VL}^\mu$ and $C_\nu^\mu$, all proportional to $C \lambda^q_{23} \lambda^\ell_{22}$.
+    \item Correlation in $C_{VL}^\tau$ and $C_\nu^\tau$, all proportional to $C \lambda^q_{23} \lambda^\ell_{33}$.
+    \item $C_9^\mu = C_9^\mathrm{loop}$ correlated to $\tau$ sector ($C\lambda^q_{23} \approx C\lambda^q_{23} \lambda^\ell_{33}$).
+    \item $C_9^e = -C_{10}^e + C_9^\mathrm{loop}$ partially correlated to $e$ and $\tau$ sectors.
+\end{itemize}
+
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{ML Fit: Likelihood and SHAPs}
+
+\begin{center}
+    \includegraphics[width=0.45\textwidth]{figures/evoplot_betal.pdf}
+    \includegraphics[width=0.45\textwidth]{figures/evoplot_alphaq.pdf}   \end{center}
+\begin{center}
+    \includegraphics[width=0.45\textwidth]{figures/SHAP_bl.pdf}
+    \includegraphics[width=0.45\textwidth]{figures/SHAP_aq.pdf}
+\end{center}
+
+\end{frame}
+
+\begin{frame}\frametitle{ALPs: Hadronic amplitude and differential distribution}The functions $\Phi^{(q,Q)}_M (m_a^2)$ contain the integrals over the quark momentum fraction
+    and are defined respectively as:
+    \begin{align*}
+        \Phi^{(q)}_M (m_a^2) & = \int^{1-\delta_M}_0 \frac{p_a \cdot P_M}{m_a^2-2\,(1-x)\,p_a\cdot P_M} \, \phi_M(x) \,g_M(x)\, dx\,, \\
+        \Phi^{(Q)}_M (m_a^2) & = \int^1_{\delta_M} \frac{p_a \cdot P_M}{m_a^2-2\,x\,p_a\cdot P_M}     \, \phi_M(x) \,g_M(x)\, dx \,.
+    \end{align*}
+    The presence of the kinematical cutoff $\delta_M=m_a/(2 M_M)$ prevents the appearance of unphysical bare singularities.
+
+    ~
+
+    The differential decay rate in the rest frame of the meson
+    $$\left(d \Gamma_M \right)_{RF} = \frac{1}{(2 \pi)^3} \frac{1}{32 M_M^3} |\overline{\mathcal{M}_h} + \overline{\mathcal{M}_\ell}  |^2 \,ds \,du \,.$$
+
+    integrated over the Mandelstam variables
+    \begin{align*}
+        s & = (P_M - p_\ell)^2 = (p_\nu+p_a)^2 = M_M^2 + m_\ell^2- 2 M_M \omega_\ell\,, \\
+        u & = (P_M - p_a)^2 = (p_\ell+p_\nu)^2 = M_M^2 + m_a^2- 2 M_M \omega_a\,.
+    \end{align*}
+
+    The interference term is proportional to both the ALP mass and lepton mass.
+
+\end{frame}
 
 
 \end{document}
