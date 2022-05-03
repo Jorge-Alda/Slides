@@ -4,12 +4,13 @@
 \usepackage{appendixnumberbeamer}
 
 
-\title{Generic Title}
-\subtitle{Jorge Alda,\\ Universidad de Zaragoza/CAPA\\
-Università degli Studi di Padova/INFN \hspace{4em} \texttt{jalda@unizar.es} }
-\author[Jorge Alda]{Slides Example}
 
-\date[Conference]{\today}
+\title[Using ML techniques in phenomenological studies in flavour physics]{Using Machine Learning techniques in\\ phenomenological studies in flavour physics}
+\subtitle{Jorge Alda,\\ Universidad de Zaragoza/CAPA \hspace{4em} \texttt{jalda@unizar.es} }
+\author[Jorge Alda]{Based on \textbf{JA}, J. Guasch, S. Peñaranda \\
+arXiv:2109.07405 [hep-ph]}
+
+\date[CERN Workshop]{5th Inter-experiment Machine Learning Workshop\\ 9-13th May 2022}
 
 
 
@@ -28,10 +29,23 @@ Università degli Studi di Padova/INFN \hspace{4em} \texttt{jalda@unizar.es} }
 
 \end{frame}
 
-
-\begin{frame}
-\frametitle{Testing SED'ing tag number}
-Tag number ++TAGNUM++.
+\begin{frame}\frametitle{Problem}
+\begin{itemize}
+    \item We study $R_{K^{(*)}}$ and $R_{D^{(*)}}$ anomalies
+    \item using Effective Field Theory at $\Lambda = 1\,\mathrm{TeV}$.
+          $$\mathcal{L}_\mathrm{EFT} = \mathcal{L}_\mathrm{SM} + \frac{1}{\Lambda^2} C \lambda^\ell_{ij} \lambda^q_{kl}\left[ (\bar{\ell}_i \gamma_\mu \ell_j)(\bar{q}_k \gamma^\mu  q_l) + (\bar{\ell}_i \gamma_\mu \tau^I \ell_j)(\bar{q}_k \gamma^\mu \tau^I q_l) \right].$$
+    \item Global fits with 5 parameters ($C$, $\alpha^\ell$, $\beta^\ell$, $\alpha^q$, $\beta^q$), log-likelihood function contains 471 physical observables.
+\end{itemize}
+\begin{columns}[onlytextwidth]
+    \begin{column}{0.7\textwidth}
+        \begin{itemize}
+            \item Non-linear relations $\Longrightarrow$ equi-probability regions are not elliptical $\Longrightarrow$ we can not use Hessian approximation for the log-likelihood.
+        \end{itemize}
+    \end{column}
+    \begin{column}{0.25\textwidth}
+        \includegraphics[width=\textwidth]{figures/alphabeta_q.pdf}
+    \end{column}
+\end{columns}
 \end{frame}
 
 \end{document}
