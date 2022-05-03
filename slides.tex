@@ -48,4 +48,30 @@ $$\mathcal{L}_\mathrm{EFT} = \mathcal{L}_\mathrm{SM} + \frac{1}{\Lambda^2} {\col
 \end{columns}
 \end{frame}
 
+\begin{frame}\frametitle{Machine Learning training}
+
+    \textbf{Solution:} We create an approximation of the log-likelihood function using the \texttt{xgboost} model (regression tree).
+
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            Data sample consisting of
+            \begin{itemize}
+                \item 5000 points re-used from likelihood plots.
+                \item 5000 random points.
+                \item Split in 75\% training set, 25\% validation set.
+                \item Learning rate 0.05, 1000 estimators, early stopping at 5 rounds.
+            \end{itemize}
+            Results of the training:
+            \begin{itemize}
+                \item Pearson regression coefficient $r=0.971$.
+                \item Mean Absolute Error $0.655$.
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[width=\columnwidth]{figures/regression_xgb.pdf}
+        \end{column}
+    \end{columns}
+
+\end{frame}
+
 \end{document}
