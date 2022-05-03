@@ -183,4 +183,19 @@ $$\mathcal{L}_\mathrm{EFT} = \mathcal{L}_\mathrm{SM} + \frac{1}{\Lambda^2} {\col
 
 \end{frame}
 
+\begin{frame}\frametitle{Conclusions}
+    We have applied Machine Learning techniques to the flavour phenomenology of $B$ anomalies.
+    \begin{itemize}
+        \item We have trained an approximation of the global log-likelihood function using \texttt{xgboost}.
+        \item We can generate new samples using a Montecarlo based on the ML approximation.
+        \item We have identified the most important parameters using \texttt{SHAP} values.
+        \item We have studied the correlations between physical observables and compared them to experimental results.
+    \end{itemize}
+
+    \vspace{0.5cm}
+    \begin{center}
+        \includegraphics[height=1.8cm]{qr_arxiv.png}
+    \end{center}
+\end{frame}
+
 \end{document}
