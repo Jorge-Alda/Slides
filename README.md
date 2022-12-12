@@ -11,6 +11,7 @@ Collections of slides for all my public presentations starting on 2022
 * XIII CPAN Days, 2022-03-22 [Branch](https://github.com/Jorge-Alda/Slides/tree/CPAN22), [Slides](https://github.com/Jorge-Alda/Slides/releases?q=tag:003).
 * Thesis Defense, 2022-04-27: [Branch](https://github.com/Jorge-Alda/Slides/tree/thesisdef), [Slides](https://github.com/Jorge-Alda/Slides/releases?q=tag:004).
 * 5th Inter-experiment Machine Learning Workshop, 2022-05-09: [Branch](https://github.com/Jorge-Alda/Slides/tree/CERN22), [Slides](https://github.com/Jorge-Alda/Slides/releases?q=tag:005).
+* Saturnalia 2022, 2022-12: [Branch](https://github.com/Jorge-Alda/Slides/tree/Saturnalia2022), [Slides](https://github.com/Jorge-Alda/Slides/releases?q=tag:006).
 
 ## How does this repo work?
 
