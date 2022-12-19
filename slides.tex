@@ -9,7 +9,7 @@
 \author[Jorge Alda]{Based on \textbf{JA}, J. Guasch, S. Peñaranda \\
 arXiv:2109.07405 [hep-ph]}
 
-\date[Saturnalia]{Saturnalia, December 2022}
+\date[Saturnalia 2022]{Saturnalia, 21st December 2022}
 
 
 
@@ -82,6 +82,15 @@ arXiv:2109.07405 [hep-ph]}
 
 \begin{frame}
     \frametitle{Effective Field Theories}
+    We want to investigate whether these anomalies could be originated by some New Physics (NP) beyond the Standard Model. How can we examine [almost] all models at once?
+    \begin{center}
+        \includegraphics[width=0.5\textwidth]{figures/EFT.png}
+    \end{center}
+    The NP particles are much heavier than the energy scales of the $B$ decays $\Longrightarrow$ their effects are limited to alterations of the interaction vertices, and these alterations are suppressed by powers of $p/\Lambda$. We can study these in a systematical way.
+\end{frame}
+
+\begin{frame}
+    \frametitle{Effective Field Theories}
 
     Effective Field Theories (EFTs) describe deviations from the SM in a model-independent way, using effective operators of dim $>4$ and their corresponding Wilson coefficients.
 
@@ -97,45 +106,6 @@ arXiv:2109.07405 [hep-ph]}
 
 \end{frame}
 
-\begin{frame}
-
-    \frametitle{Effective Field Theories}
-    The $B$ anomalies are defined at $\mu=m_b$, we need to integrate the heavy SM particles. We obtain the WET\@:
-
-    ~
-
-    \begin{itemize}
-        \item $\left.\begin{matrix}
-                      O_9^\ell = (\bar{s}_L \gamma_\alpha b_L)(\bar{e}_\ell \gamma^\alpha e_\ell) \\
-                      O_{10}^\ell = (\bar{s}_L \gamma_\alpha b_L)(\bar{e}_\ell \gamma^\alpha \gamma_5 e_\ell)
-                  \end{matrix}\right\} \qquad \Longrightarrow \qquad R_{K^{(*)}}$. % chktex 21
-
-              ~
-
-        \item $O_{VL}^\ell = (\bar{c}_L \gamma_\alpha b_L)(\bar{e}_{\ell\,L} \gamma^\alpha \nu_\ell) \qquad\Longrightarrow\qquad R_{D^{(*)}}$.
-
-              ~
-
-        \item $O_\nu^\ell = (\bar{s}_L \gamma_\alpha b_L)(\bar{\nu}_\ell (1-\gamma_5) \nu_\ell) \qquad\Longrightarrow \qquad \mathrm{BR}(B\to K^{(*)}\nu\overline{\nu})$.
-    \end{itemize}
-
-
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{Effective Field Theories}
-    Translating between the two EFTs: 1-loop RG running $\Lambda \to \mu_\mathrm{EW}$ + matching:
-    \begin{itemize}
-        \item {\small $C_9^\ell \approx \frac{\sqrt{2}}{V_{tb}V_{ts}^* G_F \Lambda^2}\left[ \frac{2\pi^2}{e^2}(C_{\ell q(1)}^{\ell\ell23}+C_{\ell q(3)}^{\ell\ell23}) + \textcolor{blue}{\frac{\log(m_b/\Lambda)}{3}(C_{\ell q(1)}^{3323}+C_{\ell q(3)}^{3323})}\right]\, $.}
-        \item {\small $C_{10}^\ell \approx \frac{-\sqrt{2}}{V_{tb}V_{ts}^* G_F \Lambda^2} \frac{2\pi^2}{e^2}(C_{\ell q(1)}^{\ell\ell23}+C_{\ell q(3)}^{\ell\ell23}) \, $.}
-\item {\small $C_{VL}^\ell \approx \frac{-1}{\sqrt{2}G_F\Lambda^2}\left(C_{\ell q(3)}^{\ell\ell33}+ \frac{V_{cs}}{V_{cb}}C_{\ell q(3)}^{\ell\ell 23}\right)$\,.}
-        \item {\small $C_\nu^\ell \approx \frac{\sqrt{2}}{e^2 V_{tb}V_{ts}^* G_F \Lambda^2}\left[2\pi^2(C_{\ell q(1)}^{\ell\ell 23}-C_{\ell q(3)}^{\ell\ell 23})+\textcolor{blue}{\frac{2{g'}^2}{3}\log(m_b/\Lambda)C_{\ell q(3)}^{\ell\ell 23}}\right]\,$.}
-    \end{itemize}
-
-\textcolor{blue}{Loop-level corrections} break the relation $C_9^\ell = -C_{10}^\ell$.
-\blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
-\end{frame}
 
 \begin{frame}
     \frametitle{Effective Field Theories}
@@ -293,7 +263,7 @@ arXiv:2109.07405 [hep-ph]}
     We have a dataset $\{(x_i, y_i)\}$ with $x_i \in X (\sim\mathbb{R}^n)$ and $y_i \in \mathbb{R}$, and want to find $\phi(x)$ so $\phi(x_i)\approx y_i$. Defining the regularized objective
     $$\mathcal{L}[\phi] = \sum_i \ell(\phi(x_i), y_i) + \sum_k \Omega(f_k)\,. $$
 \begin{itemize}
-    \item $\ell(\tilde{y}_i, y_i)$ is the loss function.
+    \item $\ell(\tilde{y}_i, y_i)$ is the loss function (MAE: $|\phi(x_i)-y_i|$).
     \item $\Omega(f_k)$ penalizes the complexity of the trees.
 \end{itemize}
 The objective is optimized iteratively:
@@ -425,28 +395,6 @@ The objective is optimized iteratively:
 
 \end{frame}
 
-\begin{frame}
-    \frametitle{Correlations between WCs}
-
-    \begin{columns}[onlytextwidth]
-        \begin{column}{0.6\textwidth}
-            \includegraphics[width=\columnwidth,clip]{figures/coeffcorr.pdf}
-            
-        \end{column}
-        \begin{column}{0.4\textwidth}
-            \begin{itemize}
-                \item Correlation in $C_{10}^e$, $C_{VL}^e$ and $C_\nu^e$, all proportional to $C \lambda^q_{23} \lambda^\ell_{11}$.
-                \item Correlation in $C_{10}^\mu$, $C_{VL}^\mu$ and $C_\nu^\mu$, all proportional to $C \lambda^q_{23} \lambda^\ell_{22}$.
-                \item Correlation in $C_{VL}^\tau$ and $C_\nu^\tau$, all proportional to $C \lambda^q_{23} \lambda^\ell_{33}$.
-                \item $C_9^\mu = C_9^\mathrm{loop}$ correlated to $\tau$ sector ($C\lambda^q_{23} \approx C\lambda^q_{23} \lambda^\ell_{33}$).
-                \item $C_9^e = -C_{10}^e + C_9^\mathrm{loop}$ partially correlated to $e$ and $\tau$ sectors.
-            \end{itemize}
-            
-        \end{column}
-    \end{columns}
-    \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
-
-\end{frame}
 
 \begin{frame}
     \frametitle{Correlations between observables}
@@ -482,6 +430,104 @@ The objective is optimized iteratively:
 
 
 \begin{frame}
+    \frametitle{Conclusions}
+
+    \begin{itemize}
+        \item Using EFTs (SMEFT) to describe the $R_{K^{(*)}}$ and $R_{D^{(*)}}$ anomalies: $R_{D^{(*)}}$ generated at tree level and $R_{K^{(*)}}$ from interplay between tree and loop level.
+        \item Global fits are needed to take in account possible side-effects. 
+        \item \texttt{xgboost} Machine Learning model is able to approximate the likelihood function.
+        \item SHAP values capture the importance of each parameter in the fit.
+        \item Interesting correlation between $R_{D^{(*)}}$ and $\mathrm{BR}(B\to K^{(*)}\nu\bar{\nu})$.
+        \item Explanation in terms of vector leptoquark $U_1$ coupling to second and third generations of quarks and third ($R_{D^{(*)}}$) and first ($R_{K^{(*)}}$) generation of leptons.
+    \end{itemize}
+
+\end{frame}
+\appendix
+
+
+\begin{frame}
+    \vspace{5cm}
+    Back-up slides
+\end{frame}
+
+\begin{frame}
+
+    \frametitle{Effective Field Theories}
+    The $B$ anomalies are defined at $\mu=m_b$, we need to integrate the heavy SM particles. We obtain the WET\@:
+
+    ~
+
+    \begin{itemize}
+        \item $\left.\begin{matrix}
+                      O_9^\ell = (\bar{s}_L \gamma_\alpha b_L)(\bar{e}_\ell \gamma^\alpha e_\ell) \\
+                      O_{10}^\ell = (\bar{s}_L \gamma_\alpha b_L)(\bar{e}_\ell \gamma^\alpha \gamma_5 e_\ell)
+                  \end{matrix}\right\} \qquad \Longrightarrow \qquad R_{K^{(*)}}$. % chktex 21
+
+              ~
+
+        \item $O_{VL}^\ell = (\bar{c}_L \gamma_\alpha b_L)(\bar{e}_{\ell\,L} \gamma^\alpha \nu_\ell) \qquad\Longrightarrow\qquad R_{D^{(*)}}$.
+
+              ~
+
+        \item $O_\nu^\ell = (\bar{s}_L \gamma_\alpha b_L)(\bar{\nu}_\ell (1-\gamma_5) \nu_\ell) \qquad\Longrightarrow \qquad \mathrm{BR}(B\to K^{(*)}\nu\overline{\nu})$.
+    \end{itemize}
+
+
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Effective Field Theories}
+    Translating between the two EFTs: 1-loop RG running $\Lambda \to \mu_\mathrm{EW}$ + matching:
+    \begin{itemize}
+        \item {\small $C_9^\ell \approx \frac{\sqrt{2}}{V_{tb}V_{ts}^* G_F \Lambda^2}\left[ \frac{2\pi^2}{e^2}(C_{\ell q(1)}^{\ell\ell23}+C_{\ell q(3)}^{\ell\ell23}) + \textcolor{blue}{\frac{\log(m_b/\Lambda)}{3}(C_{\ell q(1)}^{3323}+C_{\ell q(3)}^{3323})}\right]\, $.}
+        \item {\small $C_{10}^\ell \approx \frac{-\sqrt{2}}{V_{tb}V_{ts}^* G_F \Lambda^2} \frac{2\pi^2}{e^2}(C_{\ell q(1)}^{\ell\ell23}+C_{\ell q(3)}^{\ell\ell23}) \, $.}
+\item {\small $C_{VL}^\ell \approx \frac{-1}{\sqrt{2}G_F\Lambda^2}\left(C_{\ell q(3)}^{\ell\ell33}+ \frac{V_{cs}}{V_{cb}}C_{\ell q(3)}^{\ell\ell 23}\right)$\,.}
+        \item {\small $C_\nu^\ell \approx \frac{\sqrt{2}}{e^2 V_{tb}V_{ts}^* G_F \Lambda^2}\left[2\pi^2(C_{\ell q(1)}^{\ell\ell 23}-C_{\ell q(3)}^{\ell\ell 23})+\textcolor{blue}{\frac{2{g'}^2}{3}\log(m_b/\Lambda)C_{\ell q(3)}^{\ell\ell 23}}\right]\,$.}
+    \end{itemize}
+
+\textcolor{blue}{Loop-level corrections} break the relation $C_9^\ell = -C_{10}^\ell$.
+\blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Backup slides}
+
+    \begin{center}
+        \includegraphics[width=0.45\textwidth]{figures/evoplot_betal.pdf}
+        \includegraphics[width=0.45\textwidth]{figures/evoplot_alphaq.pdf}   \end{center}
+    \begin{center}
+        \includegraphics[width=0.45\textwidth]{figures/SHAP_bl.pdf}
+        \includegraphics[width=0.45\textwidth]{figures/SHAP_aq.pdf}
+    \end{center}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Correlations between WCs}
+
+    \begin{columns}[onlytextwidth]
+        \begin{column}{0.6\textwidth}
+            \includegraphics[width=\columnwidth,clip]{figures/coeffcorr.pdf}
+            
+        \end{column}
+        \begin{column}{0.4\textwidth}
+            \begin{itemize}
+                \item Correlation in $C_{10}^e$, $C_{VL}^e$ and $C_\nu^e$, all proportional to $C \lambda^q_{23} \lambda^\ell_{11}$.
+                \item Correlation in $C_{10}^\mu$, $C_{VL}^\mu$ and $C_\nu^\mu$, all proportional to $C \lambda^q_{23} \lambda^\ell_{22}$.
+                \item Correlation in $C_{VL}^\tau$ and $C_\nu^\tau$, all proportional to $C \lambda^q_{23} \lambda^\ell_{33}$.
+                \item $C_9^\mu = C_9^\mathrm{loop}$ correlated to $\tau$ sector ($C\lambda^q_{23} \approx C\lambda^q_{23} \lambda^\ell_{33}$).
+                \item $C_9^e = -C_{10}^e + C_9^\mathrm{loop}$ partially correlated to $e$ and $\tau$ sectors.
+            \end{itemize}
+            
+        \end{column}
+    \end{columns}
+    \blankfootnote{\textbf{J.A.}, J. Guasch and S. Peñaranda. arXiv:2109.07404}
+
+\end{frame}
+
+
+\begin{frame}
     \frametitle{Connection to Leptoquarks}
 
     Vector Leptoquark $U_1 \sim (\bar{\mathbf{3}}, \mathbf{1}, 2/3)$,
@@ -504,7 +550,9 @@ The objective is optimized iteratively:
         -2.27\times10^{-3} & -3.76\times 10^{-10}  & -0.0325 \\
         0.0319 & 5.29\times 10^{-9} &  0.458\\
         0.0437  & 7.25\times 10^{-9}  & 0.627
-        \end{pmatrix}\,.
+        \end{pmatrix} \approx \begin{pmatrix}
+            0 & 0 & 0 \\ x_1 & 0 & x_3 \\ x_1 & 0 & x_3
+        \end{pmatrix} \,.
     $$
     \begin{itemize}
         \item Couplings $x_L^{23}$ and $x_L^{33}$, previously proposed to describe the $R_{D^{(*)}}$ anomaly\footnote[1]{A.~Bhaskar, D.~Das, T.~Mandal, S.~Mitra and C.~Neeraj. 2101.12069}. Compatible with experimental limits.
@@ -515,33 +563,4 @@ The objective is optimized iteratively:
     
     Other leptoquark models, and $W'$ and $Z'$ models, do not generate $C_{\ell q(1)} = C_{\ell q (3)}$. 
 \end{frame}
-
-\begin{frame}
-    \frametitle{Conclusions}
-
-    \begin{itemize}
-        \item Using EFTs (SMEFT) to describe the $R_{K^{(*)}}$ and $R_{D^{(*)}}$ anomalies: $R_{D^{(*)}}$ generated at tree level and $R_{K^{(*)}}$ from interplay between tree and loop level.
-        \item Global fits are needed to take in account possible side-effects. 
-        \item \texttt{xgboost} Machine Learning model is able to approximate the likelihood function.
-        \item SHAP values capture the importance of each parameter in the fit.
-        \item Interesting correlation between $R_{D^{(*)}}$ and $\mathrm{BR}(B\to K^{(*)}\nu\bar{\nu})$.
-        \item Explanation in terms of vector leptoquark $U_1$ coupling to second and third generations of quarks and third ($R_{D^{(*)}}$) and first ($R_{K^{(*)}}$) generation of leptons.
-    \end{itemize}
-
-\end{frame}
-\appendix
-
-\begin{frame}
-    \frametitle{Backup slides}
-
-    \begin{center}
-        \includegraphics[width=0.45\textwidth]{figures/evoplot_betal.pdf}
-        \includegraphics[width=0.45\textwidth]{figures/evoplot_alphaq.pdf}   \end{center}
-    \begin{center}
-        \includegraphics[width=0.45\textwidth]{figures/SHAP_bl.pdf}
-        \includegraphics[width=0.45\textwidth]{figures/SHAP_aq.pdf}
-    \end{center}
-
-\end{frame}
-
 \end{document} %chktex 17
