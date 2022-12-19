@@ -39,9 +39,9 @@
     \vbox to \beamer@headheight{%
       %\vfil
       \leftskip=-\beamer@leftmargin%
-      \advance\leftskip by1.8cm%
+      \advance\leftskip by1.6cm%
       \rightskip=-\beamer@rightmargin%
-      \advance\rightskip by1.8cm plus1fil%
+      \advance\rightskip by1.6cm plus1fil%
       {\usebeamercolor[fg]{frametitle}\usebeamerfont{frametitle}\strut\insertframetitle}%
       \ifx\insertframesubtitle\@empty{\par}\else%
         {\usebeamercolor[fg]{palette tertiary}\usebeamerfont{framesubtitle}\strut\insertframesubtitle\par}%
@@ -59,10 +59,10 @@
   {%
   \leavevmode%
   \hbox{%
-    \begin{beamercolorbox}[wd=0.12\paperwidth, ht=\beamer@headheight,dp=1ex]{date in head/foot}
-        \usebeamerfont{framesubtitle}\hspace*{1em} \insertframenumber{} / \inserttotalframenumber
+    \begin{beamercolorbox}[wd=0.075\paperwidth, ht=\beamer@headheight,dp=1ex]{date in head/foot}
+        \usebeamerfont{framesubtitle}\hspace*{0.4em} \insertframenumber{} / \inserttotalframenumber
     \end{beamercolorbox}
-    \begin{beamercolorbox}[wd=0.88\paperwidth, ht=\beamer@headheight,dp=1ex]{frametitle}
+    \begin{beamercolorbox}[wd=0.93\paperwidth, ht=\beamer@headheight,dp=1ex]{frametitle}
 	\usebeamercolor[fg]{frametitle}%
 	\ifx\beamer@sidebarside\beamer@lefttext%
       \else%
