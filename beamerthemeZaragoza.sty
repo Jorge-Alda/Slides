@@ -29,6 +29,7 @@
 \setbeamertemplate{itemize items}[square]
 \setbeamertemplate{enumerate items}[square]
 
+
 \let\svthefootnote\thefootnote
 \textheight 1in
 \newcommand\blankfootnote[1]{%
@@ -38,3 +39,25 @@
 
 \mode
 <all>
+
+\newcommand\colorcite[1]{\begin{beamercolorbox}{alerted text} {\scriptsize #1} \end{beamercolorbox} }
+
+\newcommand{\sepslide}[1]{\begin{frame}[separator]
+
+  \begin{beamercolorbox}{block title}
+      \huge #1
+  \end{beamercolorbox}
+  
+  \end{frame}}
+
+\BeforeBeginEnvironment{frame}{%
+\setbeamertemplate{headline}[Zaragoza theme]%
+  \setbeamertemplate{background}[normal]
+}
+
+\makeatletter
+\define@key{beamerframe}{separator}[true]{%
+  \setbeamertemplate{headline}[notitle]%
+  \setbeamertemplate{background}[separator]
+}
+\makeatother

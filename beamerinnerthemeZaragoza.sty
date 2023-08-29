@@ -6,23 +6,30 @@
 \mode<presentation>
 
 
-\setbeamertemplate{background}{
+\defbeamertemplate{background}{normal}{
   \begin{tikzpicture}
   \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
-  \usebeamercolor{palette primary}
-  \fill[color=bg] (0,2) rectangle (\the\paperwidth,\the\paperheight);
-  \usebeamercolor{palette secondary}
-  \fill[color=bg] (0,0) rectangle(4.95,1.9);
-  \usebeamercolor{palette tertiary}
-  \fill[color=bg] (5.05,0) rectangle(\the\paperwidth,1.9);
-  \ifnum\thepage>1\relax%
-   \fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight);
-   \fi
+  
+
+   %\fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight);
+
   \end{tikzpicture}
 }
 
+\BeforeBeginEnvironment{frame}{
+  %\setbeamertemplate{background}[normal]
+}
+
+\defbeamertemplate{background}{separator}{
+  \begin{tikzpicture}
+  \usebeamercolor{palette primary}
+   \fill[color=bg,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight);
+  \end{tikzpicture}
+}
+
+
 % Title page
-\defbeamertemplate*{title page}{Zaragoza}[1][]
+\defbeamertemplate*{title page}{Zaragoza}
 { 
 %   \begin{textblock*}{12cm}(0cm, 3cm)
 %    \begin{beamercolorbox}[wd=12cm,leftskip=-0.8cm,sep=8pt,#1]{title page header}
@@ -42,6 +49,15 @@
 %  \vfill
 \begin{tikzpicture}
 \useasboundingbox (1,0) rectangle(\the\paperwidth,\the\paperheight);
+
+\usebeamercolor{palette primary}
+  \fill[color=bg] (0,2) rectangle (\the\paperwidth,\the\paperheight);
+  \usebeamercolor{palette secondary}
+  \fill[color=bg] (0,0) rectangle(4.95,1.9);
+  \usebeamercolor{palette tertiary}
+  \fill[color=bg] (5.05,0) rectangle(\the\paperwidth,1.9);
+
+
 \usebeamercolor{palette primary}
 \node[align=left, font=\usebeamerfont{subtitle}, anchor= south west, color=fg] (sub) at (0.2, 2.1)  {\insertsubtitle};
 \node[align=left, font=\usebeamerfont{title}, anchor= south west, color=fg] at ([shift={(0, 0.1)}]sub.north west) {\inserttitle};

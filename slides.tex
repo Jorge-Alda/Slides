@@ -4,22 +4,21 @@
 \usepackage{appendixnumberbeamer}
 
 
-\title{Generic Title}
-\subtitle{Jorge Alda,\\ Universidad de Zaragoza/CAPA\\
-Università degli Studi di Padova/INFN \hspace{4em} \texttt{jalda@unizar.es} }
-\author[Jorge Alda]{Slides Example}
-
-\date[Conference]{\today}
+\title[Generic title]{Generic Long Title}
+\subtitle{with a subtitle}
+\author[Jorge Alda]{Jorge Alda \hspace{4em} \texttt{jalda@unizar.es} \\
+Università degli Studi di Padova \& CAPA}
+\date[Slides exapmle]{Slides Example \\ \today}
 
 
 
 \usetheme{Zaragoza}
-\usecolortheme{Unizar}
-\titlepagelogoA{\includegraphics[width=6cm]{logos/CAPA.png}}
-\titlepagelogoB{\includegraphics[width=4cm]{logos/dftuz2.png}}
+\usecolortheme{Unipd}
+\titlepagelogoA{\includegraphics[width=4cm]{logos/CAPA.png}}
+\titlepagelogoB{\includegraphics[width=6cm]{logos/unipd.png}}
 
 
-\newcommand\colorcite[1]{{\scriptsize\color{blue}#1}}
+
 
 \begin{document}
 \begin{frame}[noframenumbering,plain]
@@ -29,9 +28,19 @@ Università degli Studi di Padova/INFN \hspace{4em} \texttt{jalda@unizar.es} }
 \end{frame}
 
 
+\sepslide{Separator Slide}
+
 \begin{frame}
 \frametitle{Testing SED'ing tag number}
-Tag number ++TAGNUM++.
+\begin{itemize}
+\item Tag \alert{number} ++TAGNUM++.\colorcite{cite}
+\end{itemize}
+
+\begin{block}{Block title}
+    Block text
+\end{block}
+
+
 \end{frame}
 
 \end{document}
