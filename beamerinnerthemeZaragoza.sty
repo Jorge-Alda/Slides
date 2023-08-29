@@ -12,9 +12,9 @@
   \usebeamercolor{palette primary}
   \fill[color=bg] (0,2) rectangle (\the\paperwidth,\the\paperheight);
   \usebeamercolor{palette secondary}
-  \fill[color=bg] (0,0) rectangle(2.95,1.9);
+  \fill[color=bg] (0,0) rectangle(4.95,1.9);
   \usebeamercolor{palette tertiary}
-  \fill[color=bg] (3.05,0) rectangle(\the\paperwidth,1.9);
+  \fill[color=bg] (5.05,0) rectangle(\the\paperwidth,1.9);
   \ifnum\thepage>1\relax%
    \fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight);
    \fi
@@ -44,10 +44,11 @@
 \useasboundingbox (1,0) rectangle(\the\paperwidth,\the\paperheight);
 \usebeamercolor{palette primary}
 \node[align=left, font=\usebeamerfont{subtitle}, anchor= south west, color=fg] (sub) at (0.2, 2.1)  {\insertsubtitle};
-\usebeamercolor{palette primary}
-\node[align=left, font=\usebeamerfont{title}, anchor= south west, color=fg] at ([shift={(0, 0.2)}]sub.north west) {\inserttitle};
+\node[align=left, font=\usebeamerfont{title}, anchor= south west, color=fg] at ([shift={(0, 0.1)}]sub.north west) {\inserttitle};
 \usebeamercolor{palette tertiary}
-\node[align=left, font=\usebeamerfont{author}, anchor= north west, color=fg] at (3.0, 1.9) {\insertauthor\\ \insertdate};
+\node[align=left, font=\usebeamerfont{subtitle}, anchor= north west, color=fg] at (5.2, 1.9)  {\insertauthor};
+\usebeamercolor{palette secondary}
+\node[align=left, font=\usebeamerfont{author}, anchor= north west, color=fg] at (0.2, 1.9) {\insertdate};
 
 \node[left, anchor=north west] at (0, \the\paperheight){\Zaragoza@titlepagelogoA}; 
 
