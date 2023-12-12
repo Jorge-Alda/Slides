@@ -86,17 +86,17 @@ Università degli Studi di Padova \& CAPA}
 
     $$\mathcal{L}_\mathrm{ALP} = \frac{1}{2}\partial_\mu a \partial^\mu a - \frac{1}{2} m_a^2 a^2 - \frac{1}{2 f_a}\partial_\mu a j^\mu_\mathrm{PQ}\,;$$
 
-    $$j^\mu_\mathrm{PQ} = \sum_{i,j} \left( c_\ell^{ij} \bar{\ell}_i\gamma^\mu \gamma_5 \ell_j + \bar{c}_\ell^{ij} \bar{\ell}_i\gamma^\mu  \ell_j  + c_\nu^{ij} \bar{\nu}_{\ell_i} \gamma^\mu P_L \nu_{\ell_j} \right)\,. $$
+    $$j^\mu_\mathrm{PQ} = \sum_{i,j} \left( c_{\ell\ell}^{ij} \bar{\ell}_i\gamma^\mu \gamma_5 \ell_j + \bar{c}_{\ell\ell}^{ij} \bar{\ell}_i\gamma^\mu  \ell_j  + c_{\nu\nu}^{ij} \bar{\nu}_{\ell_i} \gamma^\mu P_L \nu_{\ell_j} \right)\,. $$
 
     \begin{itemize}
         \item $m_a \in [1\,\mathrm{MeV}, 10\,\mathrm{GeV}]$, $f_a \sim 1\,\mathrm{TeV}$, flavour-universal $c^{ij} = c \delta^{ij}$.
         
-        \item $g_\ell = c_\ell m_\ell/f_a$.
+        \item $g_{\ell\ell} = c_{\ell\ell} m_\ell/f_a$.
         
         \item After integration-by-parts and equations-of-motion
-        $$\mathcal{L}_\mathrm{ALP, int} = \sum_\ell \left(i g_\ell \bar{\ell}\gamma_5\ell a + \frac{ig}{2 \sqrt{2} m_\ell} (g_\ell - \bar{g}_\ell + g_{\nu_\ell}) (\bar{\ell}\gamma^\mu P_L \nu_\ell) W^-_\mu a + \mathrm{h.c.} \right) + (V\tilde{V}a)\,.$$
+        $$\mathcal{L}_\mathrm{ALP, int} = \sum_\ell \left(i g_{\ell\ell} \bar{\ell}\gamma_5\ell a + \frac{ig}{2 \sqrt{2} m_\ell} (g_{\ell\ell} - \bar{g}_{\ell\ell} + g_{\nu\nu}) (\bar{\ell}\gamma^\mu P_L \nu_\ell) W^-_\mu a + \mathrm{h.c.} \right) + (V\tilde{V}a)\,.$$
 
-        \item Electroweak-preserving case: $g_\ell - \bar{g}_\ell + g_{\nu_\ell}=0$.
+        \item Electroweak-preserving case: $g_{\ell\ell} - \bar{g}_{\ell\ell} + g_{\nu\nu}=0$.
     \end{itemize}
 \end{frame}
 
@@ -120,7 +120,7 @@ Università degli Studi di Padova \& CAPA}
 
             $$\Gamma(S \to \ell^+\ell^-) = \frac{m_S}{8\pi} |K_\ell|^2 \left(1-\frac{4 m_\ell^2}{m_S^2}\right)^{\alpha_S}\,,$$
 
-            {\small with $K_\ell = g_\ell$ and $\alpha_S = 1/2$ for $S=a$, and $K_\ell = k_\ell$ and $\alpha_S = 3/2$ for $S=\phi$.}
+            {\small with $K_\ell = g_{\ell\ell}$ and $\alpha_S = 1/2$ for $S=a$, and $K_\ell = k_\ell$ and $\alpha_S = 3/2$ for $S=\phi$.}
 
             Also decays to $2\gamma$ through a lepton loop.
 
@@ -135,6 +135,17 @@ Università degli Studi di Padova \& CAPA}
     \end{columns}
 \end{frame}
 
+\begin{frame}\frametitle{Leptonic $B$ decays}
+    $$\frac{\mathrm{BR}(B^-\to \ell^- \bar{\nu}_\ell a)}{\mathrm{BR}(B^-\to \ell^- \bar{\nu}_\ell)} \approx \frac{1}{1536\pi^2}\frac{m_B^4}{m_\ell^2 f_a^2}\left[(c_{\ell\ell}-\bar{c}_{\ell\ell}+c_{\nu\nu})^2+\frac{16 m_\ell^2}{m_B^2} c_{\ell\ell}^2\right]$$
 
+    \begin{columns}
+        \begin{column}{0.45\textwidth}
+            \includegraphics[width=\columnwidth]{figures/limcl.png}
+        \end{column}
+        \begin{column}{0.45\textwidth}
+            \includegraphics[width=\columnwidth]{figures/lim_c_1GeV.png}
+        \end{column}
+    \end{columns}
+\end{frame}
 
 \end{document}
