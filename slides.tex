@@ -106,27 +106,14 @@ Università degli Studi di Padova \& CAPA}
     \end{center}
 \end{frame}
 
-\begin{frame}\frametitle{Light New Physics}
-
-    Scalar $\phi$ and pseudo-scalar $\hat{\phi}$ bosons:
-
-    $$\mathcal{L}_\mathrm{light NP} \subset \frac{1}{2}\partial_\mu \phi \partial^\mu \phi - \frac{1}{2} m_\phi^2 \phi^2 + \frac{1}{2}\partial_\mu \hat{\phi} \partial^\mu \hat{\phi} - \frac{1}{2} m_{\hat{\phi}}^2 \hat{\phi}^2 - \sum_\ell \bar{\ell}(k_\ell \phi + i \hat{k}_\ell \hat{\phi}\gamma_5) \ell\,.$$
-
-    ~
-    
-    For the pseudo-scalar boson, we recover the EW-preserving ALP when the couplings are hierarchical $\hat{k}_\ell = c_{\ell\ell} m_\ell/f_a$.
-\end{frame}
-
 \begin{frame}\frametitle{Particle decays}
     
     \begin{columns}
 
         \begin{column}{0.6\textwidth}
-            The NP particles can decay to a pair of leptons
+            The ALP particles can decay to a pair of leptons
 
-            $$\Gamma(S \to \ell^+\ell^-) = \frac{m_S}{8\pi} |K_\ell|^2 \left(1-\frac{4 m_\ell^2}{m_S^2}\right)^{\alpha_S}\,,$$
-
-            {\small with $K_\ell = c_{\ell\ell} m_\ell/f_a$ and $\alpha_S = 1/2$ for $S=a$, and $K_\ell = k_\ell$ and $\alpha_S = 3/2$ for $S=\phi$.}
+            $$\Gamma(a \to \ell^+\ell^-) = \frac{m_a}{8\pi} |c_{\ell\ell}|^2\frac{m_\ell^2}{f_a^2} \left(1-\frac{4 m_\ell^2}{m_a^2}\right)^{1/2}\,,$$
 
             Also decays to $2\gamma$ through a lepton loop.
 
@@ -164,6 +151,23 @@ Università degli Studi di Padova \& CAPA}
     \end{columns}
 \end{frame}
 
+\begin{frame}\frametitle{Gauge boson decays}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{center}
+                \includegraphics[width=0.4\columnwidth]{figures/diagZ.png}\hspace{5pt}\includegraphics[width=0.4\columnwidth]{figures/diagW.png}
+            \end{center}
+            Production of invisible ALP in $Z\to \tau^+\tau^- a$ and $W^-\to \tau^- \bar{\nu}_\tau a$.
+
+            For the $W$ decays there are additional terms in the case of EW-violating interactions.
+        \end{column}
+        \begin{column}{0.47\textwidth}
+            \includegraphics[width=\columnwidth]{figures/boson_decay.png}
+        \end{column}
+    \end{columns}
+    
+\end{frame}
+
 \begin{frame}\frametitle{$(g-2)_\tau$}
     \begin{columns}
         \begin{column}{0.5\textwidth}
@@ -184,6 +188,7 @@ Università degli Studi di Padova \& CAPA}
     
 \end{frame}
 
+
 \begin{frame}\frametitle{Bounds for couplings to $\tau$ leptons}
     \begin{center}
         \includegraphics[width=0.75\textwidth]{figures/moneyplot.png}
@@ -192,7 +197,36 @@ Università degli Studi di Padova \& CAPA}
 
 
 \begin{frame}\frametitle{Conclusions}
-    
+    \begin{itemize}\setlength{\itemsep}{15pt}
+        \item ALPs are a well-motivated extension of the SM with a new light pseudoscalar particle.
+        \item We studied ALPs coupling to $\tau$, both in LFU and $\tau$-phillic scenarios.
+        \item Production of ``visible'' ALPs in colliders:
+        \begin{itemize}
+            \item Dedicated search at Belle.
+            \item Belle-II will improve the bounds, and FCC-ee will explore heavier ALP masses.
+        \end{itemize}
+        \item ``Invisible'' ALPs in $B^-\to \tau^-\bar{\nu}_\tau a$, $W^-\to \tau^-\bar{\nu}_\tau a$ and $Z \tau^-\tau^+ a$ complement direct searches for lighter ALPs.
+        \item Loop effects in $(g-2)_\tau$, will drastically improve in Belle-II.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Outlook}
+    \begin{itemize}\setlength{\itemsep}{15pt}
+        \item Still Work in Progress
+        \item Invisible ALPs in $e^+e^-\to \tau^+\tau^- a$.
+        \item $B\to D^{(*)}\tau^-\bar{\nu}_\tau a$ and $R_{D^{(*)}}$?
+        \item Generalization to other light NP particles: scalars, dark photons, etc.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Bibliography}
+    \begin{itemize}\setlength{\itemsep}{7pt}
+        \item JA, A. Guerrera, S. Peñaranda and S. Rigolin: ``Leptonic meson decays into invisible ALP''. Nucl.Phys.B 979 (2022) 115791, arXiv:    2111.02536 [hep-ph]
+        \item W. Altmannshofer, J. A. Dror, and S. Gori, ``New Opportunities for Detecting Axion-Lepton Interactions'' Phys.
+        Rev. Lett. 130 no. 24, (2023) 241801, arXiv:2209.00665 [hep-ph]
+        \item D. Biswas et al. (Belle), ``Search for a dark leptophilic scalar produced in association with $\tau^+\tau^-$ pair
+        in $e^+e^-$ annihilation at center-of-mass energies near 10.58 GeV'' arXiv:2207.07476 [hep-ex]
+    \end{itemize}
 \end{frame}
 
 \end{document}
